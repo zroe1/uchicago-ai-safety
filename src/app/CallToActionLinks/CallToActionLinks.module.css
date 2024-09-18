@@ -4,7 +4,8 @@
   }
   
   .innerContainer {
-    max-width: 64rem;
+    /* max-width: 64rem; */
+    width: 60%;
     margin: 0 auto;
   }
   

@@ -1,6 +1,7 @@
 import styles from "./page.module.css";
 import Image from "next/image";
 import CallToActionLinks from "@/app/CallToActionLinks/CallToActionLinks";
+import HomeDescription from "./HomeDescription/HomeDescription";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
         </div>
       </div>
       <CallToActionLinks />
+      <HomeDescription />
     </>
   );
 }

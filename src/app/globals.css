@@ -1,0 +1,9 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+*::selection {
+  background-color: #8B1724; 
+  color: #ffffff; 
+}

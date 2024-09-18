@@ -1,5 +1,6 @@
 import "./globals.css";
 import Header from "@/header/page";
+import Footer from "./Footer/Footer";
 import { inriaSerif } from "@/app/ui/fonts";
 
 export const metadata = {
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
       <body className={`${inriaSerif.className}`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
