@@ -1,0 +1,21 @@
+.titleTop {
+  color: black;
+  font-weight: 400;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.titleBottom {
+  color: #8B1724;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.titleContainer {
+
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+}
