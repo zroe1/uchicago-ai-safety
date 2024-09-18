@@ -4,7 +4,7 @@
   }
   
 .innerContainer {
-  width: 60%;
+  width: 55%;
   margin: 0 auto;
 }
 
@@ -23,7 +23,7 @@
   border: solid 1px black;
   padding: 1rem;
   border-radius: 0.5rem;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 600;
   text-align: center;
   text-decoration: none;
