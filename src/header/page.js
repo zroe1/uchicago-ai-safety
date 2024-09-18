@@ -33,6 +33,7 @@ const Header = () => {
           alt="AI Safety Student Team Logo"
           width={468 * 0.55}
           height={288 * 0.55}
+          className={styles.logo}
         />
         {isMobile ? (
           <div className={styles.mobileMenuContainer}>
