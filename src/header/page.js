@@ -1,9 +1,30 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Header.module.css";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1000);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -12,19 +33,48 @@ const Header = () => {
           alt="AI Safety Student Team Logo"
           width={468 * 0.55}
           height={288 * 0.55}
-          className={styles.logo}
         />
-        <nav aria-label="Main navigation">
-          <ul className={styles.navList}>
-            {["About", "Research", "Get Involved", "Resources"].map((item) => (
-              <li key={item}>
-                <Link href={`/${item.toLowerCase().replace(" ", "-")}`} className={styles.navLink}>
-                  {item}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        {isMobile ? (
+          <div className={styles.mobileMenuContainer}>
+            <button
+              className={`${styles.mobileMenuButton} ${isMenuOpen ? styles.open : ""}`}
+              onClick={toggleMenu}
+              aria-label="Toggle menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            {isMenuOpen && (
+              <nav className={styles.mobileNav} aria-label="Mobile navigation">
+                <ul className={styles.mobileNavList}>
+                  {["About", "Research", "Get Involved", "Resources"].map((item) => (
+                    <li key={item}>
+                      <Link
+                        href={`/${item.toLowerCase().replace(" ", "-")}`}
+                        className={styles.mobileNavLink}>
+                        {item}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            )}
+          </div>
+        ) : (
+          <nav aria-label="Main navigation">
+            <ul className={styles.navList}>
+              {["About", "Research", "Get Involved", "Resources"].map((item) => (
+                <li key={item}>
+                  <Link
+                    href={`/${item.toLowerCase().replace(" ", "-")}`}
+                    className={styles.navLink}>
+                    {item}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
       </div>
     </header>
   );
