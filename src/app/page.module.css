@@ -1,7 +1,7 @@
 .titleTop {
   color: black;
   font-weight: 400;
-  font-size: 4rem;
+  font-size: 3.8rem;
   text-align: center;
   line-height: 1.775;
   margin-bottom: 30px;
@@ -16,7 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 40px;
+  padding-top: 30px;
 }
 
 .xLabContainer {
