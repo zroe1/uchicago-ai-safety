@@ -31,8 +31,8 @@ const Header = () => {
         <Image
           src="/logo.png"
           alt="AI Safety Student Team Logo"
-          width={468 * 0.55}
-          height={288 * 0.55}
+          width={468 * 0.5}
+          height={288 * 0.5}
           className={styles.logo}
         />
         {isMobile ? (
@@ -48,7 +48,7 @@ const Header = () => {
             {isMenuOpen && (
               <nav className={styles.mobileNav} aria-label="Mobile navigation">
                 <ul className={styles.mobileNavList}>
-                  {["About", "Research", "Get Involved", "Resources"].map((item) => (
+                  {["About", "Leadership", "Get Involved", "Fellowship"].map((item) => (
                     <li key={item}>
                       <Link
                         href={`/${item.toLowerCase().replace(" ", "-")}`}
@@ -64,7 +64,7 @@ const Header = () => {
         ) : (
           <nav aria-label="Main navigation">
             <ul className={styles.navList}>
-              {["About", "Research", "Get Involved", "Resources"].map((item) => (
+              {["About", "Leadership", "Get Involved", "Fellowship"].map((item) => (
                 <li key={item}>
                   <Link
                     href={`/${item.toLowerCase().replace(" ", "-")}`}

@@ -12,7 +12,6 @@ export default function Home() {
             UChicago&#39;s student-led initiative to <br className={styles.break}></br>
             <span className={styles.titleBottom}>shape the future of AI safety.</span>
           </h1>
-          {/* <h1 className={styles.titleBottom}>shape the future of AI safety.</h1> */}
           <div className={styles.xLabContainer}>
             <h2 className={styles.xRiskTitle}>
               Sponsored by the University of Chicago&#39;s x-risk lab

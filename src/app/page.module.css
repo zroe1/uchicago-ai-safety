@@ -1,9 +1,9 @@
 .titleTop {
   color: black;
   font-weight: 400;
-  font-size: 3.8rem;
+  font-size: 3.75rem;
   text-align: center;
-  line-height: 1.775;
+  line-height: 1.75;
   margin-bottom: 30px;
 }
 
@@ -29,6 +29,7 @@
 
 .xRiskTitle {
   text-align: center;
+  font-size: 1.65rem;
 }
 
 @media screen and (max-width: 1200px) {

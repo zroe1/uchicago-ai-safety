@@ -5,7 +5,6 @@ const CallToActionLinks = () => {
   return (
     <div className={styles.container}>
       <div className={styles.innerContainer}>
-        {/* <h2 className={styles.heading}>Get Involved</h2> */}
         <div className={styles.linkContainer}>
           <a href="#" className={styles.link}>
             Apply to our technical AI safety fellowship
