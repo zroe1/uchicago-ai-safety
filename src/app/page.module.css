@@ -3,18 +3,17 @@
   font-weight: 400;
   font-size: 4rem;
   text-align: center;
+  line-height: 1.775;
+  margin-bottom: 30px;
 }
 
 .titleBottom {
   color: #8B1724;
-  font-size: 4rem;
-  text-align: center;
+  font-weight: 600;
 }
 
 .titleContainer {
-
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
   padding-top: 40px;
@@ -26,10 +25,29 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 40px;
-  /* padding-top: 40px; */
 }
 
 .xRiskTitle {
-  margin-top: 35px;
   text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .titleTop {
+    font-size: 3.5rem;
+  }
+  
+}
+
+.break {
+  display: block;
+}
+
+@media screen and (max-width: 1000px) {
+  .break {
+    display: none;
+  }
+  .titleTop {
+    width: 90%;
+    margin-left: 5%;
+  }
 }
