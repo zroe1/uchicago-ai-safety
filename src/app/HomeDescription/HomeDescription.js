@@ -6,9 +6,9 @@ export default function HomeDescription() {
       <h2 className={styles.descriptionSubTitle}>AI Alignment at UChicago</h2>
       <div className={styles.homePageDivider}></div>
       <p className={styles.homePageDescriptionText}>
-        Welcome to the UChicago AI Safety, a group of undergraduate students dedicated to addressing
-        AI alignment - the crucial challenge of ensuring artificial intelligence behaves in ways
-        that benefit humanity and align with our values.
+        Welcome to UChicago AI Safety, a group of undergraduate students dedicated to addressing AI
+        alignment - the crucial challenge of ensuring artificial intelligence behaves in ways that
+        benefit humanity and align with our values.
       </p>
       <p className={styles.homePageDescriptionText}>
         As AI becomes more powerful, the importance of alignment grows. Misaligned AI could pose

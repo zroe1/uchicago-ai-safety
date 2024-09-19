@@ -1,5 +1,5 @@
 import "./globals.css";
-import Header from "@/header/page";
+import Header from "@/header/Header";
 import Footer from "./Footer/Footer";
 import { inriaSerif } from "@/app/ui/fonts";
 
