@@ -1,0 +1,25 @@
+.profileImg {
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+}
+
+
+.leaderContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 230px;
+    margin: 30px;
+}
+
+.memberRole {
+    margin-top: 0px;
+    font-weight: 600;
+    color: #8B1724;
+}
+
+.noMarginParagraph {
+    margin-top: 0px;
+    /* background-color: red; */
+}

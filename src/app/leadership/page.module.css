@@ -1,0 +1,20 @@
+.pageTitle {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.pageDescription {
+    width: 60%;
+    margin-left: 20%;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.LeaderContainer {
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
