@@ -25,6 +25,12 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setTimeout(() => {
+      setIsMenuOpen(false);
+    }, 150); // 150ms delay
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -54,7 +60,8 @@ const Header = () => {
                     <li key={item}>
                       <Link
                         href={`/${item.toLowerCase().replace(" ", "-")}`}
-                        className={styles.mobileNavLink}>
+                        className={styles.mobileNavLink}
+                        onClick={closeMenu}>
                         {item}
                       </Link>
                     </li>
