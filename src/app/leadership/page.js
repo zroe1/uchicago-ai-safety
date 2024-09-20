@@ -19,13 +19,13 @@ export default function LeadershipPage() {
       <div className={styles.LeaderContainer}>
         <LeadershipMember
           imgUrl="/jo.jpeg"
-          memberEmail="jo@uchicago.edu"
+          memberEmail="jialingjiao@uchicago.edu"
           memberName="Jo Jialing Jiao"
           memberRole="Co-President"
         />
         <LeadershipMember
           imgUrl="/avik.jpeg"
-          memberEmail="avik@uchicago.edu"
+          memberEmail="avikg@uchicago.edu"
           memberName="Avik Garg"
           memberRole="Co-President"
         />
