@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "./page.module.css";
 
-const leadershipTeam = [
-  { name: "Joanna", role: "Co-President" },
-  { name: "Avik", role: "Co-President" },
-  { name: "Zephy", role: "Executive Member" },
-  // Add more leadership members as needed
-];
+export const metadata = {
+  title: "About - UChicago AI Safety",
+  description:
+    "About UChicago AI Safety: our mission, vision, activities, affiliation, and how to get involved.",
+  keywords: "AI safety, AI alignment, University of Chicago, x-risk lab, AI research",
+};
 
 export default function About() {
   return (

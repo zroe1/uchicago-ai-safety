@@ -1,6 +1,13 @@
 import React from "react";
 import styles from "./page.module.css";
 
+export const metadata = {
+  title: "Get Involved - UChicago AI Safety",
+  description:
+    "Get Involved with UChicago AI Safety. Join our fellowship program, mailing list, or the Chicago Symposium on Transformative AI.",
+  keywords: "AI safety, AI alignment, University of Chicago, x-risk lab, AI research",
+};
+
 export default function GetInvolved() {
   return (
     <div className={styles.getInvolvedContainer}>

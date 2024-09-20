@@ -1,6 +1,12 @@
 import styles from "./page.module.css";
 import LeadershipMember from "./LeadershipMember";
 
+export const metadata = {
+  title: "Leadership Team - UChicago AI Safety",
+  description: "Meet the dedicated individuals who guide UChicago AI Safety.",
+  keywords: "AI safety, AI alignment, University of Chicago, x-risk lab, AI research",
+};
+
 export default function LeadershipPage() {
   return (
     <div>

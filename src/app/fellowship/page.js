@@ -1,6 +1,13 @@
 import React from "react";
 import styles from "./page.module.css";
 
+export const metadata = {
+  title: "Fellowship - UChicago AI Safety",
+  description:
+    "This fellowship reading list for the UChicago AI Safety Club provides a structured exploration of key AI safety topics.",
+  keywords: "AI safety, AI alignment, University of Chicago, x-risk lab, AI research",
+};
+
 const weeklyReadings = [
   {
     week: 1,
