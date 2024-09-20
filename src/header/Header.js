@@ -21,6 +21,18 @@ const Header = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add("menu-open");
+    } else {
+      document.body.classList.remove("menu-open");
+    }
+
+    return () => {
+      document.body.classList.remove("menu-open");
+    };
+  }, [isMenuOpen]);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };

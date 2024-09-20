@@ -7,3 +7,7 @@ body {
   background-color: #8B1724; 
   color: #ffffff; 
 }
+
+body.menu-open {
+  overflow: hidden;
+}
