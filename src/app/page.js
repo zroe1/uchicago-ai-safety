@@ -3,6 +3,12 @@ import Image from "next/image";
 import CallToActionLinks from "@/app/CallToActionLinks/CallToActionLinks";
 import HomeDescription from "./HomeDescription/HomeDescription";
 
+export const metadata = {
+  title: "UChicago AI Safety",
+  description: "UChicago's student-led initiative studying AI safety, sponsored by the x-risk lab.",
+  keywords: "AI safety, AI alignment, University of Chicago, x-risk lab, AI research",
+};
+
 export default function Home() {
   return (
     <>
