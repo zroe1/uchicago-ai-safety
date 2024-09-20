@@ -28,7 +28,7 @@ const Header = () => {
   const closeMenu = () => {
     setTimeout(() => {
       setIsMenuOpen(false);
-    }, 150); // 150ms delay
+    }, 200); // 150ms delay
   };
 
   return (
