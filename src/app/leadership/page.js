@@ -14,7 +14,7 @@ export default function LeadershipPage() {
         <LeadershipMember
           imgUrl="/jo.jpeg"
           memberEmail="jo@uchicago.edu"
-          memberName="Jo Something"
+          memberName="Jo Jialing Jiao"
           memberRole="Co-President"
         />
         <LeadershipMember
@@ -24,10 +24,22 @@ export default function LeadershipPage() {
           memberRole="Co-President"
         />
         <LeadershipMember
+          imgUrl="/tzu.jpg"
+          memberEmail="chantzukit@gmail.com"
+          memberName="Tzu Kit Chan"
+          memberRole="Advisor"
+        />
+        <LeadershipMember
           imgUrl="/zephy-roe.png"
           memberEmail="zroe@uchicago.edu"
           memberName="Zephy Roe"
-          memberRole="Board Member"
+          memberRole="Club Administrator"
+        />
+        <LeadershipMember
+          imgUrl="/zach.png"
+          memberEmail="zrudolph@uchicago.edu"
+          memberName="Zachary Rudolph"
+          memberRole="X-Lab Deputy Director"
         />
       </div>
     </div>
