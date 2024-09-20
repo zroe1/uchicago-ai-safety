@@ -39,7 +39,7 @@ export default function GetInvolved() {
           <li>Engage with 30-40 of the most promising undergraduate students in AI Safety</li>
           <li>Hear from speakers in technical AI alignment and AI governance</li>
           <li>Collaborate with peers to challenge assumptions and develop new ideas</li>
-          <li>Participate in pre-conference preparation to maximize the symposium's impact</li>
+          <li>Participate in pre-conference preparation to maximize the symposium&#39s impact</li>
         </ul>
         <a
           href="https://forms.gle/symposium-interest"
@@ -52,7 +52,7 @@ export default function GetInvolved() {
 
       <section className={styles.contactSection}>
         <h2>Contact Us</h2>
-        <p>Have questions or want to learn more? Don't hesitate to reach out to us directly.</p>
+        <p>Have questions or want to learn more? Don&#39t hesitate to reach out to us directly.</p>
         <p>
           Email: <a href="mailto:aisafety@uchicago.edu">aisafety@uchicago.edu</a>
         </p>
