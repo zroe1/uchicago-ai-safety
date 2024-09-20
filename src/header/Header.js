@@ -28,13 +28,15 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <Image
-          src="/logo.png"
-          alt="AI Safety Student Team Logo"
-          width={468 * 0.5}
-          height={288 * 0.5}
-          className={styles.logo}
-        />
+        <a href="/">
+          <Image
+            src="/logo.png"
+            alt="AI Safety Student Team Logo"
+            width={468 * 0.5}
+            height={288 * 0.5}
+            className={styles.logo}
+          />
+        </a>
         {isMobile ? (
           <div className={styles.mobileMenuContainer}>
             <button
