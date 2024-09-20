@@ -2,12 +2,14 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
+    padding-top: 0.5rem;
   }
   
   .pageTitle {
     font-size: 2.5rem;
     /* color: #8B1724; */
     margin-bottom: 1rem;
+    margin-top: 0px;
   }
   
   .pageDivider {
