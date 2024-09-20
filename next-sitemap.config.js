@@ -1,5 +1,5 @@
 module.exports = {
   siteUrl: "https://uchicagoaisafety.com/",
   generateRobotsTxt: true,
-  outDir: "public",
+  outDir: "out",
 };
