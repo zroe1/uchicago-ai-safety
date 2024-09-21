@@ -32,7 +32,9 @@ export default function GetInvolved() {
           Stay updated on our events, opportunities, and the latest in AI Safety. Our mailing list
           is the best way to keep in touch and never miss an important announcement.
         </p>
-        <a className={styles.actionButton}>Join Our Mailing List</a>
+        <a href="/coming-soon" className={styles.actionButton}>
+          Join Our Mailing List
+        </a>
       </section>
 
       <section className={styles.symposiumSection}>
@@ -49,7 +51,7 @@ export default function GetInvolved() {
           <li>Participate in pre-conference preparation to maximize the symposium&#39s impact</li>
         </ul>
         <a
-          href="https://forms.gle/symposium-interest"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSeawF6v2f9KHdGdV4mZW_coewp26g9eQWOtQYOtBr8h8ltmBg/viewform"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.actionButton}>
