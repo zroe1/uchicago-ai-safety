@@ -11,15 +11,16 @@ export const metadata = {
 const weeklyReadings = [
   {
     week: 1,
-    title: "Superintelligence and Control",
+    title: "Scaling and Instrumental Convergence",
     description:
-      "Explore the implications of increasingly intelligent systems, focusing on instrumental convergence and orthogonality.",
+      "Explore the implications of increasingly intelligent systems, focusing on scaling laws, superintelligence, and instrumental convergence.",
     readings: [
       {
-        title: "Scaling Laws for Neural Language Models",
-        link: "https://arxiv.org/pdf/2001.08361",
+        title: "Transformer Language Models (Video)",
+        link: "https://www.youtube.com/watch?v=5eqRuVp65eY",
         description:
-          "A brief look at the original scaling laws paper, foundational for understanding AI progress.",
+          "Watch 0:00 - 11:30 for an accessible introduction to scaling laws in language models.",
+        timeFrame: "0:00 - 11:30",
       },
       {
         title:
@@ -28,31 +29,11 @@ const weeklyReadings = [
         description:
           "Nick Bostrom's influential work on power-seeking and instrumental convergence in AI systems.",
       },
-      {
-        title: "From GPT-4 to AGI: A Situational Awareness Perspective",
-        link: "https://situational-awareness.ai/from-gpt-4-to-agi/",
-        description:
-          "Optional reading on AI scaling and its implications for artificial general intelligence.",
-        optional: true,
-      },
-      {
-        title: "Transformer Language Models (Video)",
-        link: "https://www.youtube.com/watch?v=5eqRuVp65eY",
-        description:
-          "Watch 0:00 - 11:30 for an accessible introduction to scaling laws in language models.",
-        timeFrame: "0:00 - 11:30",
-      },
     ],
   },
   {
     week: 2,
-    title: "TBA",
-    description: "Oops! We are still working on finding readings for this week!",
-    readings: [],
-  },
-  {
-    week: 3,
-    title: "Outer Alignment & Goal Misspecification",
+    title: "Outer Alignment",
     description: "Examine the challenges in correctly specifying training goals for AI systems.",
     readings: [
       {
@@ -61,32 +42,78 @@ const weeklyReadings = [
         description:
           "A comprehensive overview of outer alignment issues from DeepMind researchers.",
       },
+      {
+        title: "Learning from human preferences",
+        link: "https://openai.com/index/learning-from-human-preferences/",
+        description:
+          "Explore how alignment researchers have attempted to address issues in goal specification using human preferences.",
+      },
+    ],
+  },
+  {
+    week: 3,
+    title: "Deception & Mesa-optimization",
+    description:
+      "Investigate the concept of mesa-optimizers and the potential for deceptive behavior in AI systems.",
+    readings: [
+      {
+        title: "Deceptive Alignment",
+        link: "https://arxiv.org/pdf/1906.01820",
+        description:
+          "An in-depth exploration of deceptive alignment and pseudo-alignment, providing insights into inner alignment issues.",
+      },
     ],
   },
   {
     week: 4,
-    title: "Inner Alignment & Goal Misgeneralization",
+    title: "AI Security Concerns",
     description:
-      "Investigate whether models pursue correct goals on out-of-distribution data and learn intended behaviors.",
+      "Explore various AI security issues including jailbreaks, adversarial examples, and potential vulnerabilities.",
     readings: [
       {
-        title: "Goal misgeneralisation: why correct specifications aren't enough for correct goals",
-        link: "https://deepmindsafetyresearch.medium.com/goal-misgeneralisation-why-correct-specifications-arent-enough-for-correct-goals-cf96ebc60924",
-        description: "An in-depth exploration of inner alignment concerns and their implications.",
+        title: "Intro to Large Language Models - Andrej Karpathy",
+        link: "https://www.youtube.com/watch?v=zjkBMFhNj_g",
+        description:
+          "Watch 42:15 - 59:23 for an overview of LLM security concerns, analogous to OS security.",
+        timeFrame: "42:15 - 59:23",
+      },
+      {
+        title: "Ironing Out the Squiggles",
+        link: "https://www.lesswrong.com/posts/H7fkGinsv8SDxgiS2/ironing-out-the-squiggles",
+        description:
+          "A paper review post about adversarial examples, their implications, and potential solutions.",
+      },
+      {
+        title: "AI Sleeper Agents",
+        link: "https://arxiv.org/pdf/2401.05566",
+        description:
+          "Read the abstract and page 6 for an introduction to the concept of AI sleeper agents.",
+      },
+      {
+        title: "SolidGoldMagikarp - tokens that jailbreak LLMs",
+        link: "https://www.lesswrong.com/posts/aPeJE8bSo6rAFoLqg/solidgoldmagikarp-plus-prompt-generation",
+        description:
+          "Explore a famous case of LLM jailbreaking and its implications for AI security.",
       },
     ],
   },
   {
     week: 5,
-    title: "AI Security Concerns",
+    title: "AI Governance",
     description:
-      "Explore various AI security issues including jailbreaks, finetuning, and prompt injection.",
+      "Examine the challenges and approaches to governing AI development and deployment.",
     readings: [
       {
-        title: "Andrei's video on AI security",
-        link: "#",
+        title: "Computing Power and the Governance of AI",
+        link: "https://www.governance.ai/post/computing-power-and-the-governance-of-ai",
         description:
-          "A comprehensive overview of AI security concerns and their potential impacts.",
+          "An overview of the ongoing discussion about regulating AI hardware and its implications.",
+      },
+      {
+        title: "AI Governance Needs Technical Work",
+        link: "https://forum.effectivealtruism.org/posts/BJtekdKrAufyKhBGw/ai-governance-needs-technical-work#",
+        description:
+          "Explore how technical skills can contribute to AI governance through regulation, monitoring, and policy advising.",
       },
     ],
   },
@@ -94,22 +121,65 @@ const weeklyReadings = [
     week: 6,
     title: "Criticisms and Counter-Arguments",
     description:
-      "Examine critiques of AI safety concerns, including discussions on groupthink and cult-like behaviors.",
+      "Examine critiques of AI safety concerns and alternative perspectives on AI development.",
     readings: [
       {
-        title: "Podcast Episode on AI Safety Criticisms",
+        title: "Will AI kill all of us? | Marc Andreessen and Lex Fridman",
         link: "https://www.youtube.com/watch?v=-4u1ZBMbWT8",
         description:
-          "Listen to 00:00 - 10:30 for a balanced discussion on common criticisms of AI safety concerns.",
+          "Listen to 00:00 - 10:30 for a discussion on criticisms of AI safety concerns.",
         timeFrame: "00:00 - 10:30",
+      },
+      {
+        title: "Terrorism, Tylenol, and dangerous information",
+        link: "https://www.lesswrong.com/posts/Ek7M3xGAoXDdQkPZQ/terrorism-tylenol-and-dangerous-information",
+        description: "A useful reading for understanding infohazards in AI development.",
+      },
+      {
+        title: "Against Almost Every Theory of Impact of Interpretability",
+        link: "https://www.lesswrong.com/posts/LNA8mubrByG7SFacm/against-almost-every-theory-of-impact-of-interpretability-1",
+        description: "A critical examination of interpretability approaches in AI alignment.",
       },
     ],
   },
   {
     week: 7,
-    title: "Alignment Agendas, Hope, and Action",
-    description: "Oops! We are still working on finding readings for this week!",
-    readings: [],
+    title: "Further Reading and Discussion",
+    description:
+      "Explore various AI alignment approaches and dive deeper into specific areas of interest. Fellows will choose one of the optional readings to focus on for the week.",
+    readings: [
+      {
+        title: "A Brief Introduction to some Approaches to AI Alignment",
+        link: "https://aisafetyfundamentals.com/blog/ai-alignment-approaches/",
+        description:
+          "An overview of various AI alignment approaches, providing a foundation for further exploration.",
+      },
+      {
+        title: "Why Agent Foundations? An Overly Abstract Explanation",
+        link: "https://www.lesswrong.com/posts/FWvzwCDRgcjb9sigb/why-agent-foundations-an-overly-abstract-explanation",
+        description: "A deeper dive into the concept of agent foundations in AI alignment.",
+        optional: true,
+      },
+      {
+        title: "Goal Misgeneralisation: Why Correct Specifications Aren't Enough For Correct Goals",
+        link: "https://deepmindsafetyresearch.medium.com/goal-misgeneralisation-why-correct-specifications-arent-enough-for-correct-goals-cf96ebc60924",
+        description:
+          "An in-depth exploration of inner alignment issues and goal misgeneralization.",
+        optional: true,
+      },
+      {
+        title: "Toy Models of Superposition",
+        link: "https://transformer-circuits.pub/2022/toy_model/index.html",
+        description: "A technical exploration of interpretability in neural networks.",
+        optional: true,
+      },
+      {
+        title: "Steering Llama-2 with contrastive activation additions",
+        link: "https://www.lesswrong.com/posts/v7f8ayBxLhmMFRzpa/steering-llama-2-with-contrastive-activation-additions",
+        description: "An examination of techniques for controlling large language models.",
+        optional: true,
+      },
+    ],
   },
 ];
 
@@ -121,7 +191,7 @@ export default function Fellowship() {
       <p className={styles.pageDescription}>
         This fellowship reading list for the UChicago AI Safety Club provides a structured
         exploration of key AI safety topics across seven weeks. It covers a range of crucial
-        subjects from superintelligence and control to alignment challenges and critical
+        subjects from scaling laws and instrumental convergence to AI governance and critical
         perspectives on AI safety.
       </p>
       <div className={styles.weeklyReadings}>
