@@ -63,9 +63,12 @@ export default function GetInvolved() {
 
       <section className={styles.contactSection}>
         <h2>Contact Us</h2>
-        <p>Have questions or want to learn more? Don&#39t hesitate to reach out to us directly.</p>
         <p>
-          Email: <a href="mailto:aisafety@uchicago.edu">aisafety@uchicago.edu</a>
+          Have questions or want to learn more? Don&#39;t hesitate to reach out to us directly. You
+          can contact our presidents Avik and Jo at{" "}
+          <span className={styles.email}>avikg@uchicago.edu</span> and{" "}
+          <span className={styles.email}>jialingjiao@uchicago.edu</span> or the deputy director of
+          x-lab at <span className={styles.email}>zrudolph@uchicago.edu</span>.
         </p>
       </section>
     </div>
