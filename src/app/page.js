@@ -19,9 +19,9 @@ export default function Home() {
             <span className={styles.titleBottom}>shape the future of AI safety.</span>
           </h1>
           <div className={styles.xLabContainer}>
-            <h2 className={styles.xRiskTitle}>
+            {/* <h2 className={styles.xRiskTitle}>
               Sponsored by the University of Chicago&#39;s x-risk lab
-            </h2>
+            </h2> */}
             <Image
               src="/x-lab-logo.png"
               alt="AI Safety Student Team Logo"

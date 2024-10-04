@@ -21,7 +21,9 @@ export default function GetInvolved() {
           skills, and connect with like-minded peers. Our program is designed to value-align and
           upskill undergraduates interested in AI Safety careers.
         </p>
-        <a href="/fellowship" className={styles.actionButton}>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSf4O9WXV85jQKCTS046IDnHUqMbAu85p8vDUFSyncGzoQrJ9g/viewform?usp=sf_link"
+          className={styles.actionButton}>
           Learn More & Apply
         </a>
       </section>

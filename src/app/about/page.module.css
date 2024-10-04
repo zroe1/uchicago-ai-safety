@@ -18,6 +18,11 @@
     margin-bottom: 2rem;
   }
 
+  .email {
+    color: #8B1724;
+    font-weight: 600;
+  }
+
   .paragraph {
     font-size: 1.2rem;
   }

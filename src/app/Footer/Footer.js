@@ -14,7 +14,7 @@ const Footer = () => {
             height={288 * 0.5}
             className={styles.logo}
           />
-          <p className={styles.x}>X</p>
+          <p className={styles.x}>|</p>
           <Image
             src="/x-lab-logo.png"
             alt="X-Risk Lab Logo"

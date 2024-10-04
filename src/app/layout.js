@@ -5,7 +5,7 @@ import { inriaSerif } from "@/app/ui/fonts";
 
 export const metadata = {
   title: "UChicago AI Safety",
-  description: "UChicago's student-led initiative studying AI safety, sponsored by the x-risk lab.",
+  description: "UChicago's student-led initiative studying AI safety.",
   icons: {
     icon: [
       { rel: "icon", url: "/favicon.ico", sizes: "48x48" },

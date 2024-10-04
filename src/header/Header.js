@@ -46,7 +46,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <a href="/">
+        <a href="/" className={styles.logoContainer}>
           <Image
             src="/logo.png"
             alt="AI Safety Student Team Logo"
@@ -54,6 +54,13 @@ const Header = () => {
             height={288 * 0.5}
             className={styles.logo}
           />
+          {/* <Image
+            src="/x-lab-logo.png"
+            alt="AI Safety Student Team Logo"
+            width={853 * 0.3}
+            height={293 * 0.3}
+            className={styles.logo}
+          /> */}
         </a>
         {isMobile ? (
           <div className={styles.mobileMenuContainer}>
