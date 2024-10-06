@@ -75,3 +75,20 @@
     font-style: italic;
     color: #666;
   }
+
+  .actionButton {
+    display: inline-block;
+    background-color: #8B1724;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .actionButton:hover {
+    background-color: #6d111c;
+  }

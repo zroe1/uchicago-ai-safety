@@ -17,9 +17,9 @@ export default function GetInvolved() {
       <section className={styles.fellowshipSection}>
         <h2>Fellowship Program</h2>
         <p>
-          Join our intensive fellowship program to dive deep into AI Safety concepts, develop your
-          skills, and connect with like-minded peers. Our program is designed to value-align and
-          upskill undergraduates interested in AI Safety careers.
+          Join our intensive Learn More & Apply program to dive deep into AI Safety concepts,
+          develop your skills, and connect with like-minded peers. Our program is designed to
+          value-align and upskill undergraduates interested in AI Safety careers.
         </p>
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSf4O9WXV85jQKCTS046IDnHUqMbAu85p8vDUFSyncGzoQrJ9g/viewform?usp=sf_link"
@@ -34,7 +34,7 @@ export default function GetInvolved() {
           Stay updated on our events, opportunities, and the latest in AI Safety. Our mailing list
           is the best way to keep in touch and never miss an important announcement.
         </p>
-        <a href="/coming-soon" className={styles.actionButton}>
+        <a href="https://lists.uchicago.edu/web/info/aisafety" className={styles.actionButton}>
           Join Our Mailing List
         </a>
       </section>
