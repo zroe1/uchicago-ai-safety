@@ -37,7 +37,7 @@ export default function LeadershipPage() {
         />
         <LeadershipMember
           imgUrl={"/seth.jpg"}
-          memberEmail="sethpoling@uchicago.edu"
+          memberEmail=""
           memberName="Seth Poling"
           memberRole="Club Administrator"
         />
