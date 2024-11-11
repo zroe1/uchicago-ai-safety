@@ -104,16 +104,15 @@ const weeklyReadings = [
       "Examine the challenges and approaches to governing AI development and deployment.",
     readings: [
       {
-        title: "Computing Power and the Governance of AI",
-        link: "https://www.governance.ai/post/computing-power-and-the-governance-of-ai",
+        title: "Open Problems in Technical AI Governance",
+        link: "https://arxiv.org/abs/2407.14981",
         description:
-          "An overview of the ongoing discussion about regulating AI hardware and its implications.",
+          "An overview of technical AI governance and its methods for evaluating and enforcing AI control mechanisms.",
       },
       {
-        title: "AI Governance Needs Technical Work",
-        link: "https://forum.effectivealtruism.org/posts/BJtekdKrAufyKhBGw/ai-governance-needs-technical-work#",
-        description:
-          "Explore how technical skills can contribute to AI governance through regulation, monitoring, and policy advising.",
+        title: "Certified Safe: A Schematic for Approval Regulation of Frontier AI",
+        link: "https://arxiv.org/abs/2408.06210",
+        description: "A proposal for FDA-style approval regulation for frontier AI systems.",
       },
     ],
   },
