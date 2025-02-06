@@ -66,34 +66,56 @@ const weeklyReadings = [
   },
   {
     week: 4,
-    title: "AI Security Concerns",
+    title: "AI Security",
     description:
       "Explore various AI security issues including jailbreaks, adversarial examples, and potential vulnerabilities.",
     readings: [
       {
-        title: "Intro to Large Language Models - Andrej Karpathy",
-        link: "https://www.youtube.com/watch?v=zjkBMFhNj_g",
+        title: "A Playbook for Securing AI Model Weights",
+        link: "https://www.rand.org/pubs/research_briefs/RBA2849-1.html",
+        description: "A comprehensive playbook for protecting AI models from theft and misuse.",
+      },
+      {
+        title: "Four Fallacies of AI Cybersecurity",
+        link: "https://www.rand.org/pubs/commentary/2024/08/four-fallacies-of-ai-cybersecurity.html",
         description:
-          "Watch 42:15 - 59:23 for an overview of LLM security concerns, analogous to OS security.",
-        timeFrame: "42:15 - 59:23",
+          "Aguement that AI cybersecurity must learn from past security lessons, not reinvent them.",
+      },
+      // {
+      //   title: "AI Sleeper Agents",
+      //   link: "https://arxiv.org/pdf/2401.05566",
+      //   description:
+      //     "Read the abstract and page 6 for an introduction to the concept of AI sleeper agents.",
+      // },
+      {
+        title: "Stealing Part of a Production Language Model",
+        link: "https://arxiv.org/abs/2403.06634",
+        description:
+          "How Researchers extract embedding layers from language models through inexpensive API attacks.",
+        // optional: true,
+        timeFrame: "only abstract",
+      },
+      {
+        title: "Sleight of hand: How China weaponizes software vulnerabilities",
+        link: "https://www.atlanticcouncil.org/in-depth-research-reports/report/sleight-of-hand-how-china-weaponizes-software-vulnerability/",
+        description:
+          "China's new regulations force companies to report software vulnerabilities to government agencies.",
+        optional: true,
+        // timeFrame: "only abstract",
       },
       {
         title: "Ironing Out the Squiggles",
         link: "https://www.lesswrong.com/posts/H7fkGinsv8SDxgiS2/ironing-out-the-squiggles",
         description:
           "A paper review post about adversarial examples, their implications, and potential solutions.",
-      },
-      {
-        title: "AI Sleeper Agents",
-        link: "https://arxiv.org/pdf/2401.05566",
-        description:
-          "Read the abstract and page 6 for an introduction to the concept of AI sleeper agents.",
+        optional: true,
       },
       {
         title: "SolidGoldMagikarp - tokens that jailbreak LLMs",
         link: "https://www.lesswrong.com/posts/aPeJE8bSo6rAFoLqg/solidgoldmagikarp-plus-prompt-generation",
         description:
           "Explore a famous case of LLM jailbreaking and its implications for AI security.",
+        optional: true,
       },
     ],
   },
@@ -152,6 +174,7 @@ const weeklyReadings = [
         link: "https://aisafetyfundamentals.com/blog/ai-alignment-approaches/",
         description:
           "An overview of various AI alignment approaches, providing a foundation for further exploration.",
+        optional: true,
       },
       {
         title: "Why Agent Foundations? An Overly Abstract Explanation",
@@ -211,6 +234,7 @@ export default function Fellowship() {
               <ul className={styles.readingList}>
                 {week.readings.map((reading, readingIndex) => (
                   <li key={readingIndex} className={styles.readingItem}>
+                    {reading.optional && <span className={styles.optionalTag}>Optional: </span>}
                     <a
                       href={reading.link}
                       target="_blank"
@@ -218,7 +242,7 @@ export default function Fellowship() {
                       className={styles.readingLink}>
                       {reading.title}
                     </a>
-                    {reading.optional && <span className={styles.optionalTag}> (Optional)</span>}
+
                     {reading.timeFrame && (
                       <span className={styles.timeFrame}> ({reading.timeFrame})</span>
                     )}
