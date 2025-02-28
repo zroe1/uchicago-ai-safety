@@ -30,10 +30,22 @@ export default function LeadershipPage() {
           memberRole="Technical Programming"
         />
         <LeadershipMember
+          imgUrl="/henry.jpeg"
+          memberEmail="henryj@uchicago.edu"
+          memberName="Henry Josephson"
+          memberRole="Governance Research Manager"
+        />
+        <LeadershipMember
+          imgUrl="/michelle.jpeg"
+          memberEmail="mma02@uchicago.edu"
+          memberName="Michelle Ma"
+          memberRole="Governance Research Manager"
+        />
+        <LeadershipMember
           imgUrl={"/seth.jpg"}
           memberEmail=""
           memberName="Seth Poling"
-          memberRole="Governance Research"
+          memberRole="Governance Research Manager"
         />
         <LeadershipMember
           imgUrl="/avik.jpeg"
