@@ -22,7 +22,7 @@ export default function GetInvolved() {
           value-align and upskill undergraduates interested in AI Safety careers.
         </p>
         <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSf4O9WXV85jQKCTS046IDnHUqMbAu85p8vDUFSyncGzoQrJ9g/viewform?usp=sf_link"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSeFHozMw2Asi9qGCOkgWPXjxirIAI6Omp92MbLirEqAFYk-ew/viewform?usp=dialog"
           className={styles.actionButton}>
           Learn More & Apply
         </a>
