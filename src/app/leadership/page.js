@@ -21,32 +21,33 @@ export default function LeadershipPage() {
           imgUrl="/jo.jpeg"
           memberEmail="jialingjiao@uchicago.edu"
           memberName="Jo Jialing Jiao"
-          memberRole="Co-President"
-        />
-        <LeadershipMember
-          imgUrl="/avik.jpeg"
-          memberEmail="avikg@uchicago.edu"
-          memberName="Avik Garg"
-          memberRole="Co-President"
-        />
-        <LeadershipMember
-          imgUrl="/tzu.jpg"
-          memberEmail="chantzukit@gmail.com"
-          memberName="Tzu Kit Chan"
-          memberRole="Advisor"
-        />
-        <LeadershipMember
-          imgUrl={"/seth.jpg"}
-          memberEmail=""
-          memberName="Seth Poling"
-          memberRole="Club Administrator"
+          memberRole="Technical Programming"
         />
         <LeadershipMember
           imgUrl="/zephy-roe.png"
           memberEmail="zroe@uchicago.edu"
           memberName="Zephy Roe"
-          memberRole="Club Administrator"
+          memberRole="Technical Programming"
         />
+        <LeadershipMember
+          imgUrl={"/seth.jpg"}
+          memberEmail=""
+          memberName="Seth Poling"
+          memberRole="Governance Research"
+        />
+        <LeadershipMember
+          imgUrl="/avik.jpeg"
+          memberEmail="avikg@uchicago.edu"
+          memberName="Avik Garg"
+          memberRole="Advisor"
+        />
+        {/* <LeadershipMember
+          imgUrl="/tzu.jpg"
+          memberEmail="chantzukit@gmail.com"
+          memberName="Tzu Kit Chan"
+          memberRole="Advisor"
+        /> */}
+
         <LeadershipMember
           imgUrl="/zach.png"
           memberEmail="zrudolph@uchicago.edu"
