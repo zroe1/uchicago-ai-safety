@@ -24,7 +24,7 @@ export default function LeadershipPage() {
           memberRole="Technical Programming"
         />
         <LeadershipMember
-          imgUrl="/zephy-roe.png"
+          imgUrl="/zephy.png"
           memberEmail="zroe@uchicago.edu"
           memberName="Zephy Roe"
           memberRole="Technical Programming"
