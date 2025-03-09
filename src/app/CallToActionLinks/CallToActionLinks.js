@@ -9,7 +9,7 @@ const CallToActionLinks = () => {
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSeFHozMw2Asi9qGCOkgWPXjxirIAI6Omp92MbLirEqAFYk-ew/viewform?usp=dialog"
             className={styles.link}>
-            Apply to our AI Safety Intro Fellowship
+            Apply to our AI Safety Fundamentals Program
           </a>
           <a href="https://chicagoalignment.com/" className={styles.link}>
             Check out our upcoming convention

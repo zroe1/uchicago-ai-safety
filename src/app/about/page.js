@@ -40,10 +40,13 @@ export default function About() {
       <section className={styles.activitiesSection}>
         <h2 className={styles.secondaryTitle}>Our Activities</h2>
         <ul className={styles.unorderedLst}>
-          <li>Fellowship Program: A structured course to value-align and upskill undergraduates</li>
           <li>
-            Policy Writing Workshops: Collaborating with government officials on policy-relevant
-            questions
+            XLab AI Safety Fundamentals Program: A structured course to value-align and upskill
+            undergraduates
+          </li>
+          <li>
+            AI Policy Research: Collaborating with clients to create novel research on
+            policy-relevant questions in AI Safety
           </li>
           <li>Public Talks: Hosting speakers to increase awareness of AI Safety</li>
           <li>
@@ -66,8 +69,8 @@ export default function About() {
         <h2 className={styles.secondaryTitle}>Get Involved</h2>
         <p className={styles.paragraph}>
           Interested in joining our mission? We&#39;re always looking for passionate students to
-          join our fellowship program, attend our events, or contribute to our projects. To get
-          involved, you can reach out to our presidents, Avik and Jo at{" "}
+          join our XLab AI Safety Fundamentals program, attend our events, or contribute to our
+          projects. To get involved, you can reach out to our presidents, Avik and Jo at{" "}
           <span className={styles.email}>avikg@uchicago.edu</span> and{" "}
           <span className={styles.email}>jialingjiao@uchicago.edu</span> or the deputy director of
           x-lab at <span className={styles.email}>zrudolph@uchicago.edu</span>.

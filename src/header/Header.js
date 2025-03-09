@@ -43,6 +43,11 @@ const Header = () => {
     }, 200); // 150ms delay
   };
 
+  // Function to create URL-friendly slugs
+  const createSlug = (text) => {
+    return text.toLowerCase().replace(/\s+/g, "-");
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -75,10 +80,10 @@ const Header = () => {
             {isMenuOpen && (
               <nav className={styles.mobileNav} aria-label="Mobile navigation">
                 <ul className={styles.mobileNavList}>
-                  {["About", "Leadership", "Get Involved", "Fellowship"].map((item) => (
+                  {["About", "Leadership", "Get Involved", "AI Safety Fundamentals"].map((item) => (
                     <li key={item}>
                       <Link
-                        href={`/${item.toLowerCase().replace(" ", "-")}`}
+                        href={`/${createSlug(item)}`}
                         className={styles.mobileNavLink}
                         onClick={closeMenu}>
                         {item}
@@ -92,11 +97,9 @@ const Header = () => {
         ) : (
           <nav aria-label="Main navigation">
             <ul className={styles.navList}>
-              {["About", "Leadership", "Get Involved", "Fellowship"].map((item) => (
+              {["About", "Leadership", "Get Involved", "AI Safety Fundamentals"].map((item) => (
                 <li key={item}>
-                  <Link
-                    href={`/${item.toLowerCase().replace(" ", "-")}`}
-                    className={styles.navLink}>
+                  <Link href={`/${createSlug(item)}`} className={styles.navLink}>
                     {item}
                   </Link>
                 </li>

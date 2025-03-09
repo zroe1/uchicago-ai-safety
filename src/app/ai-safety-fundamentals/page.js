@@ -208,14 +208,13 @@ const weeklyReadings = [
 export default function Fellowship() {
   return (
     <div className={styles.fellowshipContainer}>
-      <h1 className={styles.pageTitle}>Fellowship</h1>
+      <h1 className={styles.pageTitle}>XLab AI Safety Fundamentals</h1>
       <div className={styles.pageDivider}></div>
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
         <p className={styles.pageDescription}>
-          This fellowship reading list for the UChicago AI Safety Club provides a structured
-          exploration of key AI safety topics across seven weeks. It covers a range of crucial
-          subjects from scaling laws and instrumental convergence to AI governance and critical
-          perspectives on AI safety.
+          This reading list provides a structured exploration of key AI safety topics across seven
+          weeks. It covers a range of crucial subjects from scaling laws and instrumental
+          convergence to AI governance and critical perspectives on AI safety.
         </p>
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSf4O9WXV85jQKCTS046IDnHUqMbAu85p8vDUFSyncGzoQrJ9g/viewform?usp=sf_link"

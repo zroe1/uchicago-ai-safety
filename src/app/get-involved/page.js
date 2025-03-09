@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 export const metadata = {
   title: "Get Involved - UChicago AI Safety",
   description:
-    "Get Involved with UChicago AI Safety. Join our fellowship program, mailing list, or the Chicago Symposium on Transformative AI.",
+    "Get Involved with UChicago AI Safety. Join our AI Safety Fundamentals program, mailing list, or the Chicago Symposium on Transformative AI.",
   keywords: "AI safety, AI alignment, University of Chicago, x-risk lab, AI research",
 };
 
@@ -15,9 +15,9 @@ export default function GetInvolved() {
       <div className={styles.pageDivider}></div>
 
       <section className={styles.fellowshipSection}>
-        <h2>Fellowship Program</h2>
+        <h2>XLab AI Safety Fundamentals Program</h2>
         <p>
-          Join our intensive Learn More & Apply program to dive deep into AI Safety concepts,
+          Join our intensive AI Safety Fundamentals program to dive deep into AI Safety concepts,
           develop your skills, and connect with like-minded peers. Our program is designed to
           value-align and upskill undergraduates interested in AI Safety careers.
         </p>
