@@ -3,11 +3,11 @@ import styles from "./HomeDescription.module.css";
 export default function HomeDescription() {
   return (
     <div className={styles.homeDescriptionContainer}>
-      <h2 className={styles.descriptionSubTitle}>AI Alignment at UChicago</h2>
+      <h2 className={styles.descriptionSubTitle}>AI Safety at UChicago</h2>
       <div className={styles.homePageDivider}></div>
       <p className={styles.homePageDescriptionText}>
         Welcome to UChicago AI Safety, a group of undergraduate students dedicated to addressing AI
-        alignment - the crucial challenge of ensuring artificial intelligence behaves in ways that
+        alignment—the crucial challenge of ensuring artificial intelligence behaves in ways that
         benefit humanity and align with our values.
       </p>
       <p className={styles.homePageDescriptionText}>
@@ -17,12 +17,13 @@ export default function HomeDescription() {
       </p>
       <ol className={styles.homePageDescriptionList}>
         <li>Connecting motivated students to build a strong, supportive community</li>
+        <li>Producing high-quality research and analysis on AI safety</li>
         <li>Encouraging critical thinking and independent thought</li>
         <li>Exposing members to diverse perspectives in AI safety research</li>
       </ol>
       <p className={styles.homePageDescriptionText}>
         By fostering the next generation of AI researchers and ethicists, we strive to make a
-        lasting impact on the future of AI alignment, working towards a future where advanced AI
+        lasting impact on the future of AI safety, working towards a future where advanced AI
         systems benefit all of humanity.
       </p>
     </div>
