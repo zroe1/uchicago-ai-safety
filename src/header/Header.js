@@ -80,16 +80,18 @@ const Header = () => {
             {isMenuOpen && (
               <nav className={styles.mobileNav} aria-label="Mobile navigation">
                 <ul className={styles.mobileNavList}>
-                  {["About", "Leadership", "Get Involved", "AI Safety Fundamentals"].map((item) => (
-                    <li key={item}>
-                      <Link
-                        href={`/${createSlug(item)}`}
-                        className={styles.mobileNavLink}
-                        onClick={closeMenu}>
-                        {item}
-                      </Link>
-                    </li>
-                  ))}
+                  {["Get Involved", "Leadership", "Strategy Group", "AI Safety Fundamentals"].map(
+                    (item) => (
+                      <li key={item}>
+                        <Link
+                          href={`/${createSlug(item)}`}
+                          className={styles.mobileNavLink}
+                          onClick={closeMenu}>
+                          {item}
+                        </Link>
+                      </li>
+                    )
+                  )}
                 </ul>
               </nav>
             )}
@@ -97,13 +99,15 @@ const Header = () => {
         ) : (
           <nav aria-label="Main navigation">
             <ul className={styles.navList}>
-              {["About", "Leadership", "Get Involved", "AI Safety Fundamentals"].map((item) => (
-                <li key={item}>
-                  <Link href={`/${createSlug(item)}`} className={styles.navLink}>
-                    {item}
-                  </Link>
-                </li>
-              ))}
+              {["Get Involved", "Leadership", "Strategy Group", "AI Safety Fundamentals"].map(
+                (item) => (
+                  <li key={item}>
+                    <Link href={`/${createSlug(item)}`} className={styles.navLink}>
+                      {item}
+                    </Link>
+                  </li>
+                )
+              )}
             </ul>
           </nav>
         )}
