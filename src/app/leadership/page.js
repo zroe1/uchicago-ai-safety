@@ -48,17 +48,17 @@ export default function LeadershipPage() {
           memberRole="Governance Research Manager"
         />
         <LeadershipMember
+          imgUrl="/arden.jpeg"
+          memberEmail="aaberg@uchicago.edu "
+          memberName="Arden Berg"
+          memberRole="Ecconomics of Transformative AI Reading Group"
+        />
+        <LeadershipMember
           imgUrl="/avik.jpeg"
           memberEmail="avikg@uchicago.edu"
           memberName="Avik Garg"
           memberRole="Advisor"
         />
-        {/* <LeadershipMember
-          imgUrl="/tzu.jpg"
-          memberEmail="chantzukit@gmail.com"
-          memberName="Tzu Kit Chan"
-          memberRole="Advisor"
-        /> */}
 
         <LeadershipMember
           imgUrl="/zach.png"
