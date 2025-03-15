@@ -21,10 +21,6 @@ const weeklyContent = [
         description: "Situational awareness and scaling analysis",
       },
       {
-        title: "AI Forecasting Questions Answer Key",
-        description: "Review and discuss key forecasting questions",
-      },
-      {
         title: "AI Safety Forecasting Workshop",
         description: "Interactive workshop on AI forecasting",
       },
