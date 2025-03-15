@@ -42,22 +42,22 @@ export default function GetInvolved() {
       <section className={styles.symposiumSection}>
         <h2>Chicago Symposium on Transformative AI</h2>
         <p>
-          Join us for an intensive two-day symposium where undergraduates come together to think
-          rigorously about the future of AI and its implications. The symposium will take place on
-          November 9-10, 2024, at the David Rubenstein Forum, University of Chicago.
+          Applications for the 2025 Chicago Symposium on Transformative AI are now closed. This is
+          an intensive two-day symposium where undergraduates will come together to think rigorously
+          about the future of AI and its implications. The symposium will feature:
         </p>
         <ul>
-          <li>Engage with 30-40 of the most promising undergraduate students in AI Safety</li>
-          <li>Hear from speakers in technical AI alignment and AI governance</li>
-          <li>Collaborate with peers to challenge assumptions and develop new ideas</li>
-          <li>Participate in pre-conference preparation to maximize the symposium&#39s impact</li>
+          <li>Engagement with 30-40 of the most promising undergraduate students in AI Safety</li>
+          <li>Talks from speakers in technical AI alignment and AI governance</li>
+          <li>Peer collaboration to challenge assumptions and develop new ideas</li>
         </ul>
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSeawF6v2f9KHdGdV4mZW_coewp26g9eQWOtQYOtBr8h8ltmBg/viewform"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.actionButton}>
-          Express Interest
+        <p>
+          Join our mailing list to be notified about future symposiums and similar opportunities.{" "}
+          <a href="https://lists.uchicago.edu/web/info/aisafety">Click here</a> to join. To learn
+          more about the symposium, click the button below.
+        </p>
+        <a href="https://chicagoalignment.com/" className={styles.actionButton}>
+          Learn More
         </a>
       </section>
 
@@ -65,10 +65,7 @@ export default function GetInvolved() {
         <h2>Contact Us</h2>
         <p>
           Have questions or want to learn more? Don&#39;t hesitate to reach out to us directly. You
-          can contact our presidents Avik and Jo at{" "}
-          <span className={styles.email}>avikg@uchicago.edu</span> and{" "}
-          <span className={styles.email}>jialingjiao@uchicago.edu</span> or the deputy director of
-          x-lab at <span className={styles.email}>zrudolph@uchicago.edu</span>.
+          can find our contact information on the leadership page of this website.
         </p>
       </section>
     </div>
