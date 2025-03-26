@@ -13,7 +13,14 @@ const weeklyReadings = [
     title: "Scaling and Instrumental Convergence",
     description:
       "Explore the implications of increasingly intelligent systems, focusing on scaling laws, superintelligence, and instrumental convergence.",
+    // https://www.vox.com/future-perfect/2018/12/21/18126576/ai-artificial-intelligence-machine-learning-safety-alignment
     readings: [
+      {
+        title: "The case for taking AI seriously as a threat to humanity",
+        link: "https://www.vox.com/future-perfect/2018/12/21/18126576/ai-artificial-intelligence-machine-learning-safety-alignment",
+        description:
+          "A Vox article that argues we should take AI seriously as a threat to humanity.",
+      },
       {
         title: "Transformer Language Models (Video)",
         link: "https://www.youtube.com/watch?v=5eqRuVp65eY",
@@ -24,6 +31,7 @@ const weeklyReadings = [
       {
         title:
           "The Superintelligent Will: Motivation and Instrumental Rationality in Advanced Artificial Agents",
+        optional: true,
         link: "https://nickbostrom.com/superintelligentwill.pdf",
         description:
           "Nick Bostrom's influential work on power-seeking and instrumental convergence in AI systems.",
