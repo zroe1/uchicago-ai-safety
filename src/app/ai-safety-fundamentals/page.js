@@ -19,7 +19,7 @@ const weeklyReadings = [
         title: "The case for taking AI seriously as a threat to humanity",
         link: "https://www.vox.com/future-perfect/2018/12/21/18126576/ai-artificial-intelligence-machine-learning-safety-alignment",
         description:
-          "A Vox article that argues we should take AI seriously as a threat to humanity.",
+          "We read only through section 5. This Vox article from 2020 ages remarkably well, laying out the key arguments for why we should consider AI a threat to humanity.",
       },
       {
         title: "Transformer Language Models (Video)",
