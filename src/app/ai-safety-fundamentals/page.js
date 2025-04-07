@@ -44,6 +44,11 @@ const weeklyReadings = [
     description: "Examine the challenges in correctly specifying training goals for AI systems.",
     readings: [
       {
+        title: "Specification Gaming: How AI Can Turn Your Wishes Against You",
+        link: "https://www.youtube.com/watch?v=jQOBaGka7O0",
+        description: "A fun video from 2023 that discusses the problem of specification gaming.",
+      },
+      {
         title: "Specification gaming: the flip side of AI ingenuity",
         link: "https://deepmind.google/discover/blog/specification-gaming-the-flip-side-of-ai-ingenuity/",
         description:
