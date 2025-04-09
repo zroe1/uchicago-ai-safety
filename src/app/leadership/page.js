@@ -51,7 +51,7 @@ export default function LeadershipPage() {
           imgUrl="/arden.jpeg"
           memberEmail="aaberg@uchicago.edu "
           memberName="Arden Berg"
-          memberRole="Ecconomics of Transformative AI Reading Group"
+          memberRole="Economics of Transformative AI Reading Group"
         />
         <LeadershipMember
           imgUrl="/avik.jpeg"
