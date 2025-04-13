@@ -64,10 +64,22 @@ const weeklyReadings = [
   },
   {
     week: 3,
-    title: "Deception & Mesa-optimization",
+    title: "Deception, Inner Alignment & Mechanistic Interpretability",
     description:
       "Investigate the concept of mesa-optimizers and the potential for deceptive behavior in AI systems.",
     readings: [
+      {
+        title: "Alignment Faking",
+        link: "https://www.anthropic.com/research/alignment-faking",
+        description:
+          "Anthropic's research on alignment faking, where LLMs strategically attempt to preserve their values during training.",
+      },
+      {
+        title: "Mechanistic Interpretability, Variables, and the Importance of Interpretable Bases",
+        link: "https://www.transformer-circuits.pub/2022/mech-interp-essay",
+        description:
+          "An informal note on some intuitions related to Mechanistic Interpretability by Chris Olah.",
+      },
       {
         title: "Deceptive Alignment",
         link: "https://arxiv.org/pdf/1906.01820",
