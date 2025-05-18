@@ -42,12 +42,6 @@ export default function LeadershipPage() {
           memberRole="Governance Research Manager"
         />
         <LeadershipMember
-          imgUrl={"/seth.jpg"}
-          memberEmail=""
-          memberName="Seth Poling"
-          memberRole="Governance Research Manager"
-        />
-        <LeadershipMember
           imgUrl="/arden.jpeg"
           memberEmail="aaberg@uchicago.edu "
           memberName="Arden Berg"
