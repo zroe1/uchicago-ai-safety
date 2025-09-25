@@ -241,7 +241,7 @@ export default function Fellowship() {
           convergence to AI governance and critical perspectives on AI safety.
         </p>
         <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSeFHozMw2Asi9qGCOkgWPXjxirIAI6Omp92MbLirEqAFYk-ew/viewform?usp=sharing"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfoweBGdDlvbWUoikeaR_K8V8T4A_b8sY_GYgCS-Qg-R6dfjQ/viewform?usp=header"
           className={styles.actionButton}>
           Learn More & Apply
         </a>
