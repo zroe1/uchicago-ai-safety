@@ -10,33 +10,55 @@ export const metadata = {
 const weeklyReadings = [
   {
     week: 1,
-    title: "Scaling and Instrumental Convergence",
-    description:
-      "Explore the implications of increasingly intelligent systems, focusing on scaling laws, superintelligence, and instrumental convergence.",
-    // https://www.vox.com/future-perfect/2018/12/21/18126576/ai-artificial-intelligence-machine-learning-safety-alignment
+    title: "Philoposhical and Political Foundations of AI Safety",
+    description: "Explore the philosophical and political foundations of AI safety.",
     readings: [
       {
-        title: "The case for taking AI seriously as a threat to humanity",
-        link: "https://www.vox.com/future-perfect/2018/12/21/18126576/ai-artificial-intelligence-machine-learning-safety-alignment",
-        description:
-          "We read only through section 5. This Vox article from 2020 ages remarkably well, laying out the key arguments for why we should consider AI a threat to humanity.",
-      },
-      {
-        title: "Transformer Language Models (Video)",
-        link: "https://www.youtube.com/watch?v=5eqRuVp65eY",
-        description:
-          "Watch 0:00 - 11:30 for an accessible introduction to scaling laws in language models.",
-        timeFrame: "0:00 - 11:30",
+        title: "Machines of Loving Grace",
+        link: "https://www.darioamodei.com/essay/machines-of-loving-grace",
+        description: "Dario Amodei's essay on the potential future of advanced AI systems.",
       },
       {
         title:
           "The Superintelligent Will: Motivation and Instrumental Rationality in Advanced Artificial Agents",
-        optional: true,
         link: "https://nickbostrom.com/superintelligentwill.pdf",
         description:
-          "Nick Bostrom's influential work on power-seeking and instrumental convergence in AI systems.",
+          "Nick Bostrom's paper on the potentially dangerous goals advanced AI systems will develop.",
+      },
+      {
+        title: "AI 2027",
+        link: "https://ai-2027.com/",
+        description: "A narrative-form forecast of when and how AGI may be developed.",
       },
     ],
+    // week: 1,
+    // title: "Scaling and Instrumental Convergence",
+    // description:
+    //   "Explore the implications of increasingly intelligent systems, focusing on scaling laws, superintelligence, and instrumental convergence.",
+    // // https://www.vox.com/future-perfect/2018/12/21/18126576/ai-artificial-intelligence-machine-learning-safety-alignment
+    // readings: [
+    //   {
+    //     title: "The case for taking AI seriously as a threat to humanity",
+    //     link: "https://www.vox.com/future-perfect/2018/12/21/18126576/ai-artificial-intelligence-machine-learning-safety-alignment",
+    //     description:
+    //       "We read only through section 5. This Vox article from 2020 ages remarkably well, laying out the key arguments for why we should consider AI a threat to humanity.",
+    //   },
+    //   {
+    //     title: "Transformer Language Models (Video)",
+    //     link: "https://www.youtube.com/watch?v=5eqRuVp65eY",
+    //     description:
+    //       "Watch 0:00 - 11:30 for an accessible introduction to scaling laws in language models.",
+    //     timeFrame: "0:00 - 11:30",
+    //   },
+    //   {
+    //     title:
+    //       "The Superintelligent Will: Motivation and Instrumental Rationality in Advanced Artificial Agents",
+    //     optional: true,
+    //     link: "https://nickbostrom.com/superintelligentwill.pdf",
+    //     description:
+    //       "Nick Bostrom's influential work on power-seeking and instrumental convergence in AI systems.",
+    //   },
+    // ],
   },
   {
     week: 2,
