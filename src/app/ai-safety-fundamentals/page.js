@@ -11,24 +11,41 @@ const weeklyReadings = [
   {
     week: 1,
     title: "Philoposhical and Political Foundations of AI Safety",
-    description: "Explore the philosophical and political foundations of AI safety.",
+    description: "Explore the implications of increasingly intelligent systems.",
     readings: [
+      {
+        title: "AI 2027",
+        link: "https://ai-2027.com/",
+        description: "A narrative-form scenario describing the geopolitical dynamics and risks of the development of AGI.",
+      },
+      {
+        title: "Measuring AI Ability to Complete Long Tasks",
+        link: "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/",
+        description: "A benchmark measuring the trajectory of the length of tasks AIs can complete."
+      },
+      {
+        title: "Existential Risk from Power-Seeking AI",
+        link: "https://jc.gatspress.com/pdf/existential_risk_and_powerseeking_ai.pdf",
+        description: "Joe Carlsmith lays out the case for why advanced AIs might develop power-seeking tendencies and how this could lead to catastrophe."
+      },
       {
         title: "Machines of Loving Grace",
         link: "https://www.darioamodei.com/essay/machines-of-loving-grace",
-        description: "Dario Amodei's essay on the potential future of advanced AI systems.",
+        description: "Dario Amodei's essay on the benefits powerful AI systems could bring.",
+        optional: true
       },
+      {
+        title: "Trends in Artificial Intelligence | Epoch AI",
+        link: "https://epoch.ai/trends", 
+        description: "A measurement of the central trends driving continued AI progress.",
+        optional: true
       {
         title:
           "The Superintelligent Will: Motivation and Instrumental Rationality in Advanced Artificial Agents",
         link: "https://nickbostrom.com/superintelligentwill.pdf",
         description:
-          "Nick Bostrom's paper on the potentially dangerous goals advanced AI systems will develop.",
-      },
-      {
-        title: "AI 2027",
-        link: "https://ai-2027.com/",
-        description: "A narrative-form forecast of when and how AGI may be developed.",
+          "Nick Bostrom's paper on the potential goals advanced AI systems are likely or unlikely to develop by default.",
+        optional: true
       },
     ],
     // week: 1,
