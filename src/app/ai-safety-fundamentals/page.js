@@ -10,7 +10,7 @@ export const metadata = {
 const weeklyReadings = [
   {
     week: 1,
-    title: "Philoposhical and Political Foundations of AI Safety",
+    title: "Philosophical and Political Foundations of AI Safety",
     description: "Explore the implications of increasingly intelligent systems.",
     readings: [
       {
@@ -39,6 +39,7 @@ const weeklyReadings = [
         link: "https://epoch.ai/trends", 
         description: "A measurement of the central trends driving continued AI progress.",
         optional: true
+      },
       {
         title:
           "The Superintelligent Will: Motivation and Instrumental Rationality in Advanced Artificial Agents",
