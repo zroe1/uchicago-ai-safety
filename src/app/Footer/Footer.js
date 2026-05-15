@@ -7,13 +7,16 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.logoSection}>
-          <Image
-            src="/logo.png"
-            alt="AI Safety Student Team Logo"
-            width={468 * 0.5}
-            height={288 * 0.5}
-            className={styles.logo}
-          />
+          <div className={styles.brandGroup}>
+            <Image
+              src="/x-tech_2CBM.png"
+              alt="AI Safety Student Team Logo"
+              width={70}
+              height={70}
+              className={styles.logo}
+            />
+            <span className={styles.brandText}>UChicago AI Safety</span>
+          </div>
           <p className={styles.x}>|</p>
           <Image
             src="/x-lab-logo.png"

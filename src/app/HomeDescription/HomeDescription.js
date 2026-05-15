@@ -3,8 +3,6 @@ import styles from "./HomeDescription.module.css";
 export default function HomeDescription() {
   return (
     <div className={styles.homeDescriptionContainer}>
-      <h2 className={styles.descriptionSubTitle}>AI Safety at UChicago</h2>
-      <div className={styles.homePageDivider}></div>
       <p className={styles.homePageDescriptionText}>
         Welcome to UChicago AI Safety, a group of undergraduate students dedicated to addressing AI
         alignment—the crucial challenge of ensuring artificial intelligence behaves in ways that

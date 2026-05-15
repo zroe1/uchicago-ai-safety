@@ -19,10 +19,64 @@
     justify-content: center;
 }
 
+.section {
+    width: 80%;
+    margin: 0 auto 3rem auto;
+}
+
+.sectionTitle {
+    font-size: 1.8rem;
+    color: #8B1724;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.simpleGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.simpleCard {
+    width: 220px;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    text-align: center;
+    transition: border-color 0.2s ease;
+}
+
+.simpleCard:hover {
+    border-color: #8B1724;
+}
+
+.simpleName {
+    font-weight: 700;
+    margin: 0 0 0.3rem 0;
+    font-size: 1rem;
+}
+
+.simpleRole {
+    color: #8B1724;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.simpleEmail {
+    color: #555;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
 @media screen and (max-width: 768px) {
     .pageDescription {
         width: 80%;
         margin-left: 10%;
     }
-    
+
+    .section {
+        width: 95%;
+    }
 }

@@ -1,7 +1,6 @@
 import styles from "./page.module.css";
 import Image from "next/image";
 import CallToActionLinks from "@/app/CallToActionLinks/CallToActionLinks";
-import HomeDescription from "./HomeDescription/HomeDescription";
 
 export const metadata = {
   title: "UChicago AI Safety",
@@ -24,7 +23,7 @@ export default function Home() {
               <a
                 style={{ color: "#8B1724", fontWeight: "bold" }}
                 href="https://xrisk.uchicago.edu/">
-                The University of Chicago&#39;s existential risk lab
+                The University of Chicago&#39;s Existential Risk Laboratory
               </a>
               .
             </h2>
@@ -39,7 +38,6 @@ export default function Home() {
         </div>
       </div>
       <CallToActionLinks />
-      <HomeDescription />
     </>
   );
 }

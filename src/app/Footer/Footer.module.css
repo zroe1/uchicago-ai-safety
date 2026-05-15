@@ -14,6 +14,18 @@
   flex-wrap: wrap;
 }
 
+.brandGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.brandText {
+  color: #8b1724;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
 .x {
   font-size: 25px;
   margin: 0 12px;

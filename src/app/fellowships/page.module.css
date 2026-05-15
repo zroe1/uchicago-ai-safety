@@ -1,0 +1,109 @@
+.fellowshipsContainer {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: 0.5rem;
+}
+
+.pageTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  margin-top: 0px;
+}
+
+.pageDivider {
+  width: 30%;
+  height: 3px;
+  background-color: #8b1724;
+  margin-bottom: 2.5rem;
+}
+
+.fellowshipGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.fellowshipCard {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.75rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fellowshipCard:hover {
+  border-color: #8b1724;
+  box-shadow: 0 2px 8px rgba(139, 23, 36, 0.1);
+}
+
+.fellowshipName {
+  font-size: 1.5rem;
+  color: #8b1724;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.fellowshipDescription {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 1.25rem;
+}
+
+.syllabusLink {
+  display: inline-block;
+  background-color: #8b1724;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.syllabusLink:hover {
+  background-color: #6d111c;
+}
+
+.comingSoon {
+  font-size: 0.9rem;
+  color: #999;
+  font-style: italic;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.applyButton {
+  background-color: #8b1724;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.1rem;
+  border-radius: 4px;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.applyButton:hover {
+  background-color: #6d111c;
+}
+
+.applyMessage {
+  margin: 1rem 0 0 0;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 0.75rem;
+}
+
+.applyMessageLink {
+  color: #8b1724;
+  text-decoration: underline;
+}

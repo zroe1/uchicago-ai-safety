@@ -7,12 +7,15 @@ const CallToActionLinks = () => {
       <div className={styles.innerContainer}>
         <div className={styles.linkContainer}>
           <a
-            href="https://coda.io/form/AI-Safety-Fundamentals-Application-Spring-2025_dfkdiryGjhQ"
+            href="https://coda.io/form/Spring-2026-Leadership-Application_dzKEtAMgmOx"
             className={styles.link}>
-            Apply to our AI Safety Fundamentals Program
+            Apply to Join Our Leadership Team
           </a>
           <a href="https://lists.uchicago.edu/web/info/aisafety" className={styles.link}>
-            Join our mailing list
+            Join Our Mailing List
+          </a>
+          <a href="https://join.slack.com/t/xlab-uchicago/shared_invite/zt-3xut0ezhs-z_3ga8GnpqyMQPHlbu6qZA" className={styles.link}>
+            Join Our Slack
           </a>
         </div>
       </div>

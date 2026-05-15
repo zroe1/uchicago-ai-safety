@@ -115,49 +115,19 @@ const weeklyContent = [
 export default function StrategyGroup() {
   return (
     <div className={styles.strategyContainer}>
-      <h1 className={styles.pageTitle}>XLab AI Strategy Group</h1>
+      <h1 className={styles.pageTitle}>Strategy and Forecasting Fellowship</h1>
       <div className={styles.pageDivider}></div>
 
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
         <p className={styles.pageDescription}>
-          Amidst the accelerating capabilities of models like o3 and the decreasing cost-performance
-          ratio of models such as Deepseek-r1, Transformative AI—technology capable of
-          &quot;precipitating a transition comparable to (or more significant than) the agricultural
-          or industrial revolution&quot;—is approaching swiftly. To ensure the best outcomes, it is
-          crucial to develop a coherent narrative about the future of AGI, one that integrates
-          technological progress with political developments in the context of an AGI arms race.
+          As frontier models grow more capable and the cost of frontier-level performance continues
+          to fall, transformative AI is approaching quickly. Navigating it well requires a coherent
+          picture of where AGI is headed, one that integrates technical progress with the political
+          dynamics of an AGI arms race. This reading and discussion group is dedicated to building
+          shared understanding around the crucial questions of transformative AI. Fellows engage in
+          forecasting informed by scaling laws, threat modeling, and a tabletop wargame exercise,
+          culminating in each fellow writing their own AGI takeoff scenario.
         </p>
-        <p className={styles.pageDescription}>
-          XLab AI Strategy is a 7-week focus group that aims to develop shared understanding on the
-          crux questions of Transformative AI. Along the way, we will be doing forecasting informed
-          by scaling laws, threat-modelling, a tabletop wargame (premise: we reach AGI in 2027), and
-          many more. By the end, you will write your own AGI takeoff scenario.
-        </p>
-        <div className={styles.infoBox}>
-          <h3>Format</h3>
-          <p>
-            The fellowship will run from week 2 to week 8 for 1.5 hours each week, schedule TBA.
-          </p>
-
-          <h3>Who we are looking for</h3>
-          <p>
-            We are looking for 10-12 UChicago students who have thought a lot about the future of
-            AGI along all dimensions, including technology, economics, ethics, political science,
-            philosophy, etc. Technical experience is not required though having some intuition for
-            neural networks would be helpful. We will pay a lot of attention to your writing.
-          </p>
-
-          <h3>Application</h3>
-          <p>
-            Apply here by March 24, Monday of week 1. Contact Jo at{" "}
-            <span className={styles.email}>jojiao@uchicago.edu</span> if you have any questions.
-          </p>
-        </div>
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSeFHozMw2Asi9qGCOkgWPXjxirIAI6Omp92MbLirEqAFYk-ew/viewform?usp=sharing"
-          className={styles.actionButton}>
-          Apply Now
-        </a>
       </div>
 
       <div className={styles.weeklyContent}>

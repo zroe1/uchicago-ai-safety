@@ -25,56 +25,78 @@
 .weeklyReadings {
     margin-top: 2rem;
   }
-  
+
   .weekSection {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e0e0e0;
   }
-  
+
+  .weekSection:last-child {
+    border-bottom: none;
+  }
+
   .weekTitle {
     font-size: 1.8rem;
     color: #8B1724;
     margin-bottom: 0.5rem;
   }
-  
+
   .weekDescription {
     font-size: 1.2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: #333;
   }
-  
+
   .readingList {
     list-style-type: none;
     padding-left: 0;
   }
-  
+
   .readingItem {
-    margin-bottom: 1rem;
-    margin-left: 20px;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    transition: all 0.2s ease;
   }
-  
+
+  .readingItem:hover {
+    border-color: #8B1724;
+    box-shadow: 0 2px 4px rgba(139, 23, 36, 0.1);
+  }
+
   .readingLink {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: #8B1724;
     text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
   }
-  
+
   .readingLink:hover {
     text-decoration: underline;
   }
-  
+
   .optionalTag, .timeFrame {
     font-size: 1.0rem;
     font-weight: bold;
     color: #400606;
   }
-  
+
   .readingDescription {
     font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
     margin-top: 0.25rem;
   }
-  
+
   .noReadings {
     font-style: italic;
     color: #666;
+    text-align: center;
+    padding: 1rem;
   }
 
   .actionButton {

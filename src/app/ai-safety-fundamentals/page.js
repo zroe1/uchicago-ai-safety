@@ -272,19 +272,16 @@ const weeklyReadings = [
 export default function Fellowship() {
   return (
     <div className={styles.fellowshipContainer}>
-      <h1 className={styles.pageTitle}>XLab AI Safety Fundamentals</h1>
+      <h1 className={styles.pageTitle}>AI Safety Fundamentals Fellowship</h1>
       <div className={styles.pageDivider}></div>
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
         <p className={styles.pageDescription}>
-          This reading list provides a structured exploration of key AI safety topics across seven
-          weeks. It covers a range of crucial subjects from scaling laws and instrumental
-          convergence to AI governance and critical perspectives on AI safety.
+          Our flagship fellowship introduces fellows from any background to the core ideas in AI
+          safety, with a particular focus on existential risk from advanced AI. By the program&apos;s
+          end, fellows will have a working map of the field and the foundation to dive deeper into
+          the subareas that interest them.
         </p>
-        <a
-          href="https://coda.io/form/AI-Safety-Fundamentals-Application-Spring-2025_dfkdiryGjhQ"
-          className={styles.actionButton}>
-          Learn More & Apply
-        </a>
+
       </div>
       <div className={styles.weeklyReadings}>
         {weeklyReadings.map((week, index) => (
