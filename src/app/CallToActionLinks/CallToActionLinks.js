@@ -14,7 +14,7 @@ const CallToActionLinks = () => {
           <a href="https://lists.uchicago.edu/web/info/aisafety" className={styles.link}>
             Join Our Mailing List
           </a>
-          <a href="https://join.slack.com/t/xlab-uchicago/shared_invite/zt-3xut0ezhs-z_3ga8GnpqyMQPHlbu6qZA" className={styles.link}>
+          <a href="https://join.slack.com/t/xlab-uchicago/shared_invite/zt-3y40eokbn-U3Pc5k7UosBic0eljNg5Bg" className={styles.link}>
             Join Our Slack
           </a>
         </div>
