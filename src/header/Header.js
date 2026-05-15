@@ -59,7 +59,10 @@ const Header = () => {
             height={100}
             className={styles.logo}
           />
-          <span className={styles.logoText}>UChicago AI Safety</span>
+          <span className={styles.logoText}>
+            <span>UChicago</span>
+            <span>AI Safety</span>
+          </span>
         </a>
         {isMobile ? (
           <div className={styles.mobileMenuContainer}>
