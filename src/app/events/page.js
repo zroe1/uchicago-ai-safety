@@ -17,6 +17,24 @@ export default function Events() {
         <h2 className={styles.sectionTitle}>Upcoming Events</h2>
 
         <div className={styles.eventCard}>
+          <h3 className={styles.eventName}>Midwest AIS Retreat</h3>
+          <p className={styles.eventDate}>October 2026</p>
+          <p className={styles.eventDescription}>Details coming soon.</p>
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <h2 className={styles.sectionTitle}>Past Events</h2>
+
+        <div className={styles.eventCard}>
+          <h3 className={styles.eventName}>Lightning Talks — Spring Quarter &apos;26</h3>
+          <p className={styles.eventDate}>Friday, May 22, 2026</p>
+          <p className={styles.eventDescription}>
+            Hear quick talks on AI Safety from members of our community.
+          </p>
+        </div>
+
+        <div className={styles.eventCard}>
           <h3 className={styles.eventName}>Uncommon Hacks AI Safety Track</h3>
           <p className={styles.eventDate}>May 16–17, 2026</p>
           <p className={styles.eventDescription}>
@@ -34,24 +52,6 @@ export default function Events() {
             Learn More
           </a>
         </div>
-
-        <div className={styles.eventCard}>
-          <h3 className={styles.eventName}>Lightning Talks — Spring Quarter &apos;26</h3>
-          <p className={styles.eventDate}>Friday, May 22, 2026</p>
-          <p className={styles.eventDescription}>
-            Hear quick talks on AI Safety from members of our community.
-          </p>
-        </div>
-
-        <div className={styles.eventCard}>
-          <h3 className={styles.eventName}>Midwest AIS Retreat</h3>
-          <p className={styles.eventDate}>October 2026</p>
-          <p className={styles.eventDescription}>Details coming soon.</p>
-        </div>
-      </section>
-
-      <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>Past Events</h2>
 
         <div className={styles.eventCard}>
           <h3 className={styles.eventName}>Speaker Event with Aryan Bhatt</h3>

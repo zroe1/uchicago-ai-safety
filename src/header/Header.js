@@ -86,21 +86,7 @@ const Header = () => {
                           onClick={closeMenu}>
                           {item}
                         </Link>
-                        {item === "Fellowships" && (
-                          <ul className={styles.mobileSubList}>
-                            <li>
-                              <Link href="/ai-safety-fundamentals" className={styles.mobileSubLink} onClick={closeMenu}>
-                                AI Safety Fundamentals
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href="/strategy-group" className={styles.mobileSubLink} onClick={closeMenu}>
-                                Strategy &amp; Forecasting
-                              </Link>
-                            </li>
-                          </ul>
-                        )}
-                      </li>
+                        </li>
                     )
                   )}
                 </ul>
@@ -112,24 +98,10 @@ const Header = () => {
             <ul className={styles.navList}>
               {["About Us", "Research", "Fellowships", "Events", "Leadership"].map(
                 (item) => (
-                  <li key={item} className={item === "Fellowships" ? styles.dropdownParent : ""}>
+                  <li key={item}>
                     <Link href={`/${createSlug(item)}`} className={styles.navLink}>
-                      {item}{item === "Fellowships" && " ▾"}
+                      {item}
                     </Link>
-                    {item === "Fellowships" && (
-                      <ul className={styles.dropdown}>
-                        <li>
-                          <Link href="/ai-safety-fundamentals" className={styles.dropdownLink}>
-                            AI Safety Fundamentals
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/strategy-group" className={styles.dropdownLink}>
-                            Strategy &amp; Forecasting
-                          </Link>
-                        </li>
-                      </ul>
-                    )}
                   </li>
                 )
               )}
