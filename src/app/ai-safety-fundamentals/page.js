@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./page.module.css";
+import NodeField from "@/app/ornaments/NodeField";
+import GridFade from "@/app/ornaments/GridFade";
 
 export const metadata = {
   title: "XLab AI Safety Fundamentals",
@@ -271,41 +273,43 @@ const weeklyReadings = [
 
 export default function Fellowship() {
   return (
-    <div className={styles.fellowshipContainer}>
-      <h1 className={styles.pageTitle}>AI Safety Fundamentals Fellowship</h1>
-      <div className={styles.pageDivider}></div>
-      <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-        <p className={styles.pageDescription}>
+    <div className={styles.pageWrap}>
+      <GridFade />
+      <NodeField />
+      <div className={styles.fellowshipContainer}>
+      <header className={styles.pageHeader}>
+        <p className={styles.eyebrow}>Fellowship Syllabus</p>
+        <h1 className={styles.pageTitle}>AI Safety Fundamentals</h1>
+        <p className={styles.pageLede}>
           Our flagship fellowship introduces fellows from any background to the core ideas in AI
           safety, with a particular focus on existential risk from advanced AI. By the program&apos;s
           end, fellows will have a working map of the field and the foundation to dive deeper into
           the subareas that interest them.
         </p>
-
-      </div>
+      </header>
       <div className={styles.weeklyReadings}>
         {weeklyReadings.map((week, index) => (
-          <div key={index} className={styles.weekSection}>
-            <h2 className={styles.weekTitle}>
-              Week {week.week}: {week.title}
-            </h2>
+          <section key={index} className={styles.weekSection}>
+            <p className={styles.weekNum}>Week {String(week.week).padStart(2, "0")}</p>
+            <h2 className={styles.weekTitle}>{week.title}</h2>
             <p className={styles.weekDescription}>{week.description}</p>
             {week.readings.length > 0 ? (
               <ul className={styles.readingList}>
                 {week.readings.map((reading, readingIndex) => (
                   <li key={readingIndex} className={styles.readingItem}>
-                    {reading.optional && <span className={styles.optionalTag}>Optional: </span>}
-                    <a
-                      href={reading.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={styles.readingLink}>
-                      {reading.title}
-                    </a>
-
-                    {reading.timeFrame && (
-                      <span className={styles.timeFrame}> ({reading.timeFrame})</span>
-                    )}
+                    <span className={styles.readingHead}>
+                      <a
+                        href={reading.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.readingLink}>
+                        {reading.title}
+                      </a>
+                      {reading.optional && <span className={styles.optionalTag}>Optional</span>}
+                      {reading.timeFrame && (
+                        <span className={styles.timeFrame}>{reading.timeFrame}</span>
+                      )}
+                    </span>
                     <p className={styles.readingDescription}>{reading.description}</p>
                   </li>
                 ))}
@@ -313,8 +317,9 @@ export default function Fellowship() {
             ) : (
               <p className={styles.noReadings}>No readings available for this week yet.</p>
             )}
-          </div>
+          </section>
         ))}
+      </div>
       </div>
     </div>
   );

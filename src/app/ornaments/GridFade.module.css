@@ -1,0 +1,20 @@
+.grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: min(480px, 65vh);
+  z-index: -1;
+  pointer-events: none;
+  background-image: radial-gradient(
+      ellipse 55% 60% at 50% -10%,
+      rgba(var(--maroon-rgb), 0.055),
+      transparent 70%
+    ),
+    linear-gradient(rgba(var(--ink-rgb), 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--ink-rgb), 0.035) 1px, transparent 1px);
+  background-size: auto, 56px 56px, 56px 56px;
+  background-repeat: no-repeat, repeat, repeat;
+  mask-image: radial-gradient(ellipse 85% 92% at 50% 0%, black 22%, transparent 74%);
+  -webkit-mask-image: radial-gradient(ellipse 85% 92% at 50% 0%, black 22%, transparent 74%);
+}

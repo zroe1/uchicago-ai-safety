@@ -1,5 +1,7 @@
 import styles from "./page.module.css";
 import LeadershipMember from "./LeadershipMember";
+import NodeField from "@/app/ornaments/NodeField";
+import GridFade from "@/app/ornaments/GridFade";
 
 export const metadata = {
   title: "Leadership Team - UChicago AI Safety",
@@ -11,8 +13,6 @@ const executiveBoard = [
   { imgUrl: "/julian.jpg", memberName: "Julian Huang", memberRole: "Executive Board Member", memberEmail: "julianhuang@uchicago.edu" },
   { imgUrl: "/nolan.jpg", memberName: "Nolan Johnson", memberRole: "Executive Board Member", memberEmail: "njohnson10@uchicago.edu" },
   { imgUrl: "/evie.png",   memberName: "Evie Hu",       memberRole: "Executive Board Member", memberEmail: "evelynhu@uchicago.edu", objectPosition: "35% top" },
-  { imgUrl: "/jo.jpeg",    memberName: "Jo Jiao",        memberRole: "Executive Board Member", memberEmail: "jialingjiao@uchicago.edu" },
-  { imgUrl: "/zephy.png",  memberName: "Zephy Roe",      memberRole: "Executive Board Member", memberEmail: "zroe@uchicago.edu" },
   { imgUrl: "/zach.png",   memberName: "Zachary Rudolph", memberRole: "X-Lab Deputy Director", memberEmail: "zrudolph@uchicago.edu" },
 ];
 
@@ -31,6 +31,8 @@ const organizers = [
 ];
 
 const advisors = [
+  { memberName: "Jo Jiao",         memberEmail: "jialingjiao@uchicago.edu" },
+  { memberName: "Zephy Roe",       memberEmail: "zroe@uchicago.edu" },
   { memberName: "Henry Josephson", memberEmail: "henryj@uchicago.edu" },
   { memberName: "Michelle Ma",     memberEmail: "mma02@uchicago.edu" },
   { memberName: "Arden Berg",      memberEmail: "aaberg@uchicago.edu" },
@@ -39,16 +41,23 @@ const advisors = [
 
 export default function LeadershipPage() {
   return (
-    <div>
-      <h1 className={styles.pageTitle}>Our Leadership Team</h1>
-      <p className={styles.pageDescription}>
-        Meet the dedicated individuals who lead our AI safety group. We are here to help you
-        through your AI safety journey. If you have any questions, we&apos;d love to hear from you!
-      </p>
+    <div className={styles.pageWrap}>
+      <GridFade />
+      <NodeField clearWidth={1160} />
+      <div className={styles.leadershipContainer}>
+        <header className={styles.pageHeader}>
+        <p className={styles.eyebrow}>Our Team</p>
+        <h1 className={styles.pageTitle}>Leadership</h1>
+        <p className={styles.pageLede}>
+          Meet the dedicated individuals who lead our AI safety group. We are here to help you
+          through your AI safety journey — if you have any questions, we&apos;d love to hear from
+          you.
+        </p>
+      </header>
 
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Executive Board</h2>
-        <div className={styles.LeaderContainer}>
+        <div className={styles.leaderGrid}>
           {executiveBoard.map((member) => (
             <LeadershipMember key={member.memberName} {...member} />
           ))}
@@ -78,6 +87,7 @@ export default function LeadershipPage() {
           ))}
         </div>
       </section>
+      </div>
     </div>
   );
 }

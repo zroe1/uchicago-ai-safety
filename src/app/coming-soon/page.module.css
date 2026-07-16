@@ -1,17 +1,113 @@
-.container {
-    width: 60%;
-    margin-left: 20%;
-    height: 55vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.pageWrap {
+  position: relative;
+  overflow: clip;
 }
 
-@media screen and (max-width: 768px) {
-    .container {
-        width: 80%;
-        margin-left: 10%;
-    }
-    
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  min-height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem var(--page-pad);
+}
+
+.recursion {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 2.4rem;
+  animation: spin 90s linear infinite;
+}
+
+.recursion span {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  border: 1px solid var(--hairline-dark);
+}
+
+.recursion span:nth-child(1) {
+  width: 118px;
+  height: 118px;
+}
+
+.recursion span:nth-child(2) {
+  width: 86px;
+  height: 86px;
+  transform: rotate(18deg);
+  opacity: 0.8;
+}
+
+.recursion span:nth-child(3) {
+  width: 62px;
+  height: 62px;
+  transform: rotate(36deg);
+  opacity: 0.65;
+}
+
+.recursion span:nth-child(4) {
+  width: 44px;
+  height: 44px;
+  transform: rotate(54deg);
+  border-color: var(--maroon);
+  opacity: 0.7;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .recursion {
+    animation: none;
+  }
+}
+
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--maroon);
+  margin: 0;
+}
+
+.title {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin: 1rem 0 0;
+}
+
+.text {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--muted);
+  margin: 0.9rem 0 0;
+}
+
+.homeLink {
+  display: inline-block;
+  margin-top: 1.8rem;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--maroon);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.homeLink:hover {
+  opacity: 0.72;
 }

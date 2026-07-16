@@ -1,6 +1,8 @@
 import React from "react";
 import FellowshipCard from "./FellowshipCard";
 import styles from "./page.module.css";
+import NodeField from "@/app/ornaments/NodeField";
+import GridFade from "@/app/ornaments/GridFade";
 
 export const metadata = {
   title: "Fellowships - UChicago AI Safety",
@@ -49,14 +51,24 @@ const fellowships = [
 
 export default function Fellowships() {
   return (
-    <div className={styles.fellowshipsContainer}>
-      <h1 className={styles.pageTitle}>Fellowships</h1>
-      <div className={styles.pageDivider}></div>
+    <div className={styles.pageWrap}>
+      <GridFade />
+      <NodeField />
+      <div className={styles.fellowshipsContainer}>
+        <header className={styles.pageHeader}>
+          <p className={styles.eyebrow}>Programs</p>
+          <h1 className={styles.pageTitle}>Fellowships</h1>
+          <p className={styles.pageLede}>
+            Quarter-long reading and discussion groups, open to students from any background. Each
+            track meets weekly with experienced facilitators.
+          </p>
+        </header>
 
-      <div className={styles.fellowshipGrid}>
-        {fellowships.map((fellowship) => (
-          <FellowshipCard key={fellowship.name} {...fellowship} />
-        ))}
+        <div className={styles.fellowshipGrid}>
+          {fellowships.map((fellowship) => (
+            <FellowshipCard key={fellowship.name} {...fellowship} />
+          ))}
+        </div>
       </div>
     </div>
   );

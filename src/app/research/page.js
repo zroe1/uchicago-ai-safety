@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
+import NodeField from "@/app/ornaments/NodeField";
+import GridFade from "@/app/ornaments/GridFade";
 
 export const metadata = {
   title: "Research - UChicago AI Safety",
@@ -28,6 +30,7 @@ const papers = [
     title: "Certified Safe: A Schematic for Approval Regulation of Frontier AI",
     href: "https://arxiv.org/abs/2408.06210",
     image: "/certified-safe.png",
+    keepColors: true,
   },
   {
     title: "A California Effect For Artificial Intelligence",
@@ -74,9 +77,14 @@ const otherAreas = [
 
 export default function Research() {
   return (
-    <div className={styles.researchContainer}>
-      <h1 className={styles.pageTitle}>Research</h1>
-      <div className={styles.pageDivider}></div>
+    <div className={styles.pageWrap}>
+      <GridFade />
+      <NodeField />
+      <div className={styles.researchContainer}>
+      <header className={styles.pageHeader}>
+        <p className={styles.eyebrow}>What We Study</p>
+        <h1 className={styles.pageTitle}>Research</h1>
+      </header>
 
       <p className={styles.intro}>
         Our work spans the technical, strategic, and governance dimensions of AI safety. Active
@@ -132,6 +140,7 @@ export default function Research() {
                     src={paper.image}
                     alt={paper.title}
                     fill
+                    className={paper.keepColors ? undefined : styles.paperImage}
                     style={{ objectFit: "cover", objectPosition: "top" }}
                   />
                 </div>
@@ -152,6 +161,7 @@ export default function Research() {
           ))}
         </ul>
       </section>
+      </div>
     </div>
   );
 }

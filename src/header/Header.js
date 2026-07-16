@@ -2,24 +2,32 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import styles from "./Header.module.css";
+import ThemeToggle from "./ThemeToggle";
+
+const navItems = [
+  { label: "About Us", href: "/about-us" },
+  { label: "Research", href: "/research" },
+  {
+    label: "Fellowships",
+    href: "/fellowships",
+    children: [
+      { label: "AI Safety Fundamentals", href: "/ai-safety-fundamentals" },
+      { label: "Strategy & Forecasting", href: "/strategy-group" },
+    ],
+  },
+  { label: "Events", href: "/events" },
+  { label: "Leadership", href: "/leadership" },
+];
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1000);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+    setIsMenuOpen(false);
+  }, [pathname]);
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -33,110 +41,106 @@ const Header = () => {
     };
   }, [isMenuOpen]);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const closeMenu = () => {
-    setTimeout(() => {
-      setIsMenuOpen(false);
-    }, 200); // 150ms delay
-  };
-
-  // Function to create URL-friendly slugs
-  const createSlug = (text) => {
-    return text.toLowerCase().replace(/\s+/g, "-");
-  };
+  const isActive = (item) =>
+    pathname === item.href ||
+    (item.children && item.children.some((child) => pathname === child.href));
 
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <a href="/" className={styles.logoContainer}>
+        <Link href="/" className={styles.logoContainer}>
           <Image
             src="/x-tech_2CBM.png"
-            alt="AI Safety Student Team Logo"
-            width={100}
-            height={100}
-            className={styles.logo}
+            alt="UChicago AI Safety logo"
+            width={80}
+            height={80}
+            className={`${styles.logo} dark-invert-hue`}
           />
           <span className={styles.logoText}>
             <span>UChicago</span>
             <span>AI Safety</span>
           </span>
-        </a>
-        {isMobile ? (
-          <div className={styles.mobileMenuContainer}>
-            <button
-              className={`${styles.mobileMenuButton} ${isMenuOpen ? styles.open : ""}`}
-              onClick={toggleMenu}
-              aria-label="Toggle menu">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-            {isMenuOpen && (
-              <nav className={styles.mobileNav} aria-label="Mobile navigation">
-                <ul className={styles.mobileNavList}>
-                  {["About Us", "Research", "Fellowships", "Events", "Leadership"].map(
-                    (item) => (
-                      <li key={item}>
-                        <Link
-                          href={`/${createSlug(item)}`}
-                          className={styles.mobileNavLink}
-                          onClick={closeMenu}>
-                          {item}
+        </Link>
+
+        <nav className={styles.desktopNav} aria-label="Main navigation">
+          <ul className={styles.navList}>
+            {navItems.map((item) => (
+              <li
+                key={item.label}
+                className={`${styles.navItem} ${item.children ? styles.dropdownParent : ""}`}>
+                <Link
+                  href={item.href}
+                  className={`${styles.navLink} ${isActive(item) ? styles.navLinkActive : ""}`}>
+                  {item.label}
+                  {item.children && <span className={styles.caret}>▾</span>}
+                </Link>
+                {item.children && (
+                  <ul className={styles.dropdown}>
+                    {item.children.map((child) => (
+                      <li key={child.label}>
+                        <Link href={child.href} className={styles.dropdownLink}>
+                          {child.label}
                         </Link>
-                        {item === "Fellowships" && (
-                          <ul className={styles.mobileSubList}>
-                            <li>
-                              <Link href="/ai-safety-fundamentals" className={styles.mobileSubLink} onClick={closeMenu}>
-                                AI Safety Fundamentals
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href="/strategy-group" className={styles.mobileSubLink} onClick={closeMenu}>
-                                Strategy &amp; Forecasting
-                              </Link>
-                            </li>
-                          </ul>
-                        )}
                       </li>
-                    )
-                  )}
-                </ul>
-              </nav>
-            )}
-          </div>
-        ) : (
-          <nav aria-label="Main navigation">
-            <ul className={styles.navList}>
-              {["About Us", "Research", "Fellowships", "Events", "Leadership"].map(
-                (item) => (
-                  <li key={item} className={item === "Fellowships" ? styles.dropdownParent : ""}>
-                    <Link href={`/${createSlug(item)}`} className={styles.navLink}>
-                      {item}{item === "Fellowships" && " ▾"}
-                    </Link>
-                    {item === "Fellowships" && (
-                      <ul className={styles.dropdown}>
-                        <li>
-                          <Link href="/ai-safety-fundamentals" className={styles.dropdownLink}>
-                            AI Safety Fundamentals
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/strategy-group" className={styles.dropdownLink}>
-                            Strategy &amp; Forecasting
-                          </Link>
-                        </li>
-                      </ul>
-                    )}
-                  </li>
-                )
-              )}
-            </ul>
-          </nav>
-        )}
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
+            <li className={styles.navItem}>
+              <Link href="/get-involved" className={styles.ctaLink}>
+                Get Involved <span aria-hidden="true">→</span>
+              </Link>
+            </li>
+            <li className={styles.navItem}>
+              <ThemeToggle />
+            </li>
+          </ul>
+        </nav>
+
+        <button
+          className={`${styles.mobileMenuButton} ${isMenuOpen ? styles.open : ""}`}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle menu"
+          aria-expanded={isMenuOpen}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
+
+      {isMenuOpen && (
+        <nav className={styles.mobileNav} aria-label="Mobile navigation">
+          <ul className={styles.mobileNavList}>
+            {navItems.map((item) => (
+              <li key={item.label}>
+                <Link href={item.href} className={styles.mobileNavLink}>
+                  {item.label}
+                </Link>
+                {item.children && (
+                  <ul className={styles.mobileSubList}>
+                    {item.children.map((child) => (
+                      <li key={child.label}>
+                        <Link href={child.href} className={styles.mobileSubLink}>
+                          {child.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
+            <li>
+              <Link href="/get-involved" className={styles.mobileCtaLink}>
+                Get Involved <span aria-hidden="true">→</span>
+              </Link>
+            </li>
+            <li className={styles.mobileToggleRow}>
+              <ThemeToggle />
+            </li>
+          </ul>
+        </nav>
+      )}
     </header>
   );
 };

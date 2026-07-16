@@ -13,10 +13,12 @@ export default function FellowshipCard({ name, description, syllabusHref, coming
       <div className={styles.cardFooter}>
         {syllabusHref ? (
           <a href={syllabusHref} target="_blank" rel="noopener noreferrer" className={styles.syllabusLink}>
-            View Syllabus →
+            View Syllabus <span aria-hidden="true">→</span>
           </a>
         ) : (
-          <span className={styles.comingSoon}>{comingSoonText}</span>
+          <Link href="/coming-soon" className={styles.comingSoonLink}>
+            {comingSoonText} <span aria-hidden="true">→</span>
+          </Link>
         )}
         <button className={styles.applyButton} onClick={() => setShowMessage(!showMessage)}>
           Apply

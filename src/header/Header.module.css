@@ -1,134 +1,186 @@
 .header {
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(var(--paper-rgb), 0.85);
+  backdrop-filter: blur(12px) saturate(1.2);
+  -webkit-backdrop-filter: blur(12px) saturate(1.2);
+  border-bottom: 1px solid var(--hairline);
 }
 
 .container {
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 50px 100px;
+  padding: 0 var(--page-pad);
+  height: var(--nav-height);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
 }
 
 .logoContainer {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
+  gap: 0.7rem;
   text-decoration: none;
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
 }
 
 .logoText {
   display: flex;
   flex-direction: column;
-  color: #8B1724;
-  font-weight: 700;
-  font-size: 1.5rem;
-  line-height: 1.2;
+  font-family: var(--serif);
+  color: var(--maroon);
+  font-weight: 600;
+  font-size: 1.05rem;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
 }
+
+/* --- Desktop navigation --- */
 
 .navList {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
+  align-items: center;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: var(--nav-height);
 }
 
 .navLink {
-  color: #8B1724;
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: var(--muted);
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1.4rem;
   transition: color 0.2s ease;
+  white-space: nowrap;
 }
 
 .navLink:hover {
-  color: #ac1426;
+  color: var(--ink);
 }
 
-.dropdownParent {
-  position: relative;
+.navLinkActive {
+  color: var(--maroon);
+  font-weight: 500;
 }
 
-.dropdownParent:hover .dropdown {
-  display: block;
+.navLinkActive:hover {
+  color: var(--maroon);
 }
+
+.caret {
+  display: inline-block;
+  font-size: 0.65em;
+  margin-left: 0.35em;
+  transform: translateY(-1px);
+  transition: transform 0.2s ease;
+}
+
+.dropdownParent:hover .caret {
+  transform: translateY(1px);
+}
+
+.ctaLink {
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--maroon);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+.ctaLink:hover {
+  opacity: 0.72;
+}
+
+/* --- Dropdown --- */
 
 .dropdown {
-  display: none;
   position: absolute;
   top: 100%;
-  left: 0;
-  background: white;
+  left: 50%;
+  transform: translate(-50%, -6px);
+  background: var(--paper);
   list-style: none;
   padding: 0.4rem 0;
   margin: 0;
-  border: 1px solid #e0e0e0;
-  border-radius: 4px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  min-width: 210px;
+  border: 1px solid var(--hairline-dark);
+  border-radius: 6px;
+  box-shadow: 0 12px 32px rgba(var(--ink-rgb), 0.08);
+  min-width: 230px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
   z-index: 100;
+}
+
+.dropdownParent:hover .dropdown,
+.dropdownParent:focus-within .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
 }
 
 .dropdownLink {
   display: block;
-  padding: 0.5rem 1rem;
-  color: #8B1724;
+  padding: 0.55rem 1.1rem;
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--muted);
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
   white-space: nowrap;
+  transition: color 0.15s ease, background-color 0.15s ease;
 }
 
 .dropdownLink:hover {
-  background-color: #fdf0f1;
+  color: var(--maroon);
+  background-color: var(--maroon-tint);
 }
 
-.mobileSubList {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.mobileSubLink {
-  display: block;
-  padding: 0.5rem 0;
-  color: #8B1724;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.1rem;
-  opacity: 0.8;
-}
-
-.mobileMenuContainer {
-  position: relative;
-  /* bottom: 180px; */
-}
+/* --- Mobile navigation --- */
 
 .mobileMenuButton {
+  display: none;
   background: none;
   border: none;
   cursor: pointer;
-  display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 30px;
-  width: 30px;
-  padding: 0;
-  z-index: 10;
+  justify-content: center;
+  gap: 6px;
+  height: 40px;
+  width: 40px;
+  padding: 8px;
+  z-index: 101;
 }
 
 .mobileMenuButton span {
-  width: 39px;
-  height: 3px;
-  background: #8B1724;
-  transition: all 0.3s linear;
-  position: relative;
-  transform-origin: 0px;
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--ink);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.2s ease;
 }
 
 .mobileMenuButton.open span:first-child {
-  transform: rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
 }
 
 .mobileMenuButton.open span:nth-child(2) {
@@ -136,21 +188,22 @@
 }
 
 .mobileMenuButton.open span:nth-child(3) {
-  transform: rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 .mobileNav {
   position: fixed;
-  top: 180px;
+  top: var(--nav-height);
   left: 0;
   right: 0;
   bottom: 0;
-  background: white;
+  background: var(--paper);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  z-index: 9;
+  overflow-y: auto;
+  padding: 8vh 1.5rem 3rem;
+  z-index: 99;
 }
 
 .mobileNavList {
@@ -158,33 +211,74 @@
   padding: 0;
   margin: 0;
   text-align: center;
-  position: relative;
-  bottom: 60px;
+  width: 100%;
 }
 
 .mobileNavLink {
-  color: #8B1724;
+  font-family: var(--serif);
+  color: var(--ink);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.5rem;
   display: block;
-  padding: 1rem 0;
+  padding: 0.85rem 0;
 }
 
-@media screen and (max-width: 768px) {
-  .container {
-    padding: 50px 50px;
-    padding-left: 40px;
+.mobileNavLink:hover {
+  color: var(--maroon);
+}
+
+.mobileSubList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.4rem;
+}
+
+.mobileSubLink {
+  display: block;
+  padding: 0.4rem 0;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.mobileSubLink:hover {
+  color: var(--maroon);
+}
+
+.mobileCtaLink {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--maroon);
+  text-decoration: none;
+  padding: 0.6rem 0;
+}
+
+.mobileToggleRow {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.8rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .desktopNav {
+    display: none;
+  }
+
+  .mobileMenuButton {
+    display: flex;
   }
 
   .logo {
-    max-width: 70%;
-    height: auto;
+    width: 38px;
+    height: 38px;
   }
-}
 
-@media screen and (max-width: 575px) {
-  .container {
-    padding-left: 15px;
+  .logoText {
+    font-size: 0.95rem;
   }
 }

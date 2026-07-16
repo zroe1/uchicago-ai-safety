@@ -1,0 +1,31 @@
+.field {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  /* Keep the central content column completely clear of nodes. */
+  mask-image: linear-gradient(
+    90deg,
+    black 0,
+    black calc(50% - var(--nf-clear) / 2 - 90px),
+    transparent calc(50% - var(--nf-clear) / 2),
+    transparent calc(50% + var(--nf-clear) / 2),
+    black calc(50% + var(--nf-clear) / 2 + 90px),
+    black 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    black 0,
+    black calc(50% - var(--nf-clear) / 2 - 90px),
+    transparent calc(50% - var(--nf-clear) / 2),
+    transparent calc(50% + var(--nf-clear) / 2),
+    black calc(50% + var(--nf-clear) / 2 + 90px),
+    black 100%
+  );
+}
+
+.canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

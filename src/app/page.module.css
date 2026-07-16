@@ -1,75 +1,203 @@
-.titleTop {
-  color: black;
-  font-weight: 400;
-  font-size: 3.75rem;
-  text-align: center;
-  line-height: 1.75;
-  margin-bottom: 10px;
+/* --- Hero --- */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(4rem, 11vh, 7.5rem) var(--page-pad) 3.5rem;
 }
 
-.titleBottom {
-  color: #8B1724;
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(var(--ink-rgb), 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--ink-rgb), 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 85% 75% at 50% 0%, black 25%, transparent 72%);
+  -webkit-mask-image: radial-gradient(ellipse 85% 75% at 50% 0%, black 25%, transparent 72%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 55% 45% at 50% -8%,
+    rgba(var(--maroon-rgb), 0.07),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.heroInner {
+  position: relative;
+  z-index: 1;
+  max-width: 58rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--maroon);
+  margin: 0;
+}
+
+.heroTitle {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(2.4rem, 5vw, 3.9rem);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin: 1.4rem 0 0;
+}
+
+.heroAccent {
+  color: var(--maroon);
   font-weight: 600;
 }
 
-.titleContainer {
+.heroLede {
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--muted);
+  max-width: 42rem;
+  margin: 1.6rem auto 0;
+}
+
+.heroCtas {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 30px;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2.4rem;
+  font-family: var(--sans);
+  font-size: 0.95rem;
 }
 
-.xLabContainer {
+.ctaPrimary {
+  color: var(--maroon);
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+.ctaPrimary:hover {
+  opacity: 0.72;
+}
+
+.heroAffiliation {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 4.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--hairline);
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--faint);
 }
 
-.xRiskTitle {
-  text-align: center;
-  font-size: 26px;
+.xlabLink {
+  display: inline-block;
+  line-height: 0;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
 }
 
-@media screen and (max-width: 1200px) {
-  .titleTop {
-    font-size: 3.5rem;
-  }
-  
+.xlabLink:hover {
+  opacity: 1;
 }
 
-.break {
-  display: block;
+.xlabLogo {
+  height: auto;
+  max-width: 100%;
 }
 
-@media screen and (max-width: 1000px) {
-  .break {
-    display: none;
-  }
-  .titleTop {
-    width: 90%;
-    margin-left: 5%;
+/* --- Pillars --- */
+
+.pillars {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2.5rem var(--page-pad) 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(2rem, 4vw, 4rem);
+}
+
+.pillar {
+  border-top: 1px solid var(--hairline-dark);
+  padding-top: 1.6rem;
+}
+
+.pillarIndex {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  color: var(--faint);
+}
+
+.pillarTitle {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0.8rem 0 0;
+}
+
+.pillarDescription {
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0.8rem 0 1.2rem;
+}
+
+.pillarLink {
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--maroon);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.pillarLink:hover {
+  opacity: 0.72;
+}
+
+@media screen and (max-width: 900px) {
+  .pillars {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .titleContainer {
-    padding-top: 0px;
+@media screen and (max-width: 640px) {
+  .hero {
+    padding-top: 3rem;
   }
 
-  .titleTop {
-    font-size: 2.5rem;
-    margin-top: 0px;
+  .heroCtas {
+    gap: 1.2rem;
   }
 
-  .xLabContainer {
-    width: 80%;
-    margin-left: 10%;
+  .heroAffiliation {
+    margin-top: 3rem;
   }
-
-  .xRiskTitle {
-    font-size: 22px;
-  }
-  
 }

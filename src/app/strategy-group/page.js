@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./page.module.css";
+import NodeField from "@/app/ornaments/NodeField";
+import GridFade from "@/app/ornaments/GridFade";
 
 export const metadata = {
   title: "Strategy Group - UChicago AI Safety",
@@ -114,12 +116,14 @@ const weeklyContent = [
 
 export default function StrategyGroup() {
   return (
-    <div className={styles.strategyContainer}>
-      <h1 className={styles.pageTitle}>Strategy and Forecasting Fellowship</h1>
-      <div className={styles.pageDivider}></div>
-
-      <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-        <p className={styles.pageDescription}>
+    <div className={styles.pageWrap}>
+      <GridFade />
+      <NodeField />
+      <div className={styles.strategyContainer}>
+      <header className={styles.pageHeader}>
+        <p className={styles.eyebrow}>Fellowship Syllabus</p>
+        <h1 className={styles.pageTitle}>Strategy and Forecasting</h1>
+        <p className={styles.pageLede}>
           As frontier models grow more capable and the cost of frontier-level performance continues
           to fall, transformative AI is approaching quickly. Navigating it well requires a coherent
           picture of where AGI is headed, one that integrates technical progress with the political
@@ -128,14 +132,13 @@ export default function StrategyGroup() {
           forecasting informed by scaling laws, threat modeling, and a tabletop wargame exercise,
           culminating in each fellow writing their own AGI takeoff scenario.
         </p>
-      </div>
+      </header>
 
       <div className={styles.weeklyContent}>
         {weeklyContent.map((week, index) => (
-          <div key={index} className={styles.weekSection}>
-            <h2 className={styles.weekTitle}>
-              Week {week.week}: {week.title}
-            </h2>
+          <section key={index} className={styles.weekSection}>
+            <p className={styles.weekNum}>Week {String(week.week).padStart(2, "0")}</p>
+            <h2 className={styles.weekTitle}>{week.title}</h2>
             <p className={styles.weekDescription}>{week.description}</p>
             {week.content.length > 0 ? (
               <ul className={styles.contentList}>
@@ -159,8 +162,9 @@ export default function StrategyGroup() {
             ) : (
               <p className={styles.noContent}>Content to be announced.</p>
             )}
-          </div>
+          </section>
         ))}
+      </div>
       </div>
     </div>
   );

@@ -26,9 +26,9 @@ export default function LeadershipMember({ imgUrl, memberName, memberRole, membe
       ) : (
         <div className={styles.initialsPlaceholder}>{getInitials(memberName)}</div>
       )}
-      <h2>{memberName}</h2>
+      <h3 className={styles.memberName}>{memberName}</h3>
       <p className={styles.memberRole}>{memberRole}</p>
-      {memberEmail && <p className={styles.noMarginParagraph}>{memberEmail}</p>}
+      {memberEmail && <p className={styles.memberEmail}>{memberEmail}</p>}
     </div>
   );
 }

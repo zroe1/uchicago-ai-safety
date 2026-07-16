@@ -1,16 +1,20 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
+import NodeField from "@/app/ornaments/NodeField";
+import GridFade from "@/app/ornaments/GridFade";
 
+// `invert` marks dark-on-transparent logos that flip to light silhouettes in
+// dark mode; logos with their own dark backgrounds stay as they are.
 const alumniOrgs = [
-  { name: "Anthropic", src: "/Anthropic-Logo.wine.svg" },
-  { name: "MATS", src: "/mats.svg" },
-  { name: "Google DeepMind", src: "/DeepMind_new_logo.svg.png" },
-  { name: "OpenAI", src: "/openai.jpg" },
-  { name: "Redwood Research", src: "/redwood.jpg" },
+  { name: "Anthropic", src: "/Anthropic-Logo.wine.svg", invert: true },
+  { name: "MATS", src: "/mats.svg", invert: true },
+  { name: "Google DeepMind", src: "/DeepMind_new_logo.svg.png", invert: true },
+  { name: "OpenAI", src: "/openai.png", invert: true },
+  { name: "Redwood Research", src: "/redwood.png", invert: true },
   { name: "AI Futures Project", src: "/ai_futures_project_logo.jpg" },
   { name: "Gray Swan", src: "/gray-swan-og-image.png" },
-  { name: "Epoch AI", src: "/epoch-full-standard-banner.png" },
+  { name: "Epoch AI", src: "/epoch.png", invert: true },
 ];
 
 export const metadata = {
@@ -21,9 +25,14 @@ export const metadata = {
 
 export default function AboutUs() {
   return (
-    <div className={styles.aboutContainer}>
-      <h1 className={styles.pageTitle}>About Us</h1>
-      <div className={styles.pageDivider}></div>
+    <div className={styles.pageWrap}>
+      <GridFade />
+      <NodeField />
+      <div className={styles.aboutContainer}>
+        <header className={styles.pageHeader}>
+        <p className={styles.eyebrow}>Who We Are</p>
+        <h1 className={styles.pageTitle}>About Us</h1>
+      </header>
 
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>The Existential Risk Laboratory</h2>
@@ -73,20 +82,22 @@ export default function AboutUs() {
       </section>
 
       <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>Our members have gone on to:</h2>
+        <h2 className={styles.sectionTitle}>Our members have gone on to</h2>
         <div className={styles.logoGrid}>
           {alumniOrgs.map((org) => (
-            <div key={org.name} className={styles.logoItem}>
+            <div key={org.name} className={styles.logoItem} title={org.name}>
               <Image
                 src={org.src}
                 alt={org.name}
                 fill
+                className={org.invert ? "dark-invert" : undefined}
                 style={{ objectFit: "contain" }}
               />
             </div>
           ))}
         </div>
       </section>
+      </div>
     </div>
   );
 }

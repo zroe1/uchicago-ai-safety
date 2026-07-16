@@ -1,7 +1,7 @@
 import "./globals.css";
 import Header from "@/header/Header";
 import Footer from "./Footer/Footer";
-import { inriaSerif } from "@/app/ui/fonts";
+import { serif, roboto } from "@/app/ui/fonts";
 
 export const metadata = {
   title: "UChicago AI Safety",
@@ -16,12 +16,15 @@ export const metadata = {
   },
 };
 
+const themeInit = `(function(){try{var t=localStorage.getItem("uais-theme");if(t!=="dark"&&t!=="light"){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t}catch(e){}})();`;
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${inriaSerif.className}`}>
+    <html lang="en" className={`${serif.variable} ${roboto.variable}`} suppressHydrationWarning>
+      <body>
+        <script dangerouslySetInnerHTML={{ __html: themeInit }} />
         <Header />
-        {children}
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
