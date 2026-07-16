@@ -82,7 +82,7 @@ export default function AboutUs() {
       </section>
 
       <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>Our members have gone on to</h2>
+        <h2 className={styles.sectionTitle}>Our members have worked with</h2>
         <div className={styles.logoGrid}>
           {alumniOrgs.map((org) => (
             <div key={org.name} className={styles.logoItem} title={org.name}>
