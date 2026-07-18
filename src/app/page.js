@@ -12,15 +12,13 @@ export const metadata = {
 
 const pillars = [
   {
-    index: "01",
-    title: "Learn",
+    title: "Fellowships",
     description:
       "Six fellowship tracks spanning alignment fundamentals, policy and governance, economics, strategy, and AI security — open to students from any background.",
     href: "/fellowships",
     linkText: "Explore fellowships",
   },
   {
-    index: "02",
     title: "Research",
     description:
       "Publications and working papers across technical safety, strategy, and governance — building the foundation for high-impact careers in the field.",
@@ -28,7 +26,6 @@ const pillars = [
     linkText: "Read our research",
   },
   {
-    index: "03",
     title: "Community",
     description:
       "Speaker events, symposia, and retreats that connect motivated students to each other and to researchers working on AI safety today.",
@@ -80,7 +77,6 @@ export default function Home() {
       <section className={styles.pillars}>
         {pillars.map((pillar) => (
           <div key={pillar.title} className={styles.pillar}>
-            <span className={styles.pillarIndex}>{pillar.index}</span>
             <h2 className={styles.pillarTitle}>{pillar.title}</h2>
             <p className={styles.pillarDescription}>{pillar.description}</p>
             <Link href={pillar.href} className={styles.pillarLink}>

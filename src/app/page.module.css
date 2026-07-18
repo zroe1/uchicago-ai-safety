@@ -143,20 +143,12 @@
   padding-top: 1.6rem;
 }
 
-.pillarIndex {
-  font-family: var(--sans);
-  font-size: 0.72rem;
-  font-weight: 400;
-  letter-spacing: 0.14em;
-  color: var(--faint);
-}
-
 .pillarTitle {
   font-family: var(--serif);
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--ink);
-  margin: 0.8rem 0 0;
+  margin: 0;
 }
 
 .pillarDescription {
