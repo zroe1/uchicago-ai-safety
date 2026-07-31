@@ -13,7 +13,6 @@ const executiveBoard = [
   { imgUrl: "/julian.jpg", memberName: "Julian Huang", memberRole: "Executive Board Member", memberEmail: "julianhuang@uchicago.edu" },
   { imgUrl: "/nolan.jpg", memberName: "Nolan Johnson", memberRole: "Executive Board Member", memberEmail: "njohnson10@uchicago.edu" },
   { imgUrl: "/evie.png",   memberName: "Evie Hu",       memberRole: "Executive Board Member", memberEmail: "evelynhu@uchicago.edu", objectPosition: "35% top" },
-  { imgUrl: "/zach.png",   memberName: "Zachary Rudolph", memberRole: "X-Lab Deputy Director", memberEmail: "zrudolph@uchicago.edu" },
 ];
 
 const organizers = [
