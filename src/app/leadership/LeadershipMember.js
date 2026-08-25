@@ -10,7 +10,7 @@ function getInitials(name) {
     .toUpperCase();
 }
 
-export default function LeadershipMember({ imgUrl, memberName, memberRole, memberEmail, objectPosition = "center top" }) {
+export default function LeadershipMember({ imgUrl, memberName, memberRole, memberEmail, bookingUrl, objectPosition = "center top" }) {
   return (
     <div className={styles.leaderContainer}>
       {imgUrl ? (
@@ -29,6 +29,16 @@ export default function LeadershipMember({ imgUrl, memberName, memberRole, membe
       <h3 className={styles.memberName}>{memberName}</h3>
       <p className={styles.memberRole}>{memberRole}</p>
       {memberEmail && <p className={styles.memberEmail}>{memberEmail}</p>}
+      {bookingUrl && (
+        <a
+          href={bookingUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.bookingLink}
+        >
+          Book a meeting
+        </a>
+      )}
     </div>
   );
 }

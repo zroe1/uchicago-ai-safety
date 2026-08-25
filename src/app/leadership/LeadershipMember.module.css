@@ -59,3 +59,18 @@
   margin: 0.35rem 0 0;
   word-break: break-all;
 }
+
+.bookingLink {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--maroon);
+  margin-top: 0.55rem;
+  text-decoration: none;
+  border-bottom: 1px solid var(--maroon-tint);
+  transition: border-color 0.15s ease;
+}
+
+.bookingLink:hover {
+  border-bottom-color: var(--maroon);
+}
