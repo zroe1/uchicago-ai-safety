@@ -14,6 +14,8 @@ const navItems = [
     href: "/fellowships",
     children: [
       { label: "AI Safety Fundamentals", href: "/ai-safety-fundamentals" },
+      { label: "Policy & Governance", href: "/policy-governance" },
+      { label: "Economics of Transformative AI", href: "/economics-of-transformative-ai" },
       { label: "Strategy & Forecasting", href: "/strategy-group" },
     ],
   },

@@ -21,13 +21,13 @@ const fellowships = [
     name: "Policy and Governance",
     description:
       "This track covers the foundations of AI governance: policy frameworks, the differing stances of the US, China, and the EU, threats to democratic institutions, the dynamics of international competition and decoupling, economic and labor impacts, and data privacy. Fellows conclude the program by drafting and defending their own policy briefs. No prior policy experience is required– we welcome students from technical backgrounds looking to build policy literacy, as well as those in the social sciences and humanities engaging with AI-specific governance challenges.",
-    syllabusHref: null,
+    syllabusHref: "/policy-governance",
   },
   {
     name: "Economics of Transformative AI",
     description:
       "This fellowship introduces fellows from any background to the major ideas in AI safety and their relationship to economics. Fellows examine how economic incentives shape AI safety decisions, and how those decisions (or their absence) reshape the global economy in turn. By the end of the program, fellows will have a working understanding of how market mechanisms, industrial policy, regulation, and international coordination can meaningfully reduce existential risk, along with the foundation to pursue any of these threads further.",
-    syllabusHref: "https://docs.google.com/document/d/1BdtKdzSiSOyDVg4oZ0d2pGMadEh2iMe0/edit#heading=h.1k3pxpqmwrq7",
+    syllabusHref: "/economics-of-transformative-ai",
   },
   {
     name: "Strategy and Forecasting",

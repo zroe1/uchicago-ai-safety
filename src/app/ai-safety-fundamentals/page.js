@@ -11,79 +11,75 @@ export const metadata = {
 
 const weeklyReadings = [
   {
-    week: 1,
-    title: "Philosophical and Political Foundations of AI Safety",
-    description: "Explore the implications of increasingly intelligent systems.",
+    week: 0,
+    title: "Technical Foundations",
+    description:
+      "Before Week 1, fellows build a working understanding of AI systems. The key ideas: a neural network is a function with billions of tunable parameters trained by gradient descent to minimize error on data; a large language model is a neural network (specifically a transformer) trained on next-token prediction over internet-scale text, then shaped into an assistant via post-training. You don't need to follow every technical detail — the goal is to generally understand how models learn certain behaviors. Please read or watch at least one of the following before the first meeting.",
     readings: [
       {
-        title: "AI 2027",
-        link: "https://ai-2027.com/",
-        description: "A narrative-form scenario describing the geopolitical dynamics and risks of the development of AGI.",
+        title: "A Short Introduction to Machine Learning",
+        link: "https://www.lesswrong.com/posts/qE73pqxAZmeACsAdF/a-short-introduction-to-machine-learning",
+        description:
+          "A concise primer on what machine learning is and how models learn from data rather than explicit rules.",
       },
       {
-        title: "Measuring AI Ability to Complete Long Tasks",
+        title: "Neural Networks - 3Blue1Brown",
+        link: "https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi",
+        description:
+          "A visually-driven video series building intuition for what neural networks are, how they represent functions, and how gradient descent trains them.",
+      },
+      {
+        title: "Deep Dive into LLMs like ChatGPT - Karpathy",
+        link: "https://www.youtube.com/watch?v=7xTGNNLPyMI",
+        description:
+          "A long-form walkthrough of the entire LLM pipeline: pretraining, tokenization, fine-tuning, and RLHF.",
+      },
+      {
+        title: "Intro to Large Language Models - Karpathy",
+        link: "https://www.youtube.com/watch?v=zjkBMFhNj_g",
+        description:
+          "A ~1-hour talk giving a compressed, accessible overview of what LLMs are, how they're trained, and where they're headed.",
+      },
+    ],
+  },
+  {
+    week: 1,
+    title: "Motivating AI Safety",
+    description:
+      "What is AI safety, and why should we be worried? This week establishes the core empirical and conceptual case. Empirically, AI capabilities are improving on fast, measurable trends — and if these trends continue, systems broadly exceeding human capability become plausible within our lifetime. Conceptually, we cover the orthogonality thesis (a highly capable system might pursue misaligned goals) and instrumental convergence (almost any final goal incentivizes subgoals like self-preservation and resisting shutdown), which together imply that highly capable systems are not safe by default. We also introduce timelines and takeoff speed.",
+    readings: [
+      {
+        title: "Scaling Laws for LLMs: From GPT-3 to o3",
+        link: "https://cameronrwolfe.substack.com/p/llm-scaling-laws",
+        description:
+          "On understanding the current state of LLM scaling and the future of AI research.",
+      },
+      {
+        title: "METR's Task-Completion Time Horizons Graph",
         link: "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/",
-        description: "A benchmark measuring the trajectory of the length of tasks AIs can complete."
-      },
-      {
-        title: "Existential Risk from Power-Seeking AI",
-        link: "https://jc.gatspress.com/pdf/existential_risk_and_powerseeking_ai.pdf",
-        description: "Joe Carlsmith lays out the case for why advanced AIs might develop power-seeking tendencies and how this could lead to catastrophe."
-      },
-      {
-        title: "Machines of Loving Grace",
-        link: "https://www.darioamodei.com/essay/machines-of-loving-grace",
-        description: "Dario Amodei's essay on the benefits powerful AI systems could bring.",
-        optional: true
-      },
-      {
-        title: "Trends in Artificial Intelligence | Epoch AI",
-        link: "https://epoch.ai/trends", 
-        description: "A measurement of the central trends driving continued AI progress.",
-        optional: true
+        description:
+          "METR's graph showing the length of tasks frontier AI agents can complete, doubling roughly every seven months.",
       },
       {
         title:
           "The Superintelligent Will: Motivation and Instrumental Rationality in Advanced Artificial Agents",
         link: "https://nickbostrom.com/superintelligentwill.pdf",
         description:
-          "Nick Bostrom's paper on the potential goals advanced AI systems are likely or unlikely to develop by default.",
-        optional: true
+          "Nick Bostrom's paper on the potentially dangerous goals advanced AI systems will develop.",
+      },
+      {
+        title: "Three Types of Intelligence Explosion",
+        link: "https://www.forethought.org/research/three-types-of-intelligence-explosion",
+        description:
+          "Distinguishes software-only, chip-technology, and chip-production intelligence explosions, arguing that the feedback loops have very different speed limits and bottlenecks.",
       },
     ],
-    // week: 1,
-    // title: "Scaling and Instrumental Convergence",
-    // description:
-    //   "Explore the implications of increasingly intelligent systems, focusing on scaling laws, superintelligence, and instrumental convergence.",
-    // // https://www.vox.com/future-perfect/2018/12/21/18126576/ai-artificial-intelligence-machine-learning-safety-alignment
-    // readings: [
-    //   {
-    //     title: "The case for taking AI seriously as a threat to humanity",
-    //     link: "https://www.vox.com/future-perfect/2018/12/21/18126576/ai-artificial-intelligence-machine-learning-safety-alignment",
-    //     description:
-    //       "We read only through section 5. This Vox article from 2020 ages remarkably well, laying out the key arguments for why we should consider AI a threat to humanity.",
-    //   },
-    //   {
-    //     title: "Transformer Language Models (Video)",
-    //     link: "https://www.youtube.com/watch?v=5eqRuVp65eY",
-    //     description:
-    //       "Watch 0:00 - 11:30 for an accessible introduction to scaling laws in language models.",
-    //     timeFrame: "0:00 - 11:30",
-    //   },
-    //   {
-    //     title:
-    //       "The Superintelligent Will: Motivation and Instrumental Rationality in Advanced Artificial Agents",
-    //     optional: true,
-    //     link: "https://nickbostrom.com/superintelligentwill.pdf",
-    //     description:
-    //       "Nick Bostrom's influential work on power-seeking and instrumental convergence in AI systems.",
-    //   },
-    // ],
   },
   {
     week: 2,
-    title: "Outer Alignment",
-    description: "Examine the challenges in correctly specifying training goals for AI systems.",
+    title: "Types of (Mis)Alignment",
+    description:
+      "How do we get AI systems to pursue the goals we intend? Outer alignment asks whether the objective we specify actually captures what we want — including specification gaming and reward hacking, where systems exploit loopholes in their objectives. Inner alignment asks whether the goal the trained system actually learns matches the training objective, spanning mesa-optimization, goal misgeneralization, and emergent misalignment. Deceptive alignment is the idea that a model might behave well during training and evaluation specifically to avoid being modified, then defect when deployed.",
     readings: [
       {
         title: "Specification Gaming: How AI Can Turn Your Wishes Against You",
@@ -91,25 +87,28 @@ const weeklyReadings = [
         description: "A fun video from 2023 that discusses the problem of specification gaming.",
       },
       {
-        title: "Specification gaming: the flip side of AI ingenuity",
-        link: "https://deepmind.google/discover/blog/specification-gaming-the-flip-side-of-ai-ingenuity/",
+        title: "9 Examples of Specification Gaming",
+        link: "https://www.youtube.com/watch?v=nKJlF-olKmg",
         description:
-          "A comprehensive overview of outer alignment issues from DeepMind researchers.",
+          "Rob Miles walks through real examples of AI systems exploiting loopholes in the objectives given to them.",
       },
       {
-        title: "Learning from human preferences",
-        link: "https://openai.com/index/learning-from-human-preferences/",
-        description:
-          "Explore how alignment researchers have attempted to address issues in goal specification using human preferences.",
+        title: "The OTHER AI Alignment Problem: Mesa-Optimizers",
+        link: "https://www.youtube.com/watch?v=bJLcIBixGj8",
+        description: "Rob Miles' video introducing the idea of mesa-optimizers in a digestible way.",
       },
-    ],
-  },
-  {
-    week: 3,
-    title: "Deception, Inner Alignment & Mechanistic Interpretability",
-    description:
-      "Investigate the concept of mesa-optimizers and the potential for deceptive behavior in AI systems.",
-    readings: [
+      {
+        title: "Risks from Learned Optimization in Advanced Machine Learning Systems",
+        link: "https://arxiv.org/abs/1906.01820",
+        description:
+          "Hubinger et al.'s foundational paper introducing mesa-optimization and framing the inner alignment problem, including the first careful treatment of deceptive alignment.",
+      },
+      {
+        title: "Weird Generalization and Inductive Backdoors: New Ways to Corrupt LLMs",
+        link: "https://www.lesswrong.com/posts/tCfjXzwKXmWnLkoHp/weird-generalization-and-inductive-backdoors",
+        description:
+          "Emergent misalignment and unintuitive examples of how values manifest and generalize from narrow training data.",
+      },
       {
         title: "Alignment Faking",
         link: "https://www.anthropic.com/research/alignment-faking",
@@ -117,24 +116,73 @@ const weeklyReadings = [
           "Anthropic's research on alignment faking, where LLMs strategically attempt to preserve their values during training.",
       },
       {
+        title: "Deceptive Alignment",
+        link: "https://www.alignmentforum.org/posts/zthDPAjh9w6Ytbeks/deceptive-alignment",
+        description:
+          "An in-depth exploration of deceptive alignment and pseudo-alignment, providing insights into inner alignment issues.",
+      },
+      {
+        title: "Chain-of-Thought Snippets of Covert Behavior",
+        link: "https://www.antischeming.ai/snippets",
+        description:
+          "Excerpts of frontier models' internal reasoning during evaluations for covert behavior, from the OpenAI/Apollo anti-scheming work, showing deception and eval awareness in the wild.",
+      },
+    ],
+  },
+  {
+    week: 3,
+    title: "Overview of Technical Agendas",
+    description:
+      "This week surveys approaches to alignment and technical AI safety research. Mechanistic interpretability aims to reverse-engineer the internal computations of networks to detect latent misalignment. Corrigibility asks what we even want an aligned system to be — perhaps one that tolerates correction and defers to human oversight. Training-based alignment methods like RLHF and Constitutional AI shape model behavior, but both become harder at scale as human oversight breaks down. Scalable oversight protocols like debate, and chain-of-thought monitorability, try to preserve our ability to supervise systems smarter than us.",
+    readings: [
+      {
         title: "Mechanistic Interpretability, Variables, and the Importance of Interpretable Bases",
         link: "https://www.transformer-circuits.pub/2022/mech-interp-essay",
         description:
-          "An informal note on some intuitions related to Mechanistic Interpretability by Chris Olah.",
+          "An informal note on some intuitions related to mechanistic interpretability by Chris Olah.",
       },
       {
-        title: "Deceptive Alignment",
-        link: "https://arxiv.org/pdf/1906.01820",
+        title: "Corrigibility as Singular Target",
+        link: "https://www.lesswrong.com/s/KfCjeconYRdFbMxsy",
         description:
-          "An in-depth exploration of deceptive alignment and pseudo-alignment, providing insights into inner alignment issues.",
+          "Argues that the training target should be corrigibility itself — a system that reliably accepts correction and shutdown — rather than good values, on the grounds that corrigibility is more achievable and fails more gracefully.",
+      },
+      {
+        title: "Deep Reinforcement Learning from Human Preferences",
+        link: "https://arxiv.org/abs/1706.03741",
+        description: "A paper on how we can communicate complex goals to RL systems.",
+      },
+      {
+        title: "Constitutional AI",
+        link: "https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback",
+        description:
+          "Anthropic's method for training harmlessness from a written set of principles using AI-generated feedback rather than human labels.",
+      },
+      {
+        title: "Weak-to-Strong Generalization",
+        link: "https://openai.com/index/weak-to-strong-generalization/",
+        description:
+          "OpenAI's empirical study of whether weak supervisors can elicit good behavior from stronger models, as an analogy for humans supervising superhuman systems.",
+      },
+      {
+        title: "AI Safety via Debate",
+        link: "https://arxiv.org/abs/1805.00899",
+        description:
+          "Proposes that two models arguing opposite sides in front of a human judge could let humans supervise decisions they couldn't evaluate directly, on the analogy that verifying an argument is easier than producing one.",
+      },
+      {
+        title: "Chain of Thought Monitorability: A New and Fragile Opportunity for AI Safety",
+        link: "https://arxiv.org/abs/2507.11473",
+        description:
+          "A cross-lab position paper arguing that legible chain-of-thought gives us a rare window into model reasoning that further training could easily close.",
       },
     ],
   },
   {
     week: 4,
-    title: "AI Security",
+    title: "Security and Control",
     description:
-      "Explore various AI security issues including jailbreaks, adversarial examples, and potential vulnerabilities.",
+      "Alignment work asks whether a model has aligned values. This week asks a different question: what defenses hold up when a competent adversary is working against them? We start with the outsider threat — model weight theft, jailbreaks, and misuse uplift — then consider insider threats: scheming AIs and the human analogy of spies within frontier labs. AI control asks how to safely deploy and elicit useful work from a model that may be actively scheming against you.",
     readings: [
       {
         title: "A Playbook for Securing AI Model Weights",
@@ -142,65 +190,58 @@ const weeklyReadings = [
         description: "A comprehensive playbook for protecting AI models from theft and misuse.",
       },
       {
-        title: "Four Fallacies of AI Cybersecurity",
-        link: "https://www.rand.org/pubs/commentary/2024/08/four-fallacies-of-ai-cybersecurity.html",
+        title: "Universal and Transferable Adversarial Attacks on Aligned Language Models",
+        link: "https://arxiv.org/abs/2307.15043",
         description:
-          "Aguement that AI cybersecurity must learn from past security lessons, not reinvent them.",
-      },
-      // {
-      //   title: "AI Sleeper Agents",
-      //   link: "https://arxiv.org/pdf/2401.05566",
-      //   description:
-      //     "Read the abstract and page 6 for an introduction to the concept of AI sleeper agents.",
-      // },
-      {
-        title: "Stealing Part of a Production Language Model",
-        link: "https://arxiv.org/abs/2403.06634",
-        description:
-          "How Researchers extract embedding layers from language models through inexpensive API attacks.",
-        // optional: true,
-        timeFrame: "only abstract",
+          "Safety training is a defense, and defenses can be optimized against: jailbreaks that transfer across models, adversarial examples, and extraction of model internals through API access alone.",
       },
       {
-        title: "Sleight of hand: How China weaponizes software vulnerabilities",
-        link: "https://www.atlanticcouncil.org/in-depth-research-reports/report/sleight-of-hand-how-china-weaponizes-software-vulnerability/",
+        title: "Towards a Common Standard for Evaluating Frontier AI Safeguards Against Biological Misuse",
+        link: "https://www.governance.ai/research-paper/technical-report-towards-a-common-standard-for-evaluating-frontier-ai-safeguards-against-biological-misuse",
         description:
-          "China's new regulations force companies to report software vulnerabilities to government agencies.",
-        optional: true,
-        // timeFrame: "only abstract",
+          "GovAI proposes a standardized methodology for testing how robust frontier model safeguards are to biological misuse attempts.",
       },
       {
-        title: "Ironing Out the Squiggles",
-        link: "https://www.lesswrong.com/posts/H7fkGinsv8SDxgiS2/ironing-out-the-squiggles",
+        title: "What's Worse, Spies or Schemers?",
+        link: "https://blog.redwoodresearch.org/p/whats-worse-spies-or-schemers",
         description:
-          "A paper review post about adversarial examples, their implications, and potential solutions.",
-        optional: true,
+          "Compares AI insider threats directly against the human insider threats that security teams already model, and argues the differences are large enough to demand different countermeasures.",
       },
       {
-        title: "SolidGoldMagikarp - tokens that jailbreak LLMs",
-        link: "https://www.lesswrong.com/posts/aPeJE8bSo6rAFoLqg/solidgoldmagikarp-plus-prompt-generation",
+        title: "AI Control: Improving Safety Despite Intentional Subversion",
+        link: "https://arxiv.org/abs/2312.06942",
         description:
-          "Explore a famous case of LLM jailbreaking and its implications for AI security.",
-        optional: true,
+          "Introduces control evaluations — red-team/blue-team games where the blue team designs a deployment protocol and the red team builds models that try to subvert it — and tests concrete protocols like trusted and untrusted monitoring.",
       },
     ],
   },
   {
     week: 5,
-    title: "AI Governance",
+    title: "Governance and Policy",
     description:
-      "Examine the challenges and approaches to governing AI development and deployment.",
+      "Technical alignment alone can't solve the problems of AI safety — someone has to decide what gets built, tested, and deployed, and under what rules. Key ideas this week include compute governance (regulating chip production and distribution to steer AI development), deterrence regimes like MAIM, and frontier model regulation emerging at the state level, which imposes transparency, safety-plan, and incident-reporting requirements on the largest developers. We frame these under different plans for coordinated restraint and examine how policy decisions change what safety work is realistic.",
     readings: [
       {
-        title: "Open Problems in Technical AI Governance",
-        link: "https://arxiv.org/abs/2407.14981",
+        title: "Deterrence with Mutual Assured AI Malfunction (MAIM)",
+        link: "https://www.nationalsecurity.ai/chapter/deterrence-with-mutual-assured-ai-malfunction-maim",
         description:
-          "An overview of technical AI governance and its methods for evaluating and enforcing AI control mechanisms.",
+          "Hendrycks, Schmidt, and Wang's proposal for a deterrence regime where states threaten sabotage of destabilizing AI projects, modeled loosely on MAD.",
       },
       {
-        title: "Certified Safe: A Schematic for Approval Regulation of Frontier AI",
-        link: "https://arxiv.org/abs/2408.06210",
-        description: "A proposal for FDA-style approval regulation for frontier AI systems.",
+        title: "Responsible Scaling Policy",
+        link: "https://www.anthropic.com/responsible-scaling-policy",
+        description: "Anthropic's internal governance policy for scaling frontier models safely.",
+      },
+      {
+        title: "America's AI Action Plan",
+        link: "https://www.whitehouse.gov/wp-content/uploads/2025/07/Americas-AI-Action-Plan.pdf",
+        description:
+          "The White House's AI policy agenda, centered on accelerating American AI development, infrastructure, and international competitiveness.",
+      },
+      {
+        title: "AI 2040: Plan A",
+        link: "https://ai-2040.com/",
+        description: "A verification plan for international restraint built on compute governance.",
       },
     ],
   },
@@ -208,24 +249,32 @@ const weeklyReadings = [
     week: 6,
     title: "Criticisms and Counter-Arguments",
     description:
-      "Examine critiques of AI safety concerns and alternative perspectives on AI development.",
+      "This week covers the strongest critiques of AI safety as a field. The \"AI as normal technology\" perspective holds that AI will diffuse slowly through the economy like electricity or the internet, constrained by adoption bottlenecks, and that the \"superintelligence in a lab\" frame is wrong. Others argue doom scenarios are constructed so no evidence could count against them, making them bad science. We also cover critiques of existing alignment agendas and weaknesses in foundational concepts of the field.",
     readings: [
       {
-        title: "Will AI kill all of us? | Marc Andreessen and Lex Fridman",
+        title: "AI as Normal Technology",
+        link: "https://knightcolumbia.org/content/ai-as-normal-technology",
+        description:
+          "Narayanan and Kapoor's influential essay arguing AI should be understood as a normal general-purpose technology whose diffusion is slow and controllable, not an impending superintelligence.",
+      },
+      {
+        title: "Unfalsifiable Stories of Doom",
+        link: "https://www.mechanize.work/blog/unfalsifiable-stories-of-doom/",
+        description:
+          "Mechanize argues that prominent AI doom arguments are structured to be unfalsifiable and should be discounted accordingly.",
+      },
+      {
+        title: "Counterarguments to the Basic AI X-Risk Case",
+        link: "https://aiimpacts.org/counterarguments-to-the-basic-ai-x-risk-case/",
+        description:
+          "An examination of where the standard existential risk argument has gaps, including whether AI systems will be goal-directed in the ways the argument requires.",
+      },
+      {
+        title: "Will AI Kill All of Us? | Marc Andreessen and Lex Fridman",
         link: "https://www.youtube.com/watch?v=-4u1ZBMbWT8",
         description:
-          "Listen to 00:00 - 10:30 for a discussion on criticisms of AI safety concerns.",
+          "A discussion of criticisms of AI safety concerns from a leading accelerationist perspective.",
         timeFrame: "00:00 - 10:30",
-      },
-      {
-        title: "Terrorism, Tylenol, and dangerous information",
-        link: "https://www.lesswrong.com/posts/Ek7M3xGAoXDdQkPZQ/terrorism-tylenol-and-dangerous-information",
-        description: "A useful reading for understanding infohazards in AI development.",
-      },
-      {
-        title: "Against Almost Every Theory of Impact of Interpretability",
-        link: "https://www.lesswrong.com/posts/LNA8mubrByG7SFacm/against-almost-every-theory-of-impact-of-interpretability-1",
-        description: "A critical examination of interpretability approaches in AI alignment.",
       },
     ],
   },
@@ -233,39 +282,48 @@ const weeklyReadings = [
     week: 7,
     title: "Further Reading and Discussion",
     description:
-      "Explore various AI alignment approaches and dive deeper into specific areas of interest. Fellows will choose one of the optional readings to focus on for the week.",
+      "AI safety is a wide field with many different perspectives and agendas. This week fellows explore various approaches and dive deeper into specific areas of interest — from safety-focused training and scalable oversight to AI-accelerated research and post-AGI futures. We encourage all fellows to present a lightning talk at our end-of-quarter event, possibly on one of these ideas. A few suggested starting points:",
     readings: [
       {
-        title: "A Brief Introduction to some Approaches to AI Alignment",
-        link: "https://aisafetyfundamentals.com/blog/ai-alignment-approaches/",
+        title: "When AI Builds Itself",
+        link: "https://www.anthropic.com/institute/recursive-self-improvement",
         description:
-          "An overview of various AI alignment approaches, providing a foundation for further exploration.",
-        optional: true,
-      },
-      {
-        title: "Why Agent Foundations? An Overly Abstract Explanation",
-        link: "https://www.lesswrong.com/posts/FWvzwCDRgcjb9sigb/why-agent-foundations-an-overly-abstract-explanation",
-        description: "A deeper dive into the concept of agent foundations in AI alignment.",
-        optional: true,
-      },
-      {
-        title: "Goal Misgeneralisation: Why Correct Specifications Aren't Enough For Correct Goals",
-        link: "https://deepmindsafetyresearch.medium.com/goal-misgeneralisation-why-correct-specifications-arent-enough-for-correct-goals-cf96ebc60924",
-        description:
-          "An in-depth exploration of inner alignment issues and goal misgeneralization.",
-        optional: true,
+          "Anthropic's argument, using public benchmarks and previously unreported internal data, that AI is already accelerating AI development.",
       },
       {
         title: "Toy Models of Superposition",
         link: "https://transformer-circuits.pub/2022/toy_model/index.html",
         description: "A technical exploration of interpretability in neural networks.",
-        optional: true,
       },
       {
-        title: "Steering Llama-2 with contrastive activation additions",
-        link: "https://www.lesswrong.com/posts/v7f8ayBxLhmMFRzpa/steering-llama-2-with-contrastive-activation-additions",
-        description: "An examination of techniques for controlling large language models.",
-        optional: true,
+        title: "The Bitter Lesson",
+        link: "http://www.incompleteideas.net/IncIdeas/BitterLesson.html",
+        description:
+          "Rich Sutton's short essay arguing that general methods leveraging computation reliably beat approaches built on human domain knowledge.",
+      },
+      {
+        title: "Gradual Disempowerment",
+        link: "https://gradual-disempowerment.ai/",
+        description:
+          "Argues existential risk can arrive without any takeover: as AI replaces human participation in the economy, culture, and states, human influence erodes incrementally.",
+      },
+      {
+        title: "The Intelligence Curse",
+        link: "https://intelligence-curse.ai/",
+        description:
+          "Argues that once AI replaces human labor, powerful actors lose their incentive to invest in ordinary people — a dynamic analogous to the resource curse.",
+      },
+      {
+        title: "Subliminal Learning: Language Models Transmit Behavioral Traits via Hidden Signals in Data",
+        link: "https://arxiv.org/abs/2507.14805",
+        description:
+          "A surprising phenomenon where language models transmit behavioral traits via semantically unrelated data.",
+      },
+      {
+        title: "The Persona Selection Model: Why AI Assistants Might Behave like Humans",
+        link: "https://alignment.anthropic.com/2026/psm/",
+        description:
+          "Anthropic's theory that LLMs are actors simulating characters learned in pretraining, and the assistant is one such persona.",
       },
     ],
   },
@@ -283,8 +341,8 @@ export default function Fellowship() {
         <p className={styles.pageLede}>
           Our flagship fellowship introduces fellows from any background to the core ideas in AI
           safety, with a particular focus on existential risk from advanced AI. By the program&apos;s
-          end, fellows will have a working map of the field and the foundation to dive deeper into
-          the subareas that interest them.
+          end, fellows will have a working understanding of the field and the foundation to dive
+          deeper into the subareas that interest them.
         </p>
       </header>
       <div className={styles.weeklyReadings}>
