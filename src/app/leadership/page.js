@@ -14,6 +14,7 @@ const executiveBoard = [
   { imgUrl: "/nolan.jpg", memberName: "Nolan Johnson", memberRole: "Executive Board Member", memberEmail: "njohnson10@uchicago.edu", bookingUrl: "https://calendly.com/nolanjohnson/chat" },
   { imgUrl: "/evie.png",   memberName: "Evie Hu",       memberRole: "Executive Board Member", memberEmail: "evelynhu@uchicago.edu", objectPosition: "35% top", bookingUrl: "https://calendly.com/eviehu612" },
   { imgUrl: "/nicole.jpeg", memberName: "Nicole Tang",  memberRole: "Executive Board Member", memberEmail: "xhtang@uchicago.edu", bookingUrl: "https://cal.com/nicoletangxh/quickchat" },
+  { imgUrl: "/justin.jpg", memberName: "Justin Chen",  memberRole: "Executive Board Member", memberEmail: "justinchen@uchicago.edu", bookingUrl: "https://calendly.com/emailjustinchen/30min" },
 ];
 
 const organizers = [
