@@ -36,6 +36,29 @@ export default function GetInvolved() {
       </section>
 
       <section className={styles.section}>
+        <h2 className={styles.sectionTitle}>Apply for Leadership</h2>
+        <p className={styles.sectionText}>
+          We are currently recruiting for student organizers to help deliver and scale up our
+          programs over the 2026–27 academic year. See open roles{" "}
+          <a
+            href="https://docs.google.com/document/d/1oxUyMg42swaz4c9TsFLqU9Vc58kAB1dEL1auvYl0zG8/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.inlineLink}>
+            here
+          </a>
+          .
+        </p>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLScT5UnaMvGvIGZseCLhHdSDrllh8ZOIwr-1eQgv-Fg5kZejZg/viewform?usp=header"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.actionButton}>
+          Apply for Leadership
+        </a>
+      </section>
+
+      <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Join Our Slack</h2>
         <p className={styles.sectionText}>
           Meet the community and follow the conversation between meetings. Our Slack is where we
