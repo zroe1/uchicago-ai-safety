@@ -3,7 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import styles from "./page.module.css";
 
-export default function FellowshipCard({ name, description, syllabusHref, comingSoonText = "Syllabus coming soon" }) {
+export default function FellowshipCard({ name, description, syllabusHref, applyHref, comingSoonText = "Syllabus coming soon" }) {
   const [showMessage, setShowMessage] = useState(false);
 
   return (
@@ -11,7 +11,11 @@ export default function FellowshipCard({ name, description, syllabusHref, coming
       <h2 className={styles.fellowshipName}>{name}</h2>
       <p className={styles.fellowshipDescription}>{description}</p>
       <div className={styles.cardFooter}>
-        {syllabusHref ? (
+        {syllabusHref?.startsWith("/") ? (
+          <Link href={syllabusHref} className={styles.syllabusLink}>
+            View Syllabus <span aria-hidden="true">→</span>
+          </Link>
+        ) : syllabusHref ? (
           <a href={syllabusHref} target="_blank" rel="noopener noreferrer" className={styles.syllabusLink}>
             View Syllabus <span aria-hidden="true">→</span>
           </a>
@@ -20,9 +24,15 @@ export default function FellowshipCard({ name, description, syllabusHref, coming
             {comingSoonText} <span aria-hidden="true">→</span>
           </Link>
         )}
-        <button className={styles.applyButton} onClick={() => setShowMessage(!showMessage)}>
-          Apply
-        </button>
+        {applyHref ? (
+          <a href={applyHref} target="_blank" rel="noopener noreferrer" className={styles.applyButton}>
+            Apply
+          </a>
+        ) : (
+          <button className={styles.applyButton} onClick={() => setShowMessage(!showMessage)}>
+            Apply
+          </button>
+        )}
       </div>
       {showMessage && (
         <p className={styles.applyMessage}>
