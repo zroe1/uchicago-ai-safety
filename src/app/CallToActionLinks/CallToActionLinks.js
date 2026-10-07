@@ -1,11 +1,18 @@
 import React from "react";
+import Link from "next/link";
 import styles from "./CallToActionLinks.module.css";
 
 const actions = [
   {
+    title: "Apply to Fellowships",
+    description: "Join a quarter-long reading and discussion group on AI Safety — open to students from any background.",
+    href: "/fellowships",
+    internal: true,
+  },
+  {
     title: "Apply to Leadership",
     description: "Help run our programming and shape the direction of AI safety at UChicago.",
-    href: "https://coda.io/form/Spring-2026-Leadership-Application_dzKEtAMgmOx",
+    href: "https://docs.google.com/forms/d/e/1FAIpQLScT5UnaMvGvIGZseCLhHdSDrllh8ZOIwr-1eQgv-Fg5kZejZg/viewform?usp=header",
   },
   {
     title: "Join the Mailing List",
@@ -27,20 +34,31 @@ const CallToActionLinks = () => {
         <h2 className={styles.title}>Join us in shaping the future of AI.</h2>
       </div>
       <div className={styles.grid}>
-        {actions.map((action) => (
-          <a
-            key={action.title}
-            href={action.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.card}>
-            <h3 className={styles.cardTitle}>{action.title}</h3>
-            <p className={styles.cardDescription}>{action.description}</p>
-            <span className={styles.cardArrow} aria-hidden="true">
-              →
-            </span>
-          </a>
-        ))}
+        {actions.map((action) => {
+          const content = (
+            <>
+              <h3 className={styles.cardTitle}>{action.title}</h3>
+              <p className={styles.cardDescription}>{action.description}</p>
+              <span className={styles.cardArrow} aria-hidden="true">
+                →
+              </span>
+            </>
+          );
+          return action.internal ? (
+            <Link key={action.title} href={action.href} className={styles.card}>
+              {content}
+            </Link>
+          ) : (
+            <a
+              key={action.title}
+              href={action.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.card}>
+              {content}
+            </a>
+          );
+        })}
       </div>
     </section>
   );
