@@ -36,6 +36,31 @@ export default function GetInvolved() {
       </section>
 
       <section className={styles.section}>
+        <h2 className={styles.sectionTitle}>Apply for Working Groups</h2>
+        <p className={styles.sectionText}>
+          Our working groups offer research opportunities for technical, strategic, and governance
+          dimensions of AI safety. Applications open at the start of each quarter; join the mailing
+          list below to hear when they do. See a full description of this quarter&#39;s working
+          groups and logistics{" "}
+          <a
+            href="https://docs.google.com/document/d/1IQzu9DFuPhOlDSAsksqDNyqULyAXCw57wL9LfqqEJGo/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.inlineLink}>
+            here
+          </a>
+          .
+        </p>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSeJQt0o2dUzonWsJyWe6Wu54s_SXcp6fsltzO5JHpRR2P50Lg/viewform"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.actionButton}>
+          Apply for Working Groups
+        </a>
+      </section>
+
+      <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Apply for Leadership</h2>
         <p className={styles.sectionText}>
           We are currently recruiting for student organizers to help deliver and scale up our

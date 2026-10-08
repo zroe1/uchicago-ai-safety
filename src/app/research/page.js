@@ -87,6 +87,27 @@ export default function Research() {
       </header>
 
       <p className={styles.intro}>
+        Want to do research with us? We are accepting applications for this quarter! See this quarter&#39;s working
+        groups and logistics{" "}
+        <a
+          href="https://docs.google.com/document/d/1IQzu9DFuPhOlDSAsksqDNyqULyAXCw57wL9LfqqEJGo/edit?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.inlineLink}>
+          here
+        </a>
+        , and apply{" "}
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSeJQt0o2dUzonWsJyWe6Wu54s_SXcp6fsltzO5JHpRR2P50Lg/viewform"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.inlineLink}>
+          here
+        </a>
+        .
+      </p>
+
+      <p className={styles.intro}>
         Our work spans the technical, strategic, and governance dimensions of AI safety. Active
         research concentrates in three areas:
       </p>
