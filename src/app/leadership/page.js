@@ -17,6 +17,25 @@ const executiveBoard = [
   { imgUrl: "/justin.jpg", memberName: "Justin Chen",  memberRole: "Executive Board Member", memberEmail: "justinchen@uchicago.edu", bookingUrl: "https://calendly.com/emailjustinchen/30min" },
 ];
 
+const autumnOrganizers = [
+  { memberName: "Brody Fleishman",   memberRole: "Fundamentals Facilitator" },
+  { memberName: "Adrian Fang",       memberRole: "Fundamentals Facilitator" },
+  { memberName: "Sophia Wang",       memberRole: "Fundamentals Facilitator, Graphics" },
+  { memberName: "Sasha Haider",      memberRole: "Fundamentals Facilitator" },
+  { memberName: "Justin Chen",       memberRole: "Fundamentals Facilitator" },
+  { memberName: "Kerenna Klein",     memberRole: "Fundamentals Facilitator" },
+  { memberName: "Laura Nielsen",     memberRole: "Fundamentals Facilitator, Events" },
+  { memberName: "Parjanya Tiwari",   memberRole: "Policy & Governance Facilitator" },
+  { memberName: "Gil Rubinstein",    memberRole: "Policy & Governance Facilitator" },
+  { memberName: "Tiago Flora",       memberRole: "Economics of Transformative AI Facilitator" },
+  { memberName: "Lucas Chen",        memberRole: "Technical Paper Reading Group Facilitator" },
+  { memberName: "Brian Yu",          memberRole: "Technical Paper Reading Group Facilitator" },
+  { memberName: "Julian Huang",      memberRole: "Research Manager" },
+  { memberName: "Rhea Kanuparthi",   memberRole: "Research Manager" },
+  { memberName: "Kailee Kuan",       memberRole: "Events & Marketing Lead" },
+  { memberName: "Madeleine Hoffman", memberRole: "Operations Lead" },
+];
+
 const organizers = [
   { memberName: "Nicole Tang",       memberRole: "Fundamentals Facilitator" },
   { memberName: "Kin Ching Ip",      memberRole: "Fundamentals Facilitator" },
@@ -82,6 +101,18 @@ export default function LeadershipPage() {
         <div className={styles.leaderGrid}>
           {executiveBoard.map((member) => (
             <LeadershipMember key={member.memberName} {...member} />
+          ))}
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <h2 className={styles.sectionTitle}>Organizers &amp; Leads — Autumn &apos;26</h2>
+        <div className={styles.simpleGrid}>
+          {autumnOrganizers.map((member) => (
+            <div key={member.memberName} className={styles.simpleCard}>
+              <p className={styles.simpleName}>{member.memberName}</p>
+              <p className={styles.simpleRole}>{member.memberRole}</p>
+            </div>
           ))}
         </div>
       </section>
