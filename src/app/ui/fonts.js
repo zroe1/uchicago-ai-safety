@@ -1,4 +1,4 @@
-import { EB_Garamond, Roboto } from "next/font/google";
+import { EB_Garamond, Public_Sans } from "next/font/google";
 
 // Primary display serif — used for headings and editorial titles.
 export const serif = EB_Garamond({
@@ -10,9 +10,9 @@ export const serif = EB_Garamond({
 });
 
 // Secondary sans — used for body copy, navigation, and UI text.
-export const roboto = Roboto({
+// Loaded as a variable font so the theme can tune body weight (see --text-weight).
+export const sans = Public_Sans({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "700"],
   variable: "--font-sans",
   display: "swap",
 });

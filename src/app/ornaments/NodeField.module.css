@@ -24,6 +24,18 @@
   );
 }
 
+/* Left-aligned content: nodes only on the right, fading in past the text. */
+.right {
+  mask-image: linear-gradient(90deg, transparent 0, transparent 60%, black 80%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, transparent 60%, black 80%);
+}
+
+@media screen and (max-width: 900px) {
+  .right {
+    display: none;
+  }
+}
+
 .canvas {
   display: block;
   width: 100%;

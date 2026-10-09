@@ -6,8 +6,10 @@ import NodeField from "@/app/ornaments/NodeField";
 
 export const metadata = {
   title: "UChicago AI Safety",
-  description: "UChicago's student-led initiative studying AI safety, sponsored by the x-risk lab.",
-  keywords: "AI safety, AI alignment, University of Chicago, x-risk lab, AI research",
+  description:
+    "UChicago's student-led initiative studying AI safety, sponsored by the x-risk lab.",
+  keywords:
+    "AI safety, AI alignment, University of Chicago, x-risk lab, AI research",
 };
 
 const pillars = [
@@ -38,16 +40,18 @@ export default function Home() {
   return (
     <>
       <section className={styles.hero}>
-        <NodeField clearWidth={960} />
+        <NodeField side="right" />
         <div className={styles.heroInner}>
-          <p className={styles.eyebrow}>AI Safety Group @ UChicago XLab</p>
           <h1 className={styles.heroTitle}>
             UChicago&#39;s student-led initiative to{" "}
-            <em className={styles.heroAccent}>shape the future of AI safety.</em>
+            <em className={styles.heroAccent}>
+              shape the future of AI safety.
+            </em>
           </h1>
           <p className={styles.heroLede}>
-            We are a community of undergraduate and graduate students working to reduce risks from
-            advanced AI and steer its development toward better outcomes.
+            We are a community of undergraduate and graduate students working to
+            reduce risks from advanced AI and steer its development toward
+            better outcomes.
           </p>
           <div className={styles.heroCtas}>
             <Link href="/about-us" className={styles.ctaPrimary}>
@@ -61,12 +65,13 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               className={styles.xlabLink}
-              aria-label="The University of Chicago's Existential Risk Laboratory">
+              aria-label="The University of Chicago's Existential Risk Laboratory"
+            >
               <Image
                 src="/x-lab-logo.png"
                 alt="The University of Chicago's Existential Risk Laboratory"
-                width={853 * 0.28}
-                height={293 * 0.28}
+                width={853 * 0.22}
+                height={293 * 0.22}
                 className={`${styles.xlabLogo} dark-invert-hue`}
               />
             </a>
@@ -74,16 +79,19 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.pillars}>
-        {pillars.map((pillar) => (
-          <div key={pillar.title} className={styles.pillar}>
-            <h2 className={styles.pillarTitle}>{pillar.title}</h2>
-            <p className={styles.pillarDescription}>{pillar.description}</p>
-            <Link href={pillar.href} className={styles.pillarLink}>
-              {pillar.linkText} <span aria-hidden="true">→</span>
-            </Link>
-          </div>
-        ))}
+      <section className={styles.pillarsSection}>
+        <h2 className={styles.sectionTitle}>What we do</h2>
+        <div className={styles.pillars}>
+          {pillars.map((pillar) => (
+            <div key={pillar.title} className={styles.pillar}>
+              <h3 className={styles.pillarTitle}>{pillar.title}</h3>
+              <p className={styles.pillarDescription}>{pillar.description}</p>
+              <Link href={pillar.href} className={styles.pillarLink}>
+                {pillar.linkText} <span aria-hidden="true">→</span>
+              </Link>
+            </div>
+          ))}
+        </div>
       </section>
 
       <CallToActionLinks />

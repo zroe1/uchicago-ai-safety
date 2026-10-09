@@ -85,7 +85,7 @@
 .eventDescription {
   font-family: var(--sans);
   font-size: 0.92rem;
-  font-weight: 300;
+  font-weight: var(--text-weight);
   line-height: 1.75;
   color: var(--muted);
   margin: 0.7rem 0 0;

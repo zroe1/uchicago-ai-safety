@@ -38,7 +38,7 @@
 .pageLede {
   font-family: var(--sans);
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: var(--text-weight);
   line-height: 1.75;
   color: var(--muted);
   max-width: 44rem;
@@ -113,7 +113,7 @@
 .simpleEmail {
   font-family: var(--sans);
   font-size: 0.8rem;
-  font-weight: 300;
+  font-weight: var(--text-weight);
   color: var(--faint);
   margin: 0;
 }

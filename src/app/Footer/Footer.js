@@ -59,7 +59,7 @@ const Footer = () => {
                 Mailing List
               </a>
               <a
-                href="https://join.slack.com/t/xlab-uchicago/shared_invite/zt-3y40eokbn-U3Pc5k7UosBic0eljNg5Bg"
+                href="https://join.slack.com/t/xlab-uchicago/shared_invite/zt-47zdem4lv-vncDwWYv3WTBCHvK8ZgN8Q"
                 target="_blank"
                 rel="noopener noreferrer">
                 Slack

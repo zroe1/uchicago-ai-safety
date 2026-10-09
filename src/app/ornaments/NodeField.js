@@ -19,9 +19,10 @@ function mulberry32(seed) {
  *
  * Nodes are generated only in the side margins outside the central content
  * column (`clearWidth`), and a mask fades them out before they can reach it,
- * so they never sit behind text.
+ * so they never sit behind text. With `side="right"` (for left-aligned
+ * content) nodes fill only the right portion of the section instead.
  */
-export default function NodeField({ clearWidth = 920 }) {
+export default function NodeField({ clearWidth = 920, side = "both" }) {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -62,14 +63,26 @@ export default function NodeField({ clearWidth = 920 }) {
 
       const rand = mulberry32(0xa11c3d);
       // Width of each usable side band, overlapping slightly into the mask fade.
-      const band = Math.max(90, (W - clearWidth) / 2 + 70);
-      const count = Math.min(110, Math.max(16, Math.round((2 * band * H) / 16000)));
+      const rightOnly = side === "right";
+      const band = rightOnly ? W * 0.45 : Math.max(90, (W - clearWidth) / 2 + 70);
+      const bands = rightOnly ? 1 : 2;
+      const count = Math.min(110, Math.max(16, Math.round((bands * band * H) / 16000)));
       nodes = [];
       for (let i = 0; i < count; i++) {
         const off = rand() * band;
+        const leftSide = rand() < 0.5 && !rightOnly;
+        let bx = leftSide ? off : W - off;
+        let by = rand() * H;
+        if (rightOnly) {
+          // Same seeded scatter, but lift the lower nodes and ease them left so
+          // the bottom constellation doesn't sit in the corner.
+          const depth = by / H;
+          by *= 0.82;
+          bx -= depth * depth * band * 0.2;
+        }
         nodes.push({
-          bx: rand() < 0.5 ? off : W - off,
-          by: rand() * H,
+          bx,
+          by,
           x: 0,
           y: 0,
           r: 1.6 + rand() * 1.2,
@@ -180,11 +193,11 @@ export default function NodeField({ clearWidth = 920 }) {
       ro.disconnect();
       mo.disconnect();
     };
-  }, [clearWidth]);
+  }, [clearWidth, side]);
 
   return (
     <div
-      className={styles.field}
+      className={`${styles.field} ${side === "right" ? styles.right : ""}`}
       style={{ "--nf-clear": `${clearWidth}px` }}
       aria-hidden="true">
       <canvas ref={canvasRef} className={styles.canvas} />

@@ -91,7 +91,7 @@
 .text {
   font-family: var(--sans);
   font-size: 0.95rem;
-  font-weight: 300;
+  font-weight: var(--text-weight);
   line-height: 1.75;
   color: var(--muted);
   margin: 0.9rem 0 0;

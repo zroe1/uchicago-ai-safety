@@ -43,74 +43,87 @@ const Header = () => {
     };
   }, [isMenuOpen]);
 
+  useEffect(() => {
+    if (!isMenuOpen) return;
+    const onKeyDown = (e) => {
+      if (e.key === "Escape") setIsMenuOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [isMenuOpen]);
+
   const isActive = (item) =>
     pathname === item.href ||
     (item.children && item.children.some((child) => pathname === child.href));
 
   return (
-    <header className={styles.header}>
-      <div className={styles.container}>
-        <Link href="/" className={styles.logoContainer}>
-          <Image
-            src="/x-tech_2CBM.png"
-            alt="UChicago AI Safety logo"
-            width={80}
-            height={80}
-            className={`${styles.logo} dark-invert-hue`}
-          />
-          <span className={styles.logoText}>
-            <span>UChicago</span>
-            <span>AI Safety</span>
-          </span>
-        </Link>
+    <>
+      <header className={styles.header}>
+        <div className={styles.container}>
+          <Link href="/" className={styles.logoContainer}>
+            <Image
+              src="/x-tech_2CBM.png"
+              alt="UChicago AI Safety logo"
+              width={80}
+              height={80}
+              className={`${styles.logo} dark-invert-hue`}
+            />
+            <span className={styles.logoText}>
+              <span className={styles.logoName}>AI Safety Group</span>
+              <span>@ UChicago XLab</span>
+            </span>
+          </Link>
 
-        <nav className={styles.desktopNav} aria-label="Main navigation">
-          <ul className={styles.navList}>
-            {navItems.map((item) => (
-              <li
-                key={item.label}
-                className={`${styles.navItem} ${item.children ? styles.dropdownParent : ""}`}>
-                <Link
-                  href={item.href}
-                  className={`${styles.navLink} ${isActive(item) ? styles.navLinkActive : ""}`}>
-                  {item.label}
-                  {item.children && <span className={styles.caret}>▾</span>}
+          <nav className={styles.desktopNav} aria-label="Main navigation">
+            <ul className={styles.navList}>
+              {navItems.map((item) => (
+                <li
+                  key={item.label}
+                  className={`${styles.navItem} ${item.children ? styles.dropdownParent : ""}`}>
+                  <Link
+                    href={item.href}
+                    className={`${styles.navLink} ${isActive(item) ? styles.navLinkActive : ""}`}>
+                    {item.label}
+                    {item.children && <span className={styles.caret}>▾</span>}
+                  </Link>
+                  {item.children && (
+                    <ul className={styles.dropdown}>
+                      {item.children.map((child) => (
+                        <li key={child.label}>
+                          <Link href={child.href} className={styles.dropdownLink}>
+                            {child.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
+              <li className={styles.navItem}>
+                <Link href="/get-involved" className={styles.ctaLink}>
+                  Get Involved <span aria-hidden="true">→</span>
                 </Link>
-                {item.children && (
-                  <ul className={styles.dropdown}>
-                    {item.children.map((child) => (
-                      <li key={child.label}>
-                        <Link href={child.href} className={styles.dropdownLink}>
-                          {child.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
               </li>
-            ))}
-            <li className={styles.navItem}>
-              <Link href="/get-involved" className={styles.ctaLink}>
-                Get Involved <span aria-hidden="true">→</span>
-              </Link>
-            </li>
-            <li className={styles.navItem}>
-              <ThemeToggle />
-            </li>
-          </ul>
-        </nav>
+              <li className={styles.navItem}>
+                <ThemeToggle />
+              </li>
+            </ul>
+          </nav>
 
-        <button
-          className={`${styles.mobileMenuButton} ${isMenuOpen ? styles.open : ""}`}
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label="Toggle menu"
-          aria-expanded={isMenuOpen}>
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
+          <button
+            className={`${styles.mobileMenuButton} ${isMenuOpen ? styles.open : ""}`}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
+            aria-expanded={isMenuOpen}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
 
+      {/* Rendered outside <header>: its backdrop-filter would otherwise trap this
+          fixed overlay inside the header's box instead of the viewport. */}
       {isMenuOpen && (
         <nav className={styles.mobileNav} aria-label="Mobile navigation">
           <ul className={styles.mobileNavList}>
@@ -143,7 +156,7 @@ const Header = () => {
           </ul>
         </nav>
       )}
-    </header>
+    </>
   );
 };
 

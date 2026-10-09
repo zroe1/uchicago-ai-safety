@@ -1,7 +1,7 @@
 import "./globals.css";
 import Header from "@/header/Header";
 import Footer from "./Footer/Footer";
-import { serif, roboto } from "@/app/ui/fonts";
+import { serif, sans } from "@/app/ui/fonts";
 
 export const metadata = {
   title: "UChicago AI Safety",
@@ -20,7 +20,7 @@ const themeInit = `(function(){try{var t=localStorage.getItem("uais-theme");if(t
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${serif.variable} ${roboto.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${serif.variable} ${sans.variable}`} suppressHydrationWarning>
       <body>
         <script dangerouslySetInnerHTML={{ __html: themeInit }} />
         <Header />

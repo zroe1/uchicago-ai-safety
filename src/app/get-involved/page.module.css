@@ -47,7 +47,7 @@
 }
 
 .sectionTitle {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 1.55rem;
   font-weight: 600;
   letter-spacing: -0.01em;
@@ -58,7 +58,7 @@
 .sectionText {
   font-family: var(--sans);
   font-size: 0.95rem;
-  font-weight: 300;
+  font-weight: var(--text-weight);
   line-height: 1.8;
   color: var(--muted);
   margin: 0 0 1rem;
@@ -73,7 +73,7 @@
 .bulletList li {
   font-family: var(--sans);
   font-size: 0.95rem;
-  font-weight: 300;
+  font-weight: var(--text-weight);
   line-height: 1.8;
   color: var(--muted);
   padding: 0.3rem 0 0.3rem 1.4rem;

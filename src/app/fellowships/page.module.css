@@ -38,7 +38,7 @@
 .pageLede {
   font-family: var(--sans);
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: var(--text-weight);
   line-height: 1.75;
   color: var(--muted);
   max-width: 44rem;
@@ -76,7 +76,7 @@
 .fellowshipDescription {
   font-family: var(--sans);
   font-size: 0.92rem;
-  font-weight: 300;
+  font-weight: var(--text-weight);
   line-height: 1.75;
   color: var(--muted);
   margin: 0 0 1.4rem;
@@ -139,7 +139,7 @@
 .applyMessage {
   font-family: var(--sans);
   font-size: 0.875rem;
-  font-weight: 300;
+  font-weight: var(--text-weight);
   color: var(--muted);
   line-height: 1.65;
   border-top: 1px solid var(--hairline);

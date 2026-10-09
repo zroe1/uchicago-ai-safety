@@ -54,7 +54,7 @@
 .memberEmail {
   font-family: var(--sans);
   font-size: 0.8rem;
-  font-weight: 300;
+  font-weight: var(--text-weight);
   color: var(--faint);
   margin: 0.35rem 0 0;
   word-break: break-all;

@@ -39,7 +39,7 @@
 .intro {
   font-family: var(--sans);
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: var(--text-weight);
   line-height: 1.75;
   color: var(--muted);
   max-width: 48rem;
@@ -72,7 +72,7 @@
 .areaDescription {
   font-family: var(--sans);
   font-size: 0.92rem;
-  font-weight: 300;
+  font-weight: var(--text-weight);
   line-height: 1.75;
   color: var(--muted);
   margin: 0;
@@ -178,7 +178,7 @@
 .otherItem {
   font-family: var(--sans);
   font-size: 0.9rem;
-  font-weight: 300;
+  font-weight: var(--text-weight);
   line-height: 1.6;
   color: var(--muted);
   padding: 0.55rem 0 0.55rem 1.4rem;

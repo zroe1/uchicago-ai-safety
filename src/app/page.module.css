@@ -3,7 +3,10 @@
 .hero {
   position: relative;
   overflow: hidden;
-  padding: clamp(4rem, 11vh, 7.5rem) var(--page-pad) 3.5rem;
+  /* How far the affiliation rule sits above its natural spot. Scales with screen
+     height; the same amount is added below so the sections after don't move. */
+  --affiliation-lift: clamp(1rem, 3vh, 2rem);
+  padding: clamp(2.75rem, calc(11vh - 0.75rem), 6.75rem) 0 calc(3.5rem + var(--affiliation-lift));
 }
 
 .hero::before {
@@ -13,8 +16,8 @@
   background-image: linear-gradient(rgba(var(--ink-rgb), 0.035) 1px, transparent 1px),
     linear-gradient(90deg, rgba(var(--ink-rgb), 0.035) 1px, transparent 1px);
   background-size: 56px 56px;
-  mask-image: radial-gradient(ellipse 85% 75% at 50% 0%, black 25%, transparent 72%);
-  -webkit-mask-image: radial-gradient(ellipse 85% 75% at 50% 0%, black 25%, transparent 72%);
+  mask-image: radial-gradient(ellipse 94% 213% at 85% 0%, black 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 94% 213% at 85% 0%, black 30%, transparent 75%);
   pointer-events: none;
 }
 
@@ -23,65 +26,60 @@
   position: absolute;
   inset: 0;
   background: radial-gradient(
-    ellipse 55% 45% at 50% -8%,
+    ellipse 50% 45% at 15% -8%,
     rgba(var(--maroon-rgb), 0.07),
     transparent 70%
   );
   pointer-events: none;
 }
 
+/* Shares the header's 1280px column so the hero's left edge lines up with the logo. */
 .heroInner {
   position: relative;
   z-index: 1;
-  max-width: 58rem;
+  max-width: 1280px;
   margin: 0 auto;
-  text-align: center;
-}
-
-.eyebrow {
-  font-family: var(--sans);
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--maroon);
-  margin: 0;
+  padding: 0 var(--page-pad);
 }
 
 .heroTitle {
   font-family: var(--serif);
   font-weight: 500;
-  font-size: clamp(2.4rem, 5vw, 3.9rem);
-  line-height: 1.15;
-  letter-spacing: -0.015em;
+  font-size: clamp(2.6rem, 6vw, 5rem);
+  line-height: 1.04;
+  letter-spacing: -0.022em;
   color: var(--ink);
-  margin: 1.4rem 0 0;
+  max-width: 19ch;
+  margin: 0;
 }
 
 .heroAccent {
   color: var(--maroon);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .heroLede {
   font-family: var(--sans);
-  font-size: 1.05rem;
-  font-weight: 300;
-  line-height: 1.75;
+  font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+  font-weight: var(--text-weight);
+  line-height: 1.65;
   color: var(--muted);
-  max-width: 42rem;
-  margin: 1.6rem auto 0;
+  max-width: 36rem;
+  margin: calc(clamp(4.5rem, 11vh, 6.5rem) + 1.5 * 1.65em + 0.75rem) 0 0;
+  /* Even line lengths instead of a ragged short middle line. */
+  text-wrap: balance;
 }
 
 .heroCtas {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
-  margin-top: 2.4rem;
+  margin-top: 1.25rem;
   font-family: var(--sans);
-  font-size: 0.95rem;
+  /* Same size and line height as the lede above. */
+  font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+  line-height: 1.65;
 }
 
 .ctaPrimary {
@@ -89,26 +87,36 @@
   font-weight: 500;
   text-decoration: none;
   white-space: nowrap;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid currentColor;
   transition: opacity 0.2s ease;
 }
 
+.ctaPrimary span {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
 .ctaPrimary:hover {
-  opacity: 0.72;
+  opacity: 0.8;
+}
+
+.ctaPrimary:hover span {
+  transform: translateX(3px);
 }
 
 .heroAffiliation {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 4.5rem;
-  padding-top: 2rem;
+  margin-top: calc(clamp(3.5rem, 9vh, 6rem) - var(--affiliation-lift));
+  padding-top: 1.6rem;
   border-top: 1px solid var(--hairline);
   font-family: var(--sans);
-  font-size: 0.85rem;
-  font-weight: 300;
-  color: var(--faint);
+  font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+  font-weight: var(--text-weight);
+  color: var(--muted);
 }
 
 .xlabLink {
@@ -129,10 +137,23 @@
 
 /* --- Pillars --- */
 
-.pillars {
+.pillarsSection {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2.5rem var(--page-pad) 2rem;
+}
+
+/* Matches the "Join us in shaping the future of AI." heading below. */
+.sectionTitle {
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 0 0 2rem;
+}
+
+.pillars {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: clamp(2rem, 4vw, 4rem);
@@ -144,8 +165,9 @@
 }
 
 .pillarTitle {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 1.5rem;
+  letter-spacing: -0.01em;
   font-weight: 600;
   color: var(--ink);
   margin: 0;
@@ -154,23 +176,33 @@
 .pillarDescription {
   font-family: var(--sans);
   font-size: 0.92rem;
-  font-weight: 300;
+  font-weight: var(--text-weight);
   line-height: 1.7;
   color: var(--muted);
   margin: 0.8rem 0 1.2rem;
 }
 
+/* Same size as the description; same hover as the hero CTA, minus the underline. */
 .pillarLink {
   font-family: var(--sans);
-  font-size: 0.875rem;
+  font-size: 0.92rem;
   font-weight: 500;
   color: var(--maroon);
   text-decoration: none;
   transition: opacity 0.2s ease;
 }
 
+.pillarLink span {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
 .pillarLink:hover {
-  opacity: 0.72;
+  opacity: 0.8;
+}
+
+.pillarLink:hover span {
+  transform: translateX(3px);
 }
 
 @media screen and (max-width: 900px) {
@@ -190,6 +222,6 @@
   }
 
   .heroAffiliation {
-    margin-top: 3rem;
+    margin-top: calc(3rem - var(--affiliation-lift));
   }
 }

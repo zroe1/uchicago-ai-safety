@@ -36,7 +36,7 @@
 .pageLede {
   font-family: var(--sans);
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: var(--text-weight);
   line-height: 1.75;
   color: var(--muted);
   max-width: 46rem;
@@ -75,7 +75,7 @@
 .weekDescription {
   font-family: var(--sans);
   font-size: 0.95rem;
-  font-weight: 300;
+  font-weight: var(--text-weight);
   line-height: 1.7;
   color: var(--muted);
   margin: 0.8rem 0 0;
@@ -149,7 +149,7 @@
 .timeFrame {
   font-family: var(--sans);
   font-size: 0.78rem;
-  font-weight: 300;
+  font-weight: var(--text-weight);
   font-style: italic;
   color: var(--faint);
 }
@@ -157,7 +157,7 @@
 .readingDescription {
   font-family: var(--sans);
   font-size: 0.86rem;
-  font-weight: 300;
+  font-weight: var(--text-weight);
   line-height: 1.65;
   color: var(--muted);
   margin: 0.5rem 0 0;
@@ -167,7 +167,7 @@
 .noReadings {
   font-family: var(--sans);
   font-size: 0.9rem;
-  font-weight: 300;
+  font-weight: var(--text-weight);
   font-style: italic;
   color: var(--faint);
   margin: 1.4rem 0 0;

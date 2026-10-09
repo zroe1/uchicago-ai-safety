@@ -42,6 +42,10 @@
   letter-spacing: 0.01em;
 }
 
+.logoName {
+  color: var(--ink);
+}
+
 /* --- Desktop navigation --- */
 
 .navList {
@@ -58,6 +62,31 @@
   display: flex;
   align-items: center;
   height: var(--nav-height);
+}
+
+.navLink,
+.ctaLink {
+  position: relative;
+}
+
+/* Underline that draws in from the left on hover. */
+.navLink::after,
+.ctaLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.085s ease;
+}
+
+.navLink:hover::after,
+.ctaLink:hover::after {
+  transform: scaleX(1);
 }
 
 .navLink {
@@ -122,7 +151,7 @@
   margin: 0;
   border: 1px solid var(--hairline-dark);
   border-radius: 6px;
-  box-shadow: 0 12px 32px rgba(var(--ink-rgb), 0.08);
+  box-shadow: 0 6px 16px rgba(var(--ink-rgb), 0.035);
   min-width: 230px;
   opacity: 0;
   visibility: hidden;
@@ -202,6 +231,7 @@
   flex-direction: column;
   align-items: center;
   overflow-y: auto;
+  overscroll-behavior: contain;
   padding: 8vh 1.5rem 3rem;
   z-index: 99;
 }
@@ -262,6 +292,12 @@
   display: flex;
   justify-content: center;
   margin-top: 1.8rem;
+}
+
+@media screen and (min-width: 1001px) {
+  .mobileNav {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1000px) {

@@ -51,7 +51,7 @@
 .bodyText {
   font-family: var(--sans);
   font-size: 0.95rem;
-  font-weight: 300;
+  font-weight: var(--text-weight);
   line-height: 1.8;
   color: var(--muted);
   margin-bottom: 1rem;
@@ -66,7 +66,7 @@
 .bodyList li {
   font-family: var(--sans);
   font-size: 0.95rem;
-  font-weight: 300;
+  font-weight: var(--text-weight);
   line-height: 1.8;
   color: var(--muted);
   padding: 0.35rem 0 0.35rem 1.4rem;
