@@ -5,9 +5,9 @@ import NodeField from "@/app/ornaments/NodeField";
 import GridFade from "@/app/ornaments/GridFade";
 
 export const metadata = {
-  title: "Get Involved - UChicago AI Safety",
+  title: "Get Involved - AI Safety Group @ UChicago XLab",
   description:
-    "Get Involved with UChicago AI Safety. Apply for our fellowships, join our Slack and mailing list, or reach out to us directly.",
+    "Get Involved with the AI Safety Group @ UChicago XLab. Apply for our fellowships, join our Slack and mailing list, or reach out to us directly.",
   keywords: "AI safety, AI alignment, University of Chicago, x-risk lab, AI research",
 };
 

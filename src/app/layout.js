@@ -4,7 +4,7 @@ import Footer from "./Footer/Footer";
 import { serif, sans } from "@/app/ui/fonts";
 
 export const metadata = {
-  title: "UChicago AI Safety",
+  title: "AI Safety Group @ UChicago XLab",
   description: "UChicago's student-led initiative studying AI safety.",
   icons: {
     icon: [

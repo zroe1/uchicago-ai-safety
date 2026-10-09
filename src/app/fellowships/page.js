@@ -5,8 +5,8 @@ import NodeField from "@/app/ornaments/NodeField";
 import GridFade from "@/app/ornaments/GridFade";
 
 export const metadata = {
-  title: "Fellowships - UChicago AI Safety",
-  description: "UChicago AI Safety fellowship programs covering AI safety, governance, economics, strategy, and security.",
+  title: "Fellowships - AI Safety Group @ UChicago XLab",
+  description: "Fellowship programs from the AI Safety Group @ UChicago XLab, covering AI safety, governance, economics, strategy, and security.",
   keywords: "AI safety, fellowship, University of Chicago, AI governance, AI security",
 };
 

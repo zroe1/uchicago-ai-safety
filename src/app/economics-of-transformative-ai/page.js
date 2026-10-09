@@ -4,7 +4,7 @@ import NodeField from "@/app/ornaments/NodeField";
 import GridFade from "@/app/ornaments/GridFade";
 
 export const metadata = {
-  title: "Economics of Transformative AI - UChicago AI Safety",
+  title: "Economics of Transformative AI - AI Safety Group @ UChicago XLab",
   description:
     "A fellowship examining how economic forces shape AI safety decisions, and how economic tools can meaningfully reduce existential risk from AI.",
   keywords:

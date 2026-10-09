@@ -63,7 +63,7 @@ const Header = () => {
           <Link href="/" className={styles.logoContainer}>
             <Image
               src="/x-tech_2CBM.png"
-              alt="UChicago AI Safety logo"
+              alt="AI Safety Group @ UChicago XLab logo"
               width={80}
               height={80}
               className={`${styles.logo} dark-invert-hue`}

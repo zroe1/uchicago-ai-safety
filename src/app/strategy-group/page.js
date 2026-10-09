@@ -4,7 +4,7 @@ import NodeField from "@/app/ornaments/NodeField";
 import GridFade from "@/app/ornaments/GridFade";
 
 export const metadata = {
-  title: "Strategy and Forecasting - UChicago AI Safety",
+  title: "Strategy and Forecasting - AI Safety Group @ UChicago XLab",
   description:
     "A reading and discussion group building shared understanding around the crucial questions of transformative AI, culminating in each fellow writing their own AGI takeoff scenario.",
   keywords:

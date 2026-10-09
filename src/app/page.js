@@ -5,7 +5,7 @@ import CallToActionLinks from "@/app/CallToActionLinks/CallToActionLinks";
 import NodeField from "@/app/ornaments/NodeField";
 
 export const metadata = {
-  title: "UChicago AI Safety",
+  title: "AI Safety Group @ UChicago XLab",
   description:
     "UChicago's student-led initiative studying AI safety, sponsored by the x-risk lab.",
   keywords:

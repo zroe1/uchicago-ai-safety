@@ -107,3 +107,15 @@
     height: 55px;
   }
 }
+
+.inlineLink {
+  color: var(--maroon);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(var(--maroon-rgb), 0.35);
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.inlineLink:hover {
+  color: var(--maroon-dark);
+  border-color: var(--maroon-dark);
+}

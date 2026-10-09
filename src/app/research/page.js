@@ -5,8 +5,8 @@ import NodeField from "@/app/ornaments/NodeField";
 import GridFade from "@/app/ornaments/GridFade";
 
 export const metadata = {
-  title: "Research - UChicago AI Safety",
-  description: "Research initiatives at UChicago AI Safety.",
+  title: "Research - AI Safety Group @ UChicago XLab",
+  description: "Research initiatives at the AI Safety Group @ UChicago XLab.",
   keywords: "AI safety, research, University of Chicago",
 };
 
@@ -87,8 +87,8 @@ export default function Research() {
       </header>
 
       <p className={styles.intro}>
-        Want to do research with us? We are accepting applications for this quarter! See this quarter&#39;s working
-        groups and logistics{" "}
+        Want to do research with us? We are accepting applications for this quarter&#39;s working
+        groups! See the full list of groups and logistics{" "}
         <a
           href="https://docs.google.com/document/d/1IQzu9DFuPhOlDSAsksqDNyqULyAXCw57wL9LfqqEJGo/edit?usp=sharing"
           target="_blank"
@@ -104,13 +104,23 @@ export default function Research() {
           className={styles.inlineLink}>
           here
         </a>
-        .
+        . Applications close at 11:59 PM CDT on Friday, October 9.
       </p>
 
       <p className={styles.intro}>
         Our work spans the technical, strategic, and governance dimensions of AI safety. Active
-        research concentrates in three areas:
+        research concentrates in four areas:
       </p>
+
+      <div className={styles.areaCard}>
+        <h2 className={styles.areaTitle}>Technical AI Safety</h2>
+        <p className={styles.areaDescription}>
+          Understanding the empirical properties of current frontier AI systems (namely, LLMs) and
+          developing theory about the properties we can expect from future systems — how they are
+          shaped by different forms of training, the mechanisms behind their behavior, and how human
+          oversight can scale to increasingly advanced AI.
+        </p>
+      </div>
 
       <div className={styles.areaCard}>
         <h2 className={styles.areaTitle}>Security</h2>

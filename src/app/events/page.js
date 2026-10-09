@@ -4,8 +4,8 @@ import NodeField from "@/app/ornaments/NodeField";
 import GridFade from "@/app/ornaments/GridFade";
 
 export const metadata = {
-  title: "Events - UChicago AI Safety",
-  description: "Upcoming and past events from UChicago AI Safety.",
+  title: "Events - AI Safety Group @ UChicago XLab",
+  description: "Upcoming and past events from the AI Safety Group @ UChicago XLab.",
   keywords: "AI safety, events, University of Chicago, symposium",
 };
 

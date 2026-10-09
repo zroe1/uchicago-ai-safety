@@ -12,14 +12,14 @@ const Footer = () => {
             <div className={styles.brandGroup}>
               <Image
                 src="/x-tech_2CBM.png"
-                alt="UChicago AI Safety logo"
+                alt="AI Safety Group @ UChicago XLab logo"
                 width={80}
                 height={80}
                 className={`${styles.logo} dark-invert-hue`}
               />
               <span className={styles.brandText}>
-                <span>UChicago</span>
-                <span>AI Safety</span>
+                <span className={styles.brandName}>AI Safety Group</span>
+                <span>@ UChicago XLab</span>
               </span>
             </div>
             <p className={styles.location}>University of Chicago · Chicago, IL</p>
@@ -73,8 +73,8 @@ const Footer = () => {
 
         <div className={styles.bottomBar}>
           <p>
-            &copy; {new Date().getFullYear()} UChicago AI Safety. A program of the University of
-            Chicago&apos;s Existential Risk Laboratory.
+            &copy; {new Date().getFullYear()} AI Safety Group @ UChicago XLab. A program of the
+            University of Chicago&apos;s Existential Risk Laboratory.
           </p>
         </div>
       </div>

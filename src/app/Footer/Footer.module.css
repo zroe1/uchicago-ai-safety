@@ -47,6 +47,10 @@
   line-height: 1.15;
 }
 
+.brandName {
+  color: var(--ink);
+}
+
 .location {
   color: var(--faint);
   font-size: 0.85rem;

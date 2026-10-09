@@ -4,7 +4,7 @@ import NodeField from "@/app/ornaments/NodeField";
 import GridFade from "@/app/ornaments/GridFade";
 
 export const metadata = {
-  title: "Policy and Governance - UChicago AI Safety",
+  title: "Policy and Governance - AI Safety Group @ UChicago XLab",
   description:
     "A fellowship covering the foundations of AI policy: key players and policy levers, current US, state, lab, and EU frameworks, pressing topics from US–China competition to CBRN risk, and careers in AI policy.",
   keywords:

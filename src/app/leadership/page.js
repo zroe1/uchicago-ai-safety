@@ -4,8 +4,8 @@ import NodeField from "@/app/ornaments/NodeField";
 import GridFade from "@/app/ornaments/GridFade";
 
 export const metadata = {
-  title: "Leadership Team - UChicago AI Safety",
-  description: "Meet the dedicated individuals who guide UChicago AI Safety.",
+  title: "Leadership Team - AI Safety Group @ UChicago XLab",
+  description: "Meet the dedicated individuals who guide the AI Safety Group @ UChicago XLab.",
   keywords: "AI safety, AI alignment, University of Chicago, x-risk lab, AI research",
 };
 

@@ -4,9 +4,9 @@ export default function HomeDescription() {
   return (
     <div className={styles.homeDescriptionContainer}>
       <p className={styles.homePageDescriptionText}>
-        Welcome to UChicago AI Safety, a group of undergraduate students dedicated to addressing AI
-        alignment—the crucial challenge of ensuring artificial intelligence behaves in ways that
-        benefit humanity and align with our values.
+        Welcome to the AI Safety Group @ UChicago XLab, a group of undergraduate students dedicated
+        to addressing AI alignment—the crucial challenge of ensuring artificial intelligence
+        behaves in ways that benefit humanity and align with our values.
       </p>
       <p className={styles.homePageDescriptionText}>
         As AI becomes more powerful, the importance of alignment grows. Misaligned AI could pose
