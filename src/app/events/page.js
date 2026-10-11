@@ -17,7 +17,7 @@ const upcomingEvents = [
     location: "Rubenstein Forum, Friedman Hall Auditorium",
     registerHref: "https://luma.com/vqxdyli7",
     description:
-      "A discussion with Stephen Casper, computer scientist and assistant professor at the Harvard Kennedy School of Government, and Daniel Holz, physicist at the University of Chicago and director of the Existential Risk Laboratory, to make sense of recent events in AI. What happened in the HuggingFace and OpenAI attacks and the other rogue agent breakouts? Why are people calling for a slowdown?",
+      "A discussion with Stephen Casper, computer scientist and assistant professor at the Harvard Kennedy School of Government, and Daniel Holz, physicist at the University of Chicago and director of the Existential Risk Laboratory, to make sense of recent events in AI. What happened in the HuggingFace/OpenAI attack and the other rogue agent breakouts? Why are people calling for a slowdown?",
     image: {
       src: "/whatsgoingoninAIposter.jpg",
       alt: "Poster for What is Going On in AI? with Stephen Casper and Daniel Holz",
