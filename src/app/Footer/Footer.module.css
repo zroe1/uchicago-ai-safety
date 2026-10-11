@@ -52,6 +52,8 @@
 }
 
 .location {
+  /* Logos above have built-in left whitespace; indent to match their visible edge. */
+  padding-left: 11px;
   color: var(--faint);
   font-size: 0.85rem;
   font-weight: var(--text-weight);

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import styles from "./page.module.css";
 import NodeField from "@/app/ornaments/NodeField";
 import GridFade from "@/app/ornaments/GridFade";
@@ -11,21 +12,35 @@ export const metadata = {
 
 const upcomingEvents = [
   {
-    name: "Autumn Quarter Welcome Event",
-    date: "October 2026",
-    description: "Details coming soon.",
+    name: "What is Going On in AI?",
+    date: "Thursday, October 15, 2026 · 5–7pm",
+    location: "Rubenstein Forum, Friedman Hall Auditorium",
+    registerHref: "https://luma.com/vqxdyli7",
+    description:
+      "A discussion with Stephen Casper, computer scientist and assistant professor at the Harvard Kennedy School of Government, and Daniel Holz, physicist at the University of Chicago and director of the Existential Risk Laboratory, to make sense of recent events in AI. What happened in the HuggingFace and OpenAI attacks and the other rogue agent breakouts? Why are people calling for a slowdown?",
+    image: {
+      src: "/whatsgoingoninAIposter.jpg",
+      alt: "Poster for What is Going On in AI? with Stephen Casper and Daniel Holz",
+      width: 1529,
+      height: 2299,
+    },
   },
   {
     name: "Midwest AIS Retreat",
-    date: "October 2026",
+    date: "November 2026",
     description: "Details coming soon.",
   },
 ];
 
 const pastEvents = [
   {
+    name: "Autumn Quarter Info Session",
+    date: "October 5, 2026 · 6–7pm",
+    description: "Details coming soon.",
+  },
+  {
     name: "Lightning Talks — Spring Quarter '26",
-    date: "Friday, May 22, 2026",
+    date: "May 22, 2026",
     description: "Hear quick talks on AI Safety from members of our community.",
   },
   {
@@ -56,7 +71,32 @@ function EventRow({ event }) {
       <p className={styles.eventDate}>{event.date}</p>
       <div className={styles.eventBody}>
         <h3 className={styles.eventName}>{event.name}</h3>
+        {event.location && <p className={styles.eventLocation}>{event.location}</p>}
         <p className={styles.eventDescription}>{event.description}</p>
+        {event.image && (
+          <a
+            href={event.image.src}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.eventImageLink}>
+            <Image
+              src={event.image.src}
+              alt={event.image.alt}
+              width={event.image.width}
+              height={event.image.height}
+              className={styles.eventImage}
+            />
+          </a>
+        )}
+        {event.registerHref && (
+          <a
+            href={event.registerHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.registerLink}>
+            Register <span aria-hidden="true">→</span>
+          </a>
+        )}
         {event.href && (
           <a
             href={event.href}
