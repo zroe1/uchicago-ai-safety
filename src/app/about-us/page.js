@@ -7,14 +7,15 @@ import GridFade from "@/app/ornaments/GridFade";
 // `invert` marks dark-on-transparent logos that flip to light silhouettes in
 // dark mode; logos with their own dark backgrounds stay as they are.
 const alumniOrgs = [
-  { name: "Anthropic", src: "/Anthropic-Logo.wine.svg", invert: true },
-  { name: "MATS", src: "/mats.svg", invert: true },
-  { name: "Google DeepMind", src: "/DeepMind_new_logo.svg.png", invert: true },
-  { name: "OpenAI", src: "/openai.png", invert: true },
-  { name: "Redwood Research", src: "/redwood.png", invert: true },
-  { name: "AI Futures Project", src: "/ai_futures_project_logo.jpg" },
-  { name: "Gray Swan", src: "/gray-swan-og-image.png" },
-  { name: "Epoch AI", src: "/epoch.png", invert: true },
+  { name: "Anthropic", src: "/Anthropic-Logo.wine.svg", href: "https://www.anthropic.com", invert: true },
+  { name: "MATS", src: "/mats.svg", href: "https://www.matsprogram.org", invert: true },
+  { name: "Google DeepMind", src: "/DeepMind_new_logo.svg.png", href: "https://deepmind.google", invert: true },
+  { name: "OpenAI", src: "/openai.png", href: "https://openai.com", invert: true },
+  { name: "Redwood Research", src: "/redwood.png", href: "https://www.redwoodresearch.org", invert: true },
+  { name: "AI Futures Project", src: "/ai_futures_project_logo.jpg", href: "https://www.aifutures.org" },
+  { name: "Gray Swan", src: "/gray-swan-og-image.png", href: "https://www.grayswan.ai" },
+  { name: "Epoch AI", src: "/epoch.png", href: "https://epoch.ai", invert: true },
+  { name: "New York State Assembly", src: "/nys-assembly-seal.png", href: "https://assembly.state.ny.us/mem/Alex-Bores" },
 ];
 
 export const metadata = {
@@ -37,13 +38,19 @@ export default function AboutUs() {
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>AI Safety Group @ UChicago XLab</h2>
         <p className={styles.bodyText}>
-          The AI Safety Group @ UChicago XLab is a student group affiliated with the Existential
-          Risk Laboratory, dedicated to education and research in AI safety — the crucial
-          challenge of ensuring that artificial intelligence is developed in a way that benefits
-          humanity, and of mitigating the risks that arise from its development. As AI becomes more
-          powerful, it grows more important to ensure that AI systems are aligned with human values,
-          that bad actors cannot misuse AI for harmful ends, and that power does not become
-          concentrated in the hands of a few. As AI systems are integrated into a growing number of
+          The AI Safety Group @ UChicago XLab is a student group affiliated with the{" "}
+          <a
+            href="https://xrisk.uchicago.edu/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.inlineLink}>
+            Existential Risk Laboratory
+          </a>
+          , dedicated to education and research in AI safety — the crucial challenge of mitigating
+          risks that arise from advanced AI and ensuring that it is developed in a way that benefits
+          humanity. As AI becomes more capable, it becomes increasingly important to ensure that AI
+          systems are aligned with human values, that bad actors cannot misuse AI for harmful ends,
+          and that power does not become concentrated in the hands of a few. As AI systems are integrated into a growing number of
           critical domains and societal functions, misaligned AI could pose significant risks,
           ranging from unintended effects to potentially existential consequences. Our group aims to
           contribute to this vital field by:
@@ -58,7 +65,7 @@ export default function AboutUs() {
             builds the foundation for high-impact careers in the field.
           </li>
           <li>
-            Cultivating a strong, supportive community that connects motivated students to the vital
+            Cultivating a vibrant, supportive community that connects motivated students to the vital
             field of AI safety.
           </li>
         </ul>
@@ -72,23 +79,16 @@ export default function AboutUs() {
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>The Existential Risk Laboratory (XLab)</h2>
         <p className={styles.bodyText}>
-          Founded in 2022 at the University of Chicago, the{" "}
-          <a
-            href="https://xrisk.uchicago.edu/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.inlineLink}>
-            Existential Risk Laboratory
-          </a>{" "}
-          (XLab) is an interdisciplinary research organization dedicated to the analysis and
-          mitigation of risks that threaten human civilization&apos;s long-term survival. XLab
-          focuses on critically under-addressed areas: AI safety, biorisk, nuclear security, and
-          extreme climate change, recognizing the urgent need for more expertise and innovative
-          thinking in these fields. Since these issues don&apos;t fit neatly into pre-existing
-          academic silos, XLab was created to serve as a coordinating locus for work on existential
-          and global catastrophic risk on the UChicago campus, bringing together scholars from
-          across the academy. It supports direct research and provides a venue for students to
-          build expertise in its focus areas.
+          Founded in 2022 at the University of Chicago, the Existential Risk Laboratory (XLab) is an
+          interdisciplinary research organization dedicated to the analysis and mitigation of risks
+          that threaten human civilization&apos;s long-term survival. XLab focuses on critically
+          under-addressed areas: AI safety, biorisk, nuclear security, and extreme climate change,
+          recognizing the urgent need for more expertise and innovative thinking in these fields.
+          Since these issues don&apos;t fit neatly into pre-existing academic silos, XLab was
+          created to serve as a coordinating locus for work on existential and global catastrophic
+          risk on the UChicago campus, bringing together scholars from across the academy. It
+          supports direct research and provides a venue for students to build expertise in its focus
+          areas.
         </p>
       </section>
 
@@ -96,7 +96,13 @@ export default function AboutUs() {
         <h2 className={styles.sectionTitle}>Our members have worked with</h2>
         <div className={styles.logoGrid}>
           {alumniOrgs.map((org) => (
-            <div key={org.name} className={styles.logoItem} title={org.name}>
+            <a
+              key={org.name}
+              href={org.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.logoItem}
+              title={org.name}>
               <Image
                 src={org.src}
                 alt={org.name}
@@ -104,7 +110,7 @@ export default function AboutUs() {
                 className={org.invert ? "dark-invert" : undefined}
                 style={{ objectFit: "contain" }}
               />
-            </div>
+            </a>
           ))}
         </div>
       </section>
