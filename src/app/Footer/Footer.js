@@ -10,13 +10,6 @@ const Footer = () => {
         <div className={styles.main}>
           <div className={styles.brand}>
             <div className={styles.brandGroup}>
-              <Image
-                src="/x-tech_2CBM.png"
-                alt="AI Safety Group @ UChicago XLab logo"
-                width={80}
-                height={80}
-                className={`${styles.logo} dark-invert-hue`}
-              />
               <span className={styles.brandText}>
                 <span className={styles.brandName}>AI Safety Group</span>
                 <span>@ UChicago XLab</span>

@@ -31,12 +31,6 @@
   gap: 0.7rem;
 }
 
-.logo {
-  width: 44px;
-  height: 44px;
-  object-fit: contain;
-}
-
 .brandText {
   display: flex;
   flex-direction: column;
