@@ -46,8 +46,6 @@
 }
 
 .location {
-  /* Logos above have built-in left whitespace; indent to match their visible edge. */
-  padding-left: 11px;
   color: var(--faint);
   font-size: 0.85rem;
   font-weight: var(--text-weight);
@@ -56,6 +54,8 @@
 
 .xlabLink {
   display: inline-block;
+  /* The wordmark image has ~12px of built-in left whitespace; pull it flush with the text. */
+  margin-left: -12px;
   line-height: 0;
   opacity: 0.85;
   transition: opacity 0.2s ease;
