@@ -79,8 +79,9 @@
   left: 0;
   top: 1.15rem;
   width: 12px;
-  height: 1px;
-  background: var(--maroon);
+  /* A border (not a 1px background) so browsers snap it to whole device pixels;
+     otherwise the dashes render at different darkness on scaled displays. */
+  border-top: 1px solid var(--maroon);
 }
 
 .logoGrid {
