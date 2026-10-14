@@ -52,7 +52,7 @@ const organizers = [
 
 const advisors = [
   { memberName: "Rhea Kanuparthi", memberEmail: "rhea.kanuparthi@gmail.com" },
-  { memberName: "Jo Jiao",         memberEmail: "jialingjiao@uchicago.edu" },
+  { memberName: "Jo Jiao",         memberEmail: "jojiao@uchicago.edu" },
   { memberName: "Zephy Roe",       memberEmail: "zroe@uchicago.edu" },
   { memberName: "Henry Josephson", memberEmail: "henryj@uchicago.edu" },
   { memberName: "Michelle Ma",     memberEmail: "mma02@uchicago.edu" },

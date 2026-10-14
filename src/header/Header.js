@@ -62,7 +62,7 @@ const Header = () => {
         <div className={styles.container}>
           <Link href="/" className={styles.logoContainer}>
             <Image
-              src="/x-tech_2CBM.png"
+              src="/x-LAB_maroon.png"
               alt="AI Safety Group @ UChicago XLab logo"
               width={80}
               height={80}
