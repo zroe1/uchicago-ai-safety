@@ -3,6 +3,7 @@ import Link from "next/link";
 import styles from "./page.module.css";
 import NodeField from "@/app/ornaments/NodeField";
 import GridFade from "@/app/ornaments/GridFade";
+import LeadershipApplyButton from "./LeadershipApplyButton";
 
 export const metadata = {
   title: "Get Involved - AI Safety Group @ UChicago XLab",
@@ -40,7 +41,7 @@ export default function GetInvolved() {
         <p className={styles.sectionText}>
           Our working groups offer research opportunities for technical, strategic, and governance
           dimensions of AI safety. Applications open at the start of each quarter; join the mailing
-          list below to hear when they do. See a full description of this quarter&#39;s working
+          list below to hear when they do. See a full description of Fall 2026&#39;s working
           groups and logistics{" "}
           <a
             href="https://docs.google.com/document/d/1IQzu9DFuPhOlDSAsksqDNyqULyAXCw57wL9LfqqEJGo/edit?usp=sharing"
@@ -51,36 +52,26 @@ export default function GetInvolved() {
           </a>
           .
         </p>
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSeJQt0o2dUzonWsJyWe6Wu54s_SXcp6fsltzO5JHpRR2P50Lg/viewform"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.actionButton}>
-          Apply for Working Groups
-        </a>
+        <Link href="/research" className={styles.actionButton}>
+          Explore Our Research
+        </Link>
       </section>
 
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Apply for Leadership</h2>
         <p className={styles.sectionText}>
-          We are currently recruiting for student organizers to help deliver and scale up our
-          programs over the 2026–27 academic year. See open roles{" "}
+          Applications for leadership are currently closed. Please reach out to us directly if you
+          want to get involved! See an{" "}
           <a
             href="https://docs.google.com/document/d/1oxUyMg42swaz4c9TsFLqU9Vc58kAB1dEL1auvYl0zG8/edit?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.inlineLink}>
-            here
-          </a>
-          .
+            example list of roles
+          </a>{" "}
+          for Fall 2026.
         </p>
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLScT5UnaMvGvIGZseCLhHdSDrllh8ZOIwr-1eQgv-Fg5kZejZg/viewform?usp=header"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.actionButton}>
-          Apply for Leadership
-        </a>
+        <LeadershipApplyButton />
       </section>
 
       <section className={styles.section}>

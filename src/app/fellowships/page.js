@@ -16,21 +16,18 @@ const fellowships = [
     description:
       "Our flagship fellowship introduces fellows from any background to the core ideas in AI safety, with a particular focus on existential risk from advanced AI. By the program's end, fellows will have a working map of the field and the foundation to dive deeper into the subareas that interest them.",
     syllabusHref: "/ai-safety-fundamentals",
-    applyHref: "https://forms.gle/VtJbJcS6nzF4k31u8",
   },
   {
     name: "Policy and Governance",
     description:
       "This track covers the foundations of AI governance: policy frameworks, the differing stances of the US, China, and the EU, threats to democratic institutions, the dynamics of international competition and decoupling, economic and labor impacts, and data privacy. Fellows conclude the program by drafting and defending their own policy briefs. No prior policy experience is required– we welcome students from technical backgrounds looking to build policy literacy, as well as those in the social sciences and humanities engaging with AI-specific governance challenges.",
     syllabusHref: "/policy-governance",
-    applyHref: "https://forms.gle/VtJbJcS6nzF4k31u8",
   },
   {
     name: "Economics of Transformative AI",
     description:
       "This fellowship introduces fellows from any background to the major ideas in AI safety and their relationship to economics. Fellows examine how economic incentives shape AI safety decisions, and how those decisions (or their absence) reshape the global economy in turn. By the end of the program, fellows will have a working understanding of how market mechanisms, industrial policy, regulation, and international coordination can meaningfully reduce existential risk, along with the foundation to pursue any of these threads further.",
     syllabusHref: "/economics-of-transformative-ai",
-    applyHref: "https://forms.gle/VtJbJcS6nzF4k31u8",
   },
   {
     name: "Strategy and Forecasting",
@@ -43,7 +40,6 @@ const fellowships = [
     description:
       "This reading group cultivates technical literacy and research intuition by engaging directly with the AI safety literature. Each week, participants vote on a paper to read and discuss together. The goal of this group is to foster close reading, critical questioning, and collaborative debate about AI safety research. No fixed syllabus, and any intellectually curious individual is welcome to apply.",
     syllabusHref: null,
-    applyHref: "https://forms.gle/VtJbJcS6nzF4k31u8",
   },
   {
     name: "AI Security",
@@ -65,6 +61,18 @@ export default function Fellowships() {
           <p className={styles.pageLede}>
             Quarter-long reading and discussion groups, open to students from any background. Each
             track meets weekly with experienced facilitators.
+          </p>
+          <p className={styles.pageLede}>
+            Applications for fellowships are currently closed. Please look out for future
+            opportunities through our{" "}
+            <a
+              href="https://lists.uchicago.edu/web/info/aisafety"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.applyMessageLink}>
+              mailing list
+            </a>
+            !
           </p>
         </header>
 

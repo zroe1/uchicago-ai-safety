@@ -87,24 +87,16 @@ export default function Research() {
       </header>
 
       <p className={styles.intro}>
-        Want to do research with us? We are accepting applications for this quarter&#39;s working
-        groups! See the full list of groups and logistics{" "}
+        Applications for research working groups are currently closed. Please look out for future
+        opportunities through our{" "}
         <a
-          href="https://docs.google.com/document/d/1IQzu9DFuPhOlDSAsksqDNyqULyAXCw57wL9LfqqEJGo/edit?usp=sharing"
+          href="https://lists.uchicago.edu/web/info/aisafety"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.inlineLink}>
-          here
+          mailing list
         </a>
-        , and apply{" "}
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSeJQt0o2dUzonWsJyWe6Wu54s_SXcp6fsltzO5JHpRR2P50Lg/viewform"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.inlineLink}>
-          here
-        </a>
-        . Applications close at 11:59 PM CDT on Friday, October 9.
+        !
       </p>
 
       <p className={styles.intro}>

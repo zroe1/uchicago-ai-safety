@@ -122,3 +122,14 @@
   background-color: var(--maroon);
   color: var(--paper);
 }
+
+.applyMessage {
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  font-weight: var(--text-weight);
+  color: var(--muted);
+  line-height: 1.65;
+  border-top: 1px solid var(--hairline);
+  padding-top: 1rem;
+  margin: 1.1rem 0 0;
+}

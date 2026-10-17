@@ -18,7 +18,8 @@ const actions = [
   {
     title: "Apply to Leadership",
     description: "Help run our programming and shape the direction of AI safety at UChicago.",
-    href: "https://docs.google.com/forms/d/e/1FAIpQLScT5UnaMvGvIGZseCLhHdSDrllh8ZOIwr-1eQgv-Fg5kZejZg/viewform?usp=header",
+    href: "/leadership",
+    internal: true,
   },
   {
     title: "Join the Mailing List",
