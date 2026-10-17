@@ -17,23 +17,38 @@ const executiveBoard = [
   { imgUrl: "/justin.jpg", memberName: "Justin Chen",  memberRole: "Executive Board Member", memberEmail: "justinchen@uchicago.edu", bookingUrl: "https://calendly.com/emailjustinchen/30min" },
 ];
 
-const autumnOrganizers = [
-  { memberName: "Brody Fleishman",   memberRole: "Fundamentals Facilitator" },
-  { memberName: "Adrian Fang",       memberRole: "Fundamentals Facilitator" },
-  { memberName: "Sophia Wang",       memberRole: "Fundamentals Facilitator, Graphics" },
-  { memberName: "Sasha Haider",      memberRole: "Fundamentals Facilitator" },
-  { memberName: "Justin Chen",       memberRole: "Fundamentals Facilitator" },
-  { memberName: "Kerenna Klein",     memberRole: "Fundamentals Facilitator" },
-  { memberName: "Laura Nielsen",     memberRole: "Fundamentals Facilitator, Events" },
-  { memberName: "Parjanya Tiwari",   memberRole: "Policy & Governance Facilitator" },
-  { memberName: "Gil Rubinstein",    memberRole: "Policy & Governance Facilitator" },
-  { memberName: "Tiago Flora",       memberRole: "Economics of Transformative AI Facilitator" },
-  { memberName: "Lucas Chen",        memberRole: "Technical Paper Reading Group Facilitator" },
-  { memberName: "Brian Yu",          memberRole: "Technical Paper Reading Group Facilitator" },
-  { memberName: "Julian Huang",      memberRole: "Research Manager" },
-  { memberName: "Rhea Kanuparthi",   memberRole: "Research Manager" },
-  { memberName: "Kailee Kuan",       memberRole: "Events & Marketing Lead" },
-  { memberName: "Madeleine Hoffman", memberRole: "Operations Lead" },
+const autumnTeams = [
+  {
+    team: "Fellowships",
+    groups: [
+      { role: "AI Safety Fundamentals Facilitators", members: ["Justin Chen", "Adrian Fang", "Brody Fleishman", "Sasha Haider", "Kerenna Klein", "Laura Nielsen", "Sophia Wang"] },
+      { role: "Policy & Governance Facilitators", members: ["Gil Rubinstein", "Parjanya Tiwari"] },
+      { role: "Economics of Transformative AI Facilitators", members: ["Tiago Flora"] },
+    ],
+  },
+  {
+    team: "Research",
+    groups: [
+      { role: "Research Managers", members: ["Julian Huang", "Rhea Kanuparthi"] },
+      { role: "Technical Paper Reading Group Facilitators", members: ["Lucas Chen", "Brian Yu"] },
+      { role: "Blog Posts Writing Group", members: ["Aarav Leekha"] },
+    ],
+  },
+  {
+    team: "Events",
+    groups: [
+      { role: "Operations Lead", members: ["Madeleine Hoffman"] },
+      { role: "General", members: ["Laura Nielsen"] },
+    ],
+  },
+  {
+    team: "Marketing",
+    groups: [
+      { role: "Marketing Lead", members: ["Kailee Kuan"] },
+      { role: "Graphics", members: ["Sophia Wang"] },
+      { role: "General", members: ["Jacqueline Huang", "Victoria Kurakata", "Laura Nielsen"] },
+    ],
+  },
 ];
 
 const organizers = [
@@ -99,11 +114,20 @@ export default function LeadershipPage() {
 
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Organizers &amp; Leads — Autumn &apos;26</h2>
-        <div className={styles.simpleGrid}>
-          {autumnOrganizers.map((member) => (
-            <div key={member.memberName} className={styles.simpleCard}>
-              <p className={styles.simpleName}>{member.memberName}</p>
-              <p className={styles.simpleRole}>{member.memberRole}</p>
+        <div className={styles.teamGrid}>
+          {autumnTeams.map(({ team, groups }) => (
+            <div key={team} className={styles.teamCard}>
+              <h3 className={styles.teamName}>{team}</h3>
+              {groups.map(({ role, members }) => (
+                <div key={role} className={styles.teamGroup}>
+                  <p className={styles.simpleRole}>{role}</p>
+                  <ul className={styles.teamMembers}>
+                    {members.map((name) => (
+                      <li key={name}>{name}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           ))}
         </div>

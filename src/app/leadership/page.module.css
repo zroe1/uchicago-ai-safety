@@ -117,3 +117,45 @@
   color: var(--faint);
   margin: 0;
 }
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+.teamCard {
+  border: 1px solid var(--hairline-dark);
+  border-radius: var(--radius);
+  padding: 1.3rem 1.4rem;
+  transition: border-color 0.2s ease;
+}
+
+.teamCard:hover {
+  border-color: var(--faint);
+}
+
+.teamName {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 1rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.teamGroup + .teamGroup {
+  margin-top: 1.1rem;
+}
+
+.teamMembers {
+  list-style: none;
+  padding: 0;
+  margin: 0.35rem 0 0;
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ink);
+}
