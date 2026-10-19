@@ -21,7 +21,7 @@ const autumnTeams = [
   {
     team: "Fellowships",
     groups: [
-      { role: "AI Safety Fundamentals Facilitators", members: ["Justin Chen", "Adrian Fang", "Brody Fleishman", "Sasha Haider", "Kerenna Klein", "Laura Nielsen", "Sophia Wang"] },
+      { role: "AI Safety Fundamentals Facilitators", members: ["Justin Chen", "Elias England", "Adrian Fang", "Brody Fleishman", "Sasha Haider", "Kerenna Klein", "Laura Nielsen", "Sophia Wang"] },
       { role: "Policy & Governance Facilitators", members: ["Gil Rubinstein", "Parjanya Tiwari"] },
       { role: "Economics of Transformative AI Facilitators", members: ["Tiago Flora"] },
     ],
