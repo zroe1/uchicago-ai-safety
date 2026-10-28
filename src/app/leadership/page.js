@@ -11,8 +11,6 @@ export const metadata = {
 
 const executiveBoard = [
   { imgUrl: "/julian.jpg", memberName: "Julian Huang", memberRole: "Executive Board Member", memberEmail: "julianhuang@uchicago.edu", bookingUrl: "https://calendly.com/julianhuang" },
-  { imgUrl: "/nolan.jpg", memberName: "Nolan Johnson", memberRole: "Executive Board Member", memberEmail: "njohnson10@uchicago.edu", bookingUrl: "https://calendly.com/nolanjohnson/chat" },
-  { imgUrl: "/evie.png",   memberName: "Evie Hu",       memberRole: "Executive Board Member", memberEmail: "evelynhu@uchicago.edu", objectPosition: "35% top", bookingUrl: "https://calendly.com/eviehu612" },
   { imgUrl: "/nicole.jpeg", memberName: "Nicole Tang",  memberRole: "Executive Board Member", memberEmail: "xhtang@uchicago.edu", bookingUrl: "https://cal.com/nicoletangxh/quickchat" },
   { imgUrl: "/justin.jpg", memberName: "Justin Chen",  memberRole: "Executive Board Member", memberEmail: "justinchen@uchicago.edu", bookingUrl: "https://calendly.com/emailjustinchen/30min" },
 ];
@@ -21,32 +19,36 @@ const autumnTeams = [
   {
     team: "Fellowships",
     groups: [
+      { role: "Team Lead", members: ["Nicole Tang"] },
       { role: "AI Safety Fundamentals Facilitators", members: ["Justin Chen", "Elias England", "Adrian Fang", "Brody Fleishman", "Sasha Haider", "Kerenna Klein", "Laura Nielsen", "Sophia Wang"] },
       { role: "Policy & Governance Facilitators", members: ["Gil Rubinstein", "Parjanya Tiwari"] },
       { role: "Economics of Transformative AI Facilitators", members: ["Tiago Flora"] },
+      { role: "Generalists", members: ["Adrian Fang"] },
     ],
   },
   {
     team: "Research",
     groups: [
+      { role: "Team Lead", members: ["Julian Huang"] },
       { role: "Research Managers", members: ["Julian Huang", "Rhea Kanuparthi"] },
       { role: "Technical Paper Reading Group Facilitators", members: ["Lucas Chen", "Brian Yu"] },
       { role: "Blog Posts Writing Group", members: ["Aarav Leekha"] },
+      { role: "Generalists", members: ["Aarav Leekha", "Gabriel Rosenbaum"] },
     ],
   },
   {
     team: "Events",
     groups: [
+      { role: "Team Lead", members: ["Grace Stephens"] },
       { role: "Operations Lead", members: ["Madeleine Hoffman"] },
-      { role: "General", members: ["Laura Nielsen"] },
+      { role: "Generalists", members: ["Laura Nielsen", "Daniel Pressman"] },
     ],
   },
   {
     team: "Marketing",
     groups: [
-      { role: "Marketing Lead", members: ["Kailee Kuan"] },
-      { role: "Graphics", members: ["Sophia Wang"] },
-      { role: "General", members: ["Jacqueline Huang", "Victoria Kurakata", "Laura Nielsen"] },
+      { role: "Team Lead", members: ["Kailee Kuan"] },
+      { role: "Generalists", members: ["Jacqueline Huang", "Victoria Kurakata", "Sophia Wang", "Laura Nielsen"] },
     ],
   },
 ];
@@ -66,6 +68,8 @@ const organizers = [
 ];
 
 const advisors = [
+  { memberName: "Nolan Johnson",   memberEmail: "njohnson10@uchicago.edu", bookingUrl: "https://calendly.com/nolanjohnson/chat" },
+  { memberName: "Evie Hu",         memberEmail: "evelynhu@uchicago.edu", bookingUrl: "https://calendly.com/eviehu612" },
   { memberName: "Rhea Kanuparthi", memberEmail: "rhea.kanuparthi@gmail.com" },
   { memberName: "Jo Jiao",         memberEmail: "jojiao@uchicago.edu" },
   { memberName: "Zephy Roe",       memberEmail: "zroe@uchicago.edu" },
@@ -152,6 +156,15 @@ export default function LeadershipPage() {
             <div key={member.memberName} className={styles.simpleCard}>
               <p className={styles.simpleName}>{member.memberName}</p>
               <p className={styles.simpleEmail}>{member.memberEmail}</p>
+              {member.bookingUrl && (
+                <a
+                  href={member.bookingUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${styles.inlineLink} ${styles.simpleBooking}`}>
+                  Book a meeting
+                </a>
+              )}
             </div>
           ))}
         </div>
