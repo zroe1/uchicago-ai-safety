@@ -1,0 +1,19 @@
+.embedWrap {
+  border: 1px solid var(--hairline-dark);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #fff;
+}
+
+.embed {
+  display: block;
+  width: 100%;
+  height: 620px;
+  border: 0;
+}
+
+@media (max-width: 640px) {
+  .embed {
+    height: 520px;
+  }
+}

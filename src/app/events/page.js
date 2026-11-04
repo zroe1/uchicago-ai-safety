@@ -3,6 +3,8 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import NodeField from "@/app/ornaments/NodeField";
 import GridFade from "@/app/ornaments/GridFade";
+import EventsCalendar from "./EventsCalendar";
+import { GOOGLE_ADD_URL } from "./calendarConfig";
 
 export const metadata = {
   title: "Events - AI Safety Group @ UChicago XLab",
@@ -12,10 +14,20 @@ export const metadata = {
 
 const upcomingEvents = [
   {
+    name: "Midwest AIS Retreat",
+    date: "November 6-8, 2026",
+    location: "Racine, Wisconsin",
+    description:
+      "The first ever Midwest AI Safety Retreat will bring together more than 40 students from university AI Safety groups across the Midwest, along with professionals working in AI Safety. The retreat will allow students to meet others with similar interests, develop personal plans, have high-quality discussion, and learn from professionals.",
+  },
+];
+
+const pastEvents = [
+  {
     name: "What is Going On in AI?",
-    date: "Thursday, October 15, 2026 · 5–7pm",
+    date: "October 15, 2026 · 5–7pm",
     location: "Rubenstein Forum, Friedman Hall Auditorium",
-    registerHref: "https://luma.com/vqxdyli7",
+    href: "https://luma.com/vqxdyli7",
     description:
       "A discussion with Stephen Casper, computer scientist and assistant professor at the Harvard Kennedy School of Government, and Daniel Holz, physicist at the University of Chicago and director of the Existential Risk Laboratory, to make sense of recent events in AI. What happened in the HuggingFace/OpenAI attack and the other rogue agent breakouts? Why are people calling for a slowdown?",
     image: {
@@ -26,17 +38,9 @@ const upcomingEvents = [
     },
   },
   {
-    name: "Midwest AIS Retreat",
-    date: "November 2026",
-    description: "Details coming soon.",
-  },
-];
-
-const pastEvents = [
-  {
     name: "Autumn Quarter Info Session",
     date: "October 5, 2026 · 6–7pm",
-    description: "Details coming soon.",
+    description: "Come learn about our programs for the Autumn quarter!",
   },
   {
     name: "Lightning Talks — Spring Quarter '26",
@@ -120,7 +124,23 @@ export default function Events() {
         <header className={styles.pageHeader}>
           <p className={styles.eyebrow}>What&apos;s Happening</p>
           <h1 className={styles.pageTitle}>Events</h1>
+          <p className={styles.pageLede}>
+            Check up-to-date events on our{" "}
+            <a
+              href={GOOGLE_ADD_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.inlineLink}>
+              shared Google Calendar
+            </a>
+            . New events and changes will be automatically updated.
+          </p>
         </header>
+
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>Calendar</h2>
+          <EventsCalendar />
+        </section>
 
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Upcoming</h2>
