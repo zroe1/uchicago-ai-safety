@@ -84,20 +84,19 @@ export default function Research() {
       <header className={styles.pageHeader}>
         <p className={styles.eyebrow}>What We Study</p>
         <h1 className={styles.pageTitle}>Research</h1>
+        <p className={styles.pageLede}>
+          Applications for research working groups are currently closed. Please look out for future
+          opportunities through our{" "}
+          <a
+            href="https://lists.uchicago.edu/web/info/aisafety"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.inlineLink}>
+            mailing list
+          </a>
+          !
+        </p>
       </header>
-
-      <p className={styles.intro}>
-        Applications for research working groups are currently closed. Please look out for future
-        opportunities through our{" "}
-        <a
-          href="https://lists.uchicago.edu/web/info/aisafety"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.inlineLink}>
-          mailing list
-        </a>
-        !
-      </p>
 
       <p className={styles.intro}>
         Our work spans the technical, strategic, and governance dimensions of AI safety. Active

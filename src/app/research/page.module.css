@@ -78,6 +78,16 @@
   margin: 0;
 }
 
+.pageLede {
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: var(--text-weight);
+  line-height: 1.75;
+  color: var(--muted);
+  max-width: 44rem;
+  margin: 1.2rem 0 0;
+}
+
 .inlineLink {
   color: var(--maroon);
   text-decoration: none;
