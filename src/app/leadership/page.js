@@ -12,7 +12,7 @@ export const metadata = {
 const executiveBoard = [
   { imgUrl: "/julian.jpg", memberName: "Julian Huang", memberRole: "Executive Board Member", memberEmail: "julianhuang@uchicago.edu", bookingUrl: "https://calendly.com/julianhuang" },
   { imgUrl: "/nicole.jpeg", memberName: "Nicole Tang",  memberRole: "Executive Board Member", memberEmail: "xhtang@uchicago.edu", bookingUrl: "https://cal.com/nicoletangxh/quickchat" },
-  { imgUrl: "/justin.jpg", memberName: "Justin Chen",  memberRole: "Executive Board Member", memberEmail: "justinchen@uchicago.edu", bookingUrl: "https://calendly.com/emailjustinchen/30min" },
+  { imgUrl: "/justin.jpg", memberName: "Justin Chen",  memberRole: "Executive Board Member", memberEmail: "justinchen@uchicago.edu", bookingUrl: "https://cal.com/justinchen/chat" },
 ];
 
 const autumnTeams = [
