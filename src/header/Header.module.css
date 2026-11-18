@@ -21,12 +21,13 @@
 .logoContainer {
   display: flex;
   align-items: center;
-  gap: 0.7rem;
+  gap: 0;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .logo {
-  width: 150px;
+  width: 280px;
   height: auto;
   object-fit: contain;
 }
@@ -45,14 +46,6 @@
 
 :global(:root[data-theme="dark"]) .logoDark {
   display: block;
-}
-
-.logoText {
-  display: none;
-}
-
-.logoName {
-  color: var(--ink);
 }
 
 /* --- Desktop navigation --- */
@@ -319,11 +312,12 @@
   }
 
   .logo {
-    width: 150px;
+    width: 210px;
     height: auto;
   }
 
-  .logoText {
+  .logoText,
+  .logoName {
     display: none;
   }
 }
