@@ -26,20 +26,29 @@
 }
 
 .logo {
-  width: 34px;
-  height: 34px;
+  width: 150px;
+  height: auto;
   object-fit: contain;
 }
 
+.logoDark {
+  display: none;
+}
+
+.logoLight {
+  display: block;
+}
+
+:global(:root[data-theme="dark"]) .logoLight {
+  display: none;
+}
+
+:global(:root[data-theme="dark"]) .logoDark {
+  display: block;
+}
+
 .logoText {
-  display: flex;
-  flex-direction: column;
-  font-family: var(--serif);
-  color: var(--maroon);
-  font-weight: 600;
-  font-size: 1.05rem;
-  line-height: 1.15;
-  letter-spacing: 0.01em;
+  display: none;
 }
 
 .logoName {
@@ -310,11 +319,11 @@
   }
 
   .logo {
-    width: 30px;
-    height: 30px;
+    width: 150px;
+    height: auto;
   }
 
   .logoText {
-    font-size: 0.95rem;
+    display: none;
   }
 }

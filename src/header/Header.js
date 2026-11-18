@@ -62,16 +62,21 @@ const Header = () => {
         <div className={styles.container}>
           <Link href="/" className={styles.logoContainer}>
             <Image
-              src="/x-LAB_maroon.png"
-              alt="AI Safety Group @ UChicago XLab logo"
-              width={80}
-              height={80}
-              className={`${styles.logo} dark-invert-hue`}
+              src="/lockup1_red.png"
+              alt="AI Safety Group @ UChicago"
+              width={1731}
+              height={380}
+              priority
+              className={`${styles.logo} ${styles.logoLight}`}
             />
-            <span className={styles.logoText}>
-              <span className={styles.logoName}>AI Safety Group</span>
-              <span>@ UChicago XLab</span>
-            </span>
+            <Image
+              src="/lockup1_white.png"
+              alt="AI Safety Group @ UChicago"
+              width={1731}
+              height={379}
+              priority
+              className={`${styles.logo} ${styles.logoDark}`}
+            />
           </Link>
 
           <nav className={styles.desktopNav} aria-label="Main navigation">
